@@ -260,70 +260,40 @@
     .card[data-filter="9I"] { --stripe: var(--c9i); --stripe-bg: var(--c9i-bg); }
     .card[data-filter="8B"] { --stripe: var(--c8s); --stripe-bg: var(--c8s-bg); }
 
-    /* thumbnail area */
-    .card-thumb {
-      aspect-ratio: 16/9;
+    /* name banner header */
+    .card-banner {
       background: var(--stripe-bg, #eaf3ff);
+      padding: 22px 20px 20px;
       position: relative;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      border-bottom: 2px solid var(--border);
     }
-    .card-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
-    .card:hover .card-thumb img { transform: scale(1.05); }
-
-    .thumb-initial {
-      font-size: 56px;
-      font-weight: 900;
-      color: var(--stripe, var(--c9b));
-      opacity: 0.25;
-      user-select: none;
-    }
-    .thumb-overlay {
-      position: absolute; inset: 0;
-      background: rgba(45,42,62,0);
-      display: flex; align-items: center; justify-content: center;
-      transition: background 0.2s;
-    }
-    .card:hover .thumb-overlay { background: rgba(45,42,62,0.55); }
-    .open-btn {
-      opacity: 0; transform: scale(0.88);
-      transition: opacity 0.18s, transform 0.18s;
-      background: var(--white);
-      color: var(--stripe, var(--c9b));
-      border: none;
-      border-radius: var(--radius-pill);
-      padding: 10px 22px;
-      font-family: 'Nunito', sans-serif;
-      font-size: 13px;
-      font-weight: 800;
-      cursor: pointer;
-      text-decoration: none;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
-    .card:hover .open-btn { opacity: 1; transform: scale(1); }
-
-    /* card body */
-    .card-body { padding: 18px 18px 10px; flex: 1; display: flex; flex-direction: column; }
-
-    .card-tag {
+    .card-banner .banner-tag {
       display: inline-flex;
       align-items: center;
       gap: 5px;
-      background: var(--stripe-bg, #eaf3ff);
+      background: var(--white);
       color: var(--stripe, var(--c9b));
       border-radius: var(--radius-pill);
       font-size: 11px;
       font-weight: 800;
       letter-spacing: 0.06em;
       padding: 3px 12px;
-      margin-bottom: 10px;
-      align-self: flex-start;
+      margin-bottom: 12px;
     }
-    .card-title {
-      font-size: 17px;
+    .card-banner .student-name {
+      font-size: 26px;
       font-weight: 900;
+      color: var(--stripe, var(--c9b));
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+    }
+
+    /* card body */
+    .card-body { padding: 16px 20px 10px; flex: 1; display: flex; flex-direction: column; }
+
+    .card-title {
+      font-size: 16px;
+      font-weight: 800;
       color: var(--ink);
       line-height: 1.25;
       margin-bottom: 8px;
@@ -331,7 +301,7 @@
     .card-desc {
       font-size: 13px;
       color: var(--ink-2);
-      line-height: 1.65;
+      line-height: 1.6;
       font-weight: 600;
       flex: 1;
     }
@@ -340,27 +310,22 @@
     .card-footer {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      padding: 12px 18px;
+      justify-content: flex-end;
+      padding: 14px 20px;
       border-top: 2px solid var(--border);
-      margin-top: 10px;
-    }
-    .student-name {
-      font-size: 13px;
-      font-weight: 800;
-      color: var(--ink-2);
+      margin-top: 12px;
     }
     .card-link {
-      font-size: 12px;
+      font-size: 13px;
       font-weight: 800;
-      color: var(--stripe, var(--c9b));
+      color: var(--white);
       text-decoration: none;
-      background: var(--stripe-bg, #eaf3ff);
-      padding: 5px 14px;
+      background: var(--stripe, var(--c9b));
+      padding: 8px 20px;
       border-radius: var(--radius-pill);
-      transition: opacity 0.15s;
+      transition: opacity 0.15s, transform 0.15s;
     }
-    .card-link:hover { opacity: 0.8; }
+    .card-link:hover { opacity: 0.9; transform: scale(1.04); }
 
     /* ── EMPTY STATE ── */
     .empty-state { text-align: center; padding: 64px 24px; display: none; }
@@ -440,162 +405,142 @@
   <div class="grid" id="grid">
 
     <div class="card" data-name="caleb" data-filter="9B">
-      <div class="card-thumb">
-        <div class="thumb-initial">C</div>
-        <div class="thumb-overlay"><a href="caleb/index.html" target="_blank" class="open-btn">Open ↗</a></div>
+      <div class="card-banner">
+        <span class="banner-tag">🧪 9B</span>
+        <div class="student-name">Caleb</div>
       </div>
       <div class="card-body">
-        <p class="card-tag">🧪 9B</p>
         <h2 class="card-title">Unusual Building Materials</h2>
         <p class="card-desc">Popcorn, hemp, and mycelium — with interactive buttons that reveal each material's superpowers.</p>
       </div>
       <div class="card-footer">
-        <span class="student-name">Caleb</span>
-        <a href="caleb/index.html" target="_blank" class="card-link">View ↗</a>
+        <a href="caleb/index.html" target="_blank" class="card-link">Open project ↗</a>
       </div>
     </div>
 
     <div class="card" data-name="chaeyu" data-filter="9B">
-      <div class="card-thumb">
-        <div class="thumb-initial">C</div>
-        <div class="thumb-overlay"><a href="chaeyu/index.html" target="_blank" class="open-btn">Open ↗</a></div>
+      <div class="card-banner">
+        <span class="banner-tag">🧪 9B</span>
+        <div class="student-name">Chaeyu</div>
       </div>
       <div class="card-body">
-        <p class="card-tag">🧪 9B</p>
         <h2 class="card-title">Translucent Wood</h2>
         <p class="card-desc">Wood you can see through! A deep dive into how lignin removal turns timber into a glowing, eco-friendly building material.</p>
       </div>
       <div class="card-footer">
-        <span class="student-name">Chaeyu</span>
-        <a href="chaeyu/index.html" target="_blank" class="card-link">View ↗</a>
+        <a href="chaeyu/index.html" target="_blank" class="card-link">Open project ↗</a>
       </div>
     </div>
 
     <div class="card" data-name="chilli" data-filter="9B">
-      <div class="card-thumb">
-        <div class="thumb-initial">C</div>
-        <div class="thumb-overlay"><a href="chilli/index.html" target="_blank" class="open-btn">Open ↗</a></div>
+      <div class="card-banner">
+        <span class="banner-tag">🧪 9B</span>
+        <div class="student-name">Chilli</div>
       </div>
       <div class="card-body">
-        <p class="card-tag">🧪 9B</p>
         <h2 class="card-title">Hempcrete &amp; Mycelium</h2>
         <p class="card-desc">Could fungus and hemp replace concrete? Investigates both materials — plus a quiz to test what you've learnt.</p>
       </div>
       <div class="card-footer">
-        <span class="student-name">Chilli</span>
-        <a href="chilli/index.html" target="_blank" class="card-link">View ↗</a>
+        <a href="chilli/index.html" target="_blank" class="card-link">Open project ↗</a>
       </div>
     </div>
 
     <div class="card" data-name="jessica" data-filter="9B">
-      <div class="card-thumb">
-        <div class="thumb-initial">J</div>
-        <div class="thumb-overlay"><a href="jessica/index.html" target="_blank" class="open-btn">Open ↗</a></div>
+      <div class="card-banner">
+        <span class="banner-tag">🧪 9B</span>
+        <div class="student-name">Jessica</div>
       </div>
       <div class="card-body">
-        <p class="card-tag">🧪 9B</p>
         <h2 class="card-title">Hempcrete</h2>
         <p class="card-desc">A focused look at hempcrete — what it is, how it's made, and why it might just replace traditional concrete one day.</p>
       </div>
       <div class="card-footer">
-        <span class="student-name">Jessica</span>
-        <a href="jessica/index.html" target="_blank" class="card-link">View ↗</a>
+        <a href="jessica/index.html" target="_blank" class="card-link">Open project ↗</a>
       </div>
     </div>
 
     <div class="card" data-name="joonki" data-filter="9B">
-      <div class="card-thumb">
-        <div class="thumb-initial">J</div>
-        <div class="thumb-overlay"><a href="joonki/index.html" target="_blank" class="open-btn">Open ↗</a></div>
+      <div class="card-banner">
+        <span class="banner-tag">🧪 9B</span>
+        <div class="student-name">Joonki</div>
       </div>
       <div class="card-body">
-        <p class="card-tag">🧪 9B</p>
         <h2 class="card-title">UBM — Unusual Building Materials</h2>
         <p class="card-desc">Popcorn concrete and mycelium bricks, presented in a polished card layout with a custom logo and smooth hover effects.</p>
       </div>
       <div class="card-footer">
-        <span class="student-name">Joonki</span>
-        <a href="joonki/index.html" target="_blank" class="card-link">View ↗</a>
+        <a href="joonki/index.html" target="_blank" class="card-link">Open project ↗</a>
       </div>
     </div>
 
     <div class="card" data-name="khoi nguyen" data-filter="9B">
-      <div class="card-thumb">
-        <div class="thumb-initial">K</div>
-        <div class="thumb-overlay"><a href="khoi/index.html" target="_blank" class="open-btn">Open ↗</a></div>
+      <div class="card-banner">
+        <span class="banner-tag">🧪 9B</span>
+        <div class="student-name">Khoi Nguyen</div>
       </div>
       <div class="card-body">
-        <p class="card-tag">🧪 9B</p>
         <h2 class="card-title">Sticky Rice Mortar, Hempcrete &amp; Popcorn</h2>
         <p class="card-desc">Ancient sticky rice mortar, hempcrete, and popcorn concrete — three unlikely heroes of construction, with a quiz to match.</p>
       </div>
       <div class="card-footer">
-        <span class="student-name">Khoi Nguyen</span>
-        <a href="khoi/index.html" target="_blank" class="card-link">View ↗</a>
+        <a href="khoi/index.html" target="_blank" class="card-link">Open project ↗</a>
       </div>
     </div>
 
     <div class="card" data-name="minh hieu" data-filter="9B">
-      <div class="card-thumb">
-        <div class="thumb-initial">M</div>
-        <div class="thumb-overlay"><a href="minh-hieu/index.html" target="_blank" class="open-btn">Open ↗</a></div>
+      <div class="card-banner">
+        <span class="banner-tag">🧪 9B</span>
+        <div class="student-name">Minh Hieu</div>
       </div>
       <div class="card-body">
-        <p class="card-tag">🧪 9B</p>
         <h2 class="card-title">Newspaper Wood &amp; Mycelium</h2>
         <p class="card-desc">Building with yesterday's news — and fungus. Explores two materials revolutionising modern construction, with bold button navigation.</p>
       </div>
       <div class="card-footer">
-        <span class="student-name">Minh Hieu</span>
-        <a href="minh-hieu/index.html" target="_blank" class="card-link">View ↗</a>
+        <a href="minh-hieu/index.html" target="_blank" class="card-link">Open project ↗</a>
       </div>
     </div>
 
     <div class="card" data-name="nhat minh tom" data-filter="9B">
-      <div class="card-thumb">
-        <div class="thumb-initial">T</div>
-        <div class="thumb-overlay"><a href="nhat-minh/index.html" target="_blank" class="open-btn">Open ↗</a></div>
+      <div class="card-banner">
+        <span class="banner-tag">🧪 9B</span>
+        <div class="student-name">Nhat Minh (Tom)</div>
       </div>
       <div class="card-body">
-        <p class="card-tag">🧪 9B</p>
         <h2 class="card-title">Weirdo Materios</h2>
         <p class="card-desc">"The dumber the better somehow :)" — hempcrete, mycelium, and transparent wood served with bold yellow styling and zero pretension.</p>
       </div>
       <div class="card-footer">
-        <span class="student-name">Nhat Minh (Tom)</span>
-        <a href="nhat-minh/index.html" target="_blank" class="card-link">View ↗</a>
+        <a href="nhat-minh/index.html" target="_blank" class="card-link">Open project ↗</a>
       </div>
     </div>
 
     <div class="card" data-name="seonyoung" data-filter="9B">
-      <div class="card-thumb">
-        <div class="thumb-initial">S</div>
-        <div class="thumb-overlay"><a href="seonyoung/index.html" target="_blank" class="open-btn">Open ↗</a></div>
+      <div class="card-banner">
+        <span class="banner-tag">🧪 9B</span>
+        <div class="student-name">Seonyoung</div>
       </div>
       <div class="card-body">
-        <p class="card-tag">🧪 9B</p>
         <h2 class="card-title">Bio-Inspired Structural Glass</h2>
         <p class="card-desc">Dark theme, animated floating text, and particle effects. One of the most technically ambitious sites in the whole class.</p>
       </div>
       <div class="card-footer">
-        <span class="student-name">Seonyoung</span>
-        <a href="seonyoung/index.html" target="_blank" class="card-link">View ↗</a>
+        <a href="seonyoung/index.html" target="_blank" class="card-link">Open project ↗</a>
       </div>
     </div>
 
     <div class="card" data-name="tri anh" data-filter="9B">
-      <div class="card-thumb">
-        <div class="thumb-initial">T</div>
-        <div class="thumb-overlay"><a href="tri-anh/index.html" target="_blank" class="open-btn">Open ↗</a></div>
+      <div class="card-banner">
+        <span class="banner-tag">🧪 9B</span>
+        <div class="student-name">Tri Anh</div>
       </div>
       <div class="card-body">
-        <p class="card-tag">🧪 9B</p>
         <h2 class="card-title">Strange Building Materials</h2>
         <p class="card-desc">Salt blocks, and more unexpected construction materials. Clean blue design with image galleries, a quiz, and references.</p>
       </div>
       <div class="card-footer">
-        <span class="student-name">Tri Anh</span>
-        <a href="tri-anh/index.html" target="_blank" class="card-link">View ↗</a>
+        <a href="tri-anh/index.html" target="_blank" class="card-link">Open project ↗</a>
       </div>
     </div>
 
@@ -609,114 +554,100 @@
     </div>
 
     <div class="card" data-name="alice" data-filter="9I">
-      <div class="card-thumb">
-        <div class="thumb-initial">A</div>
-        <div class="thumb-overlay"><a href="alice/index.html" target="_blank" class="open-btn">Open ↗</a></div>
+      <div class="card-banner">
+        <span class="banner-tag">🧱 9I</span>
+        <div class="student-name">Alice</div>
       </div>
       <div class="card-body">
-        <p class="card-tag">🧱 9I</p>
         <h2 class="card-title">Hemp Fabric, Wine Bottles &amp; Salt</h2>
         <p class="card-desc">Three surprisingly versatile materials — from hemp textiles to recycled wine bottle walls and compressed salt bricks.</p>
       </div>
       <div class="card-footer">
-        <span class="student-name">Alice</span>
-        <a href="alice/index.html" target="_blank" class="card-link">View ↗</a>
+        <a href="alice/index.html" target="_blank" class="card-link">Open project ↗</a>
       </div>
     </div>
 
     <div class="card" data-name="bao khanh" data-filter="9I">
-      <div class="card-thumb">
-        <div class="thumb-initial">B</div>
-        <div class="thumb-overlay"><a href="bao-khanh/index.html" target="_blank" class="open-btn">Open ↗</a></div>
+      <div class="card-banner">
+        <span class="banner-tag">🧱 9I</span>
+        <div class="student-name">Bao Khanh</div>
       </div>
       <div class="card-body">
-        <p class="card-tag">🧱 9I</p>
         <h2 class="card-title">Cracked Clay &amp; Mycelium Insulation</h2>
         <p class="card-desc">Cracked clay casting and mycelium insulation — sustainable choices presented in a clean card layout with reveal buttons.</p>
       </div>
       <div class="card-footer">
-        <span class="student-name">Bao Khanh</span>
-        <a href="bao-khanh/index.html" target="_blank" class="card-link">View ↗</a>
+        <a href="bao-khanh/index.html" target="_blank" class="card-link">Open project ↗</a>
       </div>
     </div>
 
     <div class="card" data-name="crystal" data-filter="9I">
-      <div class="card-thumb">
-        <div class="thumb-initial">C</div>
-        <div class="thumb-overlay"><a href="crystal/index.html" target="_blank" class="open-btn">Open ↗</a></div>
+      <div class="card-banner">
+        <span class="banner-tag">🧱 9I</span>
+        <div class="student-name">Crystal</div>
       </div>
       <div class="card-body">
-        <p class="card-tag">🧱 9I</p>
         <h2 class="card-title">Popcorn Panels, Hempcrete &amp; Mycelium</h2>
         <p class="card-desc">Three big info buttons that pop up descriptions of each material. Simple, direct, and satisfying to click.</p>
       </div>
       <div class="card-footer">
-        <span class="student-name">Crystal</span>
-        <a href="crystal/index.html" target="_blank" class="card-link">View ↗</a>
+        <a href="crystal/index.html" target="_blank" class="card-link">Open project ↗</a>
       </div>
     </div>
 
     <div class="card" data-name="junyoung" data-filter="9I">
-      <div class="card-thumb">
-        <div class="thumb-initial">J</div>
-        <div class="thumb-overlay"><a href="junyoung/index.html" target="_blank" class="open-btn">Open ↗</a></div>
+      <div class="card-banner">
+        <span class="banner-tag">🧱 9I</span>
+        <div class="student-name">Junyoung</div>
       </div>
       <div class="card-body">
-        <p class="card-tag">🧱 9I</p>
         <h2 class="card-title">Woodoo, Aerographit &amp; Hanf</h2>
         <p class="card-desc">Woodoo augmented wood is stronger than concrete and see-through. Alongside aerographit and hemp, a truly futuristic lineup.</p>
       </div>
       <div class="card-footer">
-        <span class="student-name">Junyoung</span>
-        <a href="junyoung/index.html" target="_blank" class="card-link">View ↗</a>
+        <a href="junyoung/index.html" target="_blank" class="card-link">Open project ↗</a>
       </div>
     </div>
 
     <div class="card" data-name="khanh vy" data-filter="9I">
-      <div class="card-thumb">
-        <div class="thumb-initial">K</div>
-        <div class="thumb-overlay"><a href="khanh-vy/index.html" target="_blank" class="open-btn">Open ↗</a></div>
+      <div class="card-banner">
+        <span class="banner-tag">🧱 9I</span>
+        <div class="student-name">Khanh Vy</div>
       </div>
       <div class="card-body">
-        <p class="card-tag">🧱 9I</p>
         <h2 class="card-title">Aerogel, Nitinol &amp; Ferrofluid</h2>
         <p class="card-desc">The most out-there material picks — the world's lightest solid, a shape-memory alloy, and a liquid that spikes near magnets. Each with a fun-fact button!</p>
       </div>
       <div class="card-footer">
-        <span class="student-name">Khanh Vy</span>
-        <a href="khanh-vy/index.html" target="_blank" class="card-link">View ↗</a>
+        <a href="khanh-vy/index.html" target="_blank" class="card-link">Open project ↗</a>
       </div>
     </div>
 
     <div class="card" data-name="raewon" data-filter="9I">
-      <div class="card-thumb">
-        <div class="thumb-initial">R</div>
-        <div class="thumb-overlay"><a href="raewon/index.html" target="_blank" class="open-btn">Open ↗</a></div>
+      <div class="card-banner">
+        <span class="banner-tag">🧱 9I</span>
+        <div class="student-name">Raewon</div>
       </div>
       <div class="card-body">
-        <p class="card-tag">🧱 9I</p>
         <h2 class="card-title">Hempcrete &amp; Plastic Bottles</h2>
         <p class="card-desc">Eco-friendly construction done right — hempcrete and repurposed plastic bottles, with image cards and hover zoom effects.</p>
       </div>
       <div class="card-footer">
-        <span class="student-name">Raewon</span>
-        <a href="raewon/index.html" target="_blank" class="card-link">View ↗</a>
+        <a href="raewon/index.html" target="_blank" class="card-link">Open project ↗</a>
       </div>
     </div>
 
     <div class="card" data-name="soobin" data-filter="9I">
-      <div class="card-thumb">
-        <div class="thumb-initial">S</div>
-        <div class="thumb-overlay"><a href="soobin/index.html" target="_blank" class="open-btn">Open ↗</a></div>
+      <div class="card-banner">
+        <span class="banner-tag">🧱 9I</span>
+        <div class="student-name">Soobin</div>
       </div>
       <div class="card-body">
-        <p class="card-tag">🧱 9I</p>
         <h2 class="card-title">Plastic &amp; Salt as Building Materials</h2>
         <p class="card-desc">A polished site with a swipe-away animated intro screen. Covers recycled plastic and salt blocks with a quiz to finish.</p>
       </div>
       <div class="card-footer">
-        <span class="student-name">Soobin</span>
-        <a href="soobin/index.html" target="_blank" class="card-link">View ↗</a>
+        <a href="soobin/index.html" target="_blank" class="card-link">Open project ↗</a>
       </div>
     </div>
 
@@ -730,82 +661,72 @@
     </div>
 
     <div class="card" data-name="dohyun" data-filter="8B">
-      <div class="card-thumb">
-        <div class="thumb-initial">D</div>
-        <div class="thumb-overlay"><a href="dohyun/index.html" target="_blank" class="open-btn">Open ↗</a></div>
+      <div class="card-banner">
+        <span class="banner-tag">🌋 8S</span>
+        <div class="student-name">Dohyun</div>
       </div>
       <div class="card-body">
-        <p class="card-tag">🌋 8S</p>
         <h2 class="card-title">ExtremeBuild</h2>
         <p class="card-desc">Mars, deep ocean, desert, Antarctica — a slick dual-panel site with a custom logo, sidebar nav, and a quiz.</p>
       </div>
       <div class="card-footer">
-        <span class="student-name">Dohyun</span>
-        <a href="dohyun/index.html" target="_blank" class="card-link">View ↗</a>
+        <a href="dohyun/index.html" target="_blank" class="card-link">Open project ↗</a>
       </div>
     </div>
 
     <div class="card" data-name="duc hung" data-filter="8B">
-      <div class="card-thumb">
-        <div class="thumb-initial">D</div>
-        <div class="thumb-overlay"><a href="duc-hung/index.html" target="_blank" class="open-btn">Open ↗</a></div>
+      <div class="card-banner">
+        <span class="banner-tag">🌋 8S</span>
+        <div class="student-name">Duc Hung</div>
       </div>
       <div class="card-body">
-        <p class="card-tag">🌋 8S</p>
         <h2 class="card-title">Arctic, Desert, Sea &amp; Space</h2>
         <p class="card-desc">Four extreme environments on a dark gradient site with sticky pill-shaped navigation and material-selector buttons on every page.</p>
       </div>
       <div class="card-footer">
-        <span class="student-name">Duc Hung</span>
-        <a href="duc-hung/index.html" target="_blank" class="card-link">View ↗</a>
+        <a href="duc-hung/index.html" target="_blank" class="card-link">Open project ↗</a>
       </div>
     </div>
 
     <div class="card" data-name="evika" data-filter="8B">
-      <div class="card-thumb">
-        <div class="thumb-initial">E</div>
-        <div class="thumb-overlay"><a href="evika/index.html" target="_blank" class="open-btn">Open ↗</a></div>
+      <div class="card-banner">
+        <span class="banner-tag">🌋 8S</span>
+        <div class="student-name">Evika</div>
       </div>
       <div class="card-body">
-        <p class="card-tag">🌋 8S</p>
         <h2 class="card-title">Which Material Works Best?</h2>
         <p class="card-desc">Nine environment buttons — desert, tundra, tropical forest and more. Click one and instantly find out what to build with. So satisfying!</p>
       </div>
       <div class="card-footer">
-        <span class="student-name">Evika</span>
-        <a href="evika/index.html" target="_blank" class="card-link">View ↗</a>
+        <a href="evika/index.html" target="_blank" class="card-link">Open project ↗</a>
       </div>
     </div>
 
     <div class="card" data-name="sunwoo" data-filter="8B">
-      <div class="card-thumb">
-        <div class="thumb-initial">S</div>
-        <div class="thumb-overlay"><a href="sunwoo/index.html" target="_blank" class="open-btn">Open ↗</a></div>
+      <div class="card-banner">
+        <span class="banner-tag">🌋 8S</span>
+        <div class="student-name">Sunwoo</div>
       </div>
       <div class="card-body">
-        <p class="card-tag">🌋 8S</p>
         <h2 class="card-title">Buildings for the Extreme</h2>
         <p class="card-desc">Antarctica, desert, Mars, ocean — on a stunning space-themed site with glowing hover effects, glassmorphism cards, and smooth scroll.</p>
       </div>
       <div class="card-footer">
-        <span class="student-name">Sunwoo</span>
-        <a href="sunwoo/index.html" target="_blank" class="card-link">View ↗</a>
+        <a href="sunwoo/index.html" target="_blank" class="card-link">Open project ↗</a>
       </div>
     </div>
 
     <div class="card" data-name="to nam" data-filter="8B">
-      <div class="card-thumb">
-        <div class="thumb-initial">T</div>
-        <div class="thumb-overlay"><a href="to-nam/index.html" target="_blank" class="open-btn">Open ↗</a></div>
+      <div class="card-banner">
+        <span class="banner-tag">🌋 8S</span>
+        <div class="student-name">To Nam</div>
       </div>
       <div class="card-body">
-        <p class="card-tag">🌋 8S</p>
         <h2 class="card-title">Extreme Survival Environments</h2>
         <p class="card-desc">A bold full-screen hero site with a deep blue gradient and cinematic opening. Smooth glowing nav links throughout.</p>
       </div>
       <div class="card-footer">
-        <span class="student-name">To Nam</span>
-        <a href="to-nam/index.html" target="_blank" class="card-link">View ↗</a>
+        <a href="to-nam/index.html" target="_blank" class="card-link">Open project ↗</a>
       </div>
     </div>
 

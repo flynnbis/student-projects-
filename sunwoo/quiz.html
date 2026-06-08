@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Revision Quizzes</title>
+
+    <style>
+        html {scroll-behavior: smooth;}
+
+        body {margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom right, #000000, #0f172a, #1e3a8a);
+            color: white;}
+
+        header {text-align: center;
+              padding: 50px;
+              font-size: 50px;
+              font-weight: bold;
+              letter-spacing: 2px;
+              background: rgba(255,255,255,0.08);
+              backdrop-filter: blur(5px);
+              box-shadow: 0 0 20px rgba(255,255,255,0.1);}
+
+        .subtitle {font-size: 20px;
+                 font-weight: normal;
+                 margin-top: 10px;
+                 color: #cbd5e1;}
+      
+        nav {display: flex;
+          justify-content: center;
+          gap: 40px;
+          background-color: rgba(255,255,255,0.08);
+          backdrop-filter: blur(8px);
+          padding: 18px;
+          position: sticky;
+          top: 0;}
+
+        nav a {text-decoration: none;
+             color: white;
+             font-size: 22px;
+             font-weight: bold;
+             transition: 0.3s;}
+
+        nav a:hover {color: #93c5fd;
+                   text-shadow: 0 0 10px #93c5fd;}
+        
+        .quiz-container {width: 80%;
+                         margin: 40px auto;}
+
+        .question {background-color: rgba(255,255,255,0.12);
+                   backdrop-filter: blur(8px);
+                   border-radius: 20px;
+                   padding: 25px;
+                   margin-bottom: 30px;
+                   box-shadow: 0 0 15px rgba(255,255,255,0.15);}
+
+        .question h2 {color: #93c5fd;
+                      margin-top: 0;}
+
+        .question label {display: block;
+                         margin: 10px 0;
+                         font-size: 18px;}
+
+        input[type="text"] {width: 80%;
+                            padding: 10px;
+                            border-radius: 10px;
+                            border: none;
+                            font-size: 16px;}
+
+        textarea {width: 90%;
+                  height: 100px;
+                  border-radius: 10px;
+                  border: none;
+                  padding: 10px;
+                  font-size: 16px;}
+
+        button {display: block;
+                margin: 40px auto;
+                padding: 15px 30px;
+                font-size: 20px;
+                border: none;
+                border-radius: 15px;
+                cursor: pointer;
+                background-color: #2563eb;
+                color: white;}
+
+        button:hover {background-color: #3b82f6;}
+
+    </style>
+    <script>
+      function checkQuiz()
+    {
+    let score = 0;
+
+    /* Question 1 */
+    if(document.getElementById("q1d").checked)
+    {
+        score++;
+    }
+
+    /* Question 2 */
+    let q2a = document.getElementById("q2a").checked;
+    let q2b = document.getElementById("q2b").checked;
+    let q2c = document.getElementById("q2c").checked;
+    let q2d = document.getElementById("q2d").checked;
+
+    if(!q2a && q2b && q2c && !q2d)
+    {
+        score++;
+    }
+
+    /* Question 3 */
+    let answer3 = document.getElementById("q3").value.toLowerCase();
+
+    if(answer3.includes("-63") || answer3.includes("-63℃"))
+    {
+        score++;
+    }
+
+    /* Question 4 */
+    if(document.getElementById("q4false").checked)
+    {
+        score++;
+    }
+
+    /* Question 5 */
+    if(document.getElementById("q5").value == "Ocean")
+    {
+        score++;
+    }
+
+    alert("You scored " + score + " out of 5!");
+}
+    </script>
+  </head>
+  <body>
+    <header>
+      Revision Quizzes
+
+      <p class="subtitle">
+        Adaptive Materials for Survival
+      </p>
+    </header>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="antarctica.html">Antarctica</a>
+      <a href="desert.html">Desert</a>
+      <a href="mars.html">Mars</a>
+      <a href="ocean.html">Ocean</a>
+      <a href="quiz.html">Quiz</a>
+    </nav>
+
+    <div class="quiz-container">
+
+    <div class="question">
+        <h2>Which material is suitable for building homes in the desert?</h2>
+
+        <label><input type="radio" name="q1" id="q1a"> Sand</label>
+        <label><input type="radio" name="q1" id="q1b"> Asphalt</label>
+        <label><input type="radio" name="q1" id="q1c"> Wood</label>
+        <label><input type="radio" name="q1" id="q1d"> Adobe</label>
+    </div>
+
+    <div class="question">
+        <h2>Which material is inappropriate for building homes in the ocean?-Select All Corect Answers</h2>
+
+        <label><input type="checkbox" id="q2a"> Reinforced Concrete</label>
+        <label><input type="checkbox" id="q2b"> Unprotected Brick Structures</label>
+        <label><input type="checkbox" id="q2c"> Standard Residential Glass</label>
+        <label><input type="checkbox" id="q2d"> Acrylic Viewing Panels</label>
+    </div>
+
+    <div class="question">
+        <h2>What is the average temperature of Mars?</h2>
+
+        <input type="text" id="q3" placeholder="Type your answer here">
+    </div>
+
+    <div class="question">
+        <h2>Concrete is appropriate for building homes in the Antarctica - True or False</h2>
+
+        <label><input type="radio" name="q4" id="q4true"> True</label>
+        <label><input type="radio" name="q4" id="q4false"> False</label>
+    </div>  
+
+    <div class="question">
+        <h2>Which environment is this material most suitable for?-Marine Grade Steel</h2>
+
+        <select id="q5">
+            <option>Select an answer</option>
+            <option>Antarctica</option>
+            <option>Desert</option>
+            <option>Mars</option>
+            <option>Ocean</option>
+        </select>
+    </div>
+
+    <button onclick="checkQuiz()">Submit Quiz</button>
+
+</div>
+
+
+      
+
+</body>
+
+</html>

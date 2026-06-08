@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UBM - Popcorn</title>
+    
+    <style>
+        
+        body {
+            background-color: #cfdfe8;
+            font-family: sans-serif; /* Fallback for main text */
+            margin: 0; 
+            padding: 0;
+        }
+        
+        .button1 {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .button1 img {
+            height: 50px; 
+            width: auto;
+            cursor: pointer;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #444;
+            margin-right: 20px;
+            font-size: 30px;
+            font-family: Rockwell Extra Bold, Rockwell Bold, monospace;
+            transition: 0.2s; 
+        }
+
+        nav a:hover {
+            color: #000;             
+            transform: translateY(-2px); 
+            text-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            display: flex;
+            align-items: center; 
+            background-color: #ffffff; 
+            padding: 10px 200px;       
+            gap: 40px;
+            border: none; 
+            border-radius: 50px; 
+            max-width: fit-content; 
+            margin: 40px auto; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #a9b9c2; 
+            margin-bottom: 40px;
+        }
+
+        
+        .content-card {
+            background-color: #ffffff; 
+            border: 2px solid #a29bfe; 
+            border-radius: 30px; 
+            max-width: 800px;
+            margin: 0 auto 50px auto; 
+            overflow: hidden; 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease; 
+        }
+
+        .content-card:hover{
+            transform: translateY(-10px); 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .context-top {
+            padding: 40px 40px 20px 40px;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        .context-top h1 {
+            margin-top: 0;
+            font-family: Rockwell Extra Bold, Rockwell Bold, monospace;
+        }
+
+        .main-img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+       
+        .different-colour-section {
+            background-color: #f1f2f6; 
+            padding: 40px;
+            text-align: center;
+            border-top: 2px solid #a29bfe; 
+        }
+
+        .feature_con{
+            
+            
+        }
+        .feature_con:hover{
+            color: #000;             
+            transform: translateY(-2px); 
+            
+            text-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+        }
+
+    </style>
+
+    <script>
+        function gohome(){
+            window.location.href = "home.html";
+        }
+    </script>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="item">
+            <button class="button1" type="button" onclick="gohome()">
+                <img src="Drawing.png" alt="Button Icon" width="167.8" height="87.7">
+            </button>
+        </div>
+        <div class="item">
+             <nav>
+                <a href="popcorn.html">popcorn</a>
+                <a href="mycelium.html">Mycelium</a>
+                
+            </nav>
+        </div>
+    </div>
+    
+    
+    
+    <div class="content-card">
+        
+        <div class="context-top">
+            <h1>Popcorn Insulation</h1>
+            <p>
+                While it sounds like a movie snack, popcorn is emerging as a serious, sustainable alternative to petroleum-based polystyrene (Styrofoam).
+            </p>
+            <img src="popcorn.jpeg" alt="Popcorn Insulation" class="main-img">
+        </div>
+
+        <div class="different-colour-section">
+            <h2>Features</h2>
+            <div class="feature_con">
+                <p>Eco-Friendly:    
+
+    Researchers are working on building panels and insulation materials made from crushed popcorn. This plant-based option is meant to replace traditional boards in construction.</p>
+            </div>
+            <div class="feature_con">
+                <p>The popcorn material is great for keeping buildings in winter and cool in summer. It also helps block out noise.. It is really light which makes it easy to move around and install on construction sites.</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

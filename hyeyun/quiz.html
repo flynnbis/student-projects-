@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .main_box{
+            border:0.5px solid black;
+            margin-top: 50px !important;
+            /* background-color:rgb(255, 255, 255); */
+        }
+        .main_box:hover{
+            border:0px solid;
+            box-shadow: 0px 2px 7px rgb(0, 0, 0);
+        }
+        .container{
+            box-shadow: 0px 0px 7px white;
+            margin:12px;
+            padding:15px;
+            border-radius: 10px;
+            background-color: aliceblue;
+        }
+        .question{
+            border:1px solid;
+            font-size:large;
+            background-color: rgb(39, 39, 39);
+            color: white;
+            box-shadow: inset 0px 0px 5px rgb(0, 0, 0);
+        }
+
+        .hidden{
+            position: absolute;
+            visibility: hidden;
+        }
+        .opt{
+            border-radius: 10px;
+            margin: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container main_box">
+        <div class="container question">
+            1) What is the faous structure that uses sticky rice as a building material?
+        </div>
+        <div class="container options">
+            <label for="Q1A"><div id="OPTQ1A" class="opt"><input type="radio" name="Q1" id="Q1A" value="A" onchange="fun(document.getElementById('OPTQ1A'),'A',document.getElementById('ANSQ1').textContent)"> statue of liberty</div></label>
+            <label for="Q1B"><div id="OPTQ1B" class="opt"><input type="radio" name="Q1" id="Q1B" value="B" onchange="fun(document.getElementById('OPTQ1B'),'B',document.getElementById('ANSQ1').textContent)"> pyramid</div></label>
+            <label for="Q1C"><div id="OPTQ1C" class="opt"><input type="radio" name="Q1" id="Q1C" value="C" onchange="fun(document.getElementById('OPTQ1C'),'C',document.getElementById('ANSQ1').textContent)"> Great wall</div></label>
+            <label for="Q1D"><div id="OPTQ1D" class="opt"><input type="radio" name="Q1" id="Q1D" value="D" onchange="fun(document.getElementById('OPTQ1D'),'D',document.getElementById('ANSQ1').textContent)"> Eiffel Tower</div></label>
+        </div>
+        <span class="hidden" id="ANSQ1">C</span>
+    </div>
+    <div class="container main_box">
+        <div class="container question">
+            2) Carbon nanotubes are made of carbon atoms that are held together with what type of bonds?
+        </div>
+        <div class="container options">
+            <label for="Q2A"><div id="OPTQ2A" class="opt"><input type="radio" name="Q2" id="Q2A" value="A" onchange="fun(document.getElementById('OPTQ2A'),'A',document.getElementById('ANSQ2').textContent)"> Strong double covalent bonds</div></label>
+            <label for="Q2B"><div id="OPTQ2B" class="opt"><input type="radio" name="Q2" id="Q2B" value="B" onchange="fun(document.getElementById('OPTQ2B'),'B',document.getElementById('ANSQ2').textContent)"> Strong single covalent bonds</div></label>
+            <label for="Q2C"><div id="OPTQ2C" class="opt"><input type="radio" name="Q2" id="Q2C" value="C" onchange="fun(document.getElementById('OPTQ2C'),'C',document.getElementById('ANSQ2').textContent)"> Weak triple covalent bonds</div></label>
+            <label for="Q2D"><div id="OPTQ2D" class="opt"><input type="radio" name="Q2" id="Q2D" value="D" onchange="fun(document.getElementById('OPTQ2D'),'D',document.getElementById('ANSQ2').textContent)"> Ionic bonds</div></label>
+        </div>
+        <span class="hidden" id="ANSQ2">A</span>
+    </div>
+
+    <script>
+        function fun(id,user_ans,right_ans){
+            console.log(user_ans)
+            console.log(right_ans)
+            if(user_ans==right_ans){
+                id.style="background-color:green;color:white;";
+            }
+            else{
+                id.style="background-color:red;color:white;";
+            }
+        }
+       
+    </script>  
+    <div id="quiz-container">
+    <button onclick="window.location.href='index.html'">Exit</button>
+</div>
+
+<div id="start-screen" style="display:none;">
+    <h1>Welcome to the Quiz</h1>
+    <button onclick="startQuiz()">Start Quiz</button>
+</div>
+
+<script>
+function exitQuiz() {
+    // 1. Reset any score or timer variables
+    currentQuestion = 0;
+    score = 0;
+    
+    // 2. Hide the quiz and show the main menu
+    document.getElementById('quiz-container').style.display = 'none';
+    document.getElementById('start-screen').style.display = 'block';
+}
+</script>  
+</body>
+</html>

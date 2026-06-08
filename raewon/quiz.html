@@ -1,0 +1,111 @@
+<html>
+
+<head>
+
+    <style>
+
+        body{
+            background-color: #d8f3dc;
+            font-family: Arial;
+            text-align: center;
+        }
+
+        nav{
+            background-color: green;
+            padding: 15px;
+        }
+
+        nav a{
+            color: white;
+            margin: 15px;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        h1{
+            color: darkgreen;
+        }
+
+        .answer{
+            display: none;
+        }
+
+        button{
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+    </style>
+
+    <script>
+
+        function reveal_answer(id) {
+            document.getElementById(id).style.display='block';
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+    </nav>
+
+    <h1>Quizzes</h1>
+
+    <p>Click the button under each question to reveal the answer</p>
+
+    <p><b>1. What is Hempcrete made from?</b></p>
+    <button onclick="reveal_answer('a1')">Reveal answer</button>
+    <p id="a1" class="answer">Hemp fibres, lime, and water.</p>
+
+
+    <p><b>2. Why is Hempcrete environmentally friendly?</b></p>
+    <button onclick="reveal_answer('a2')">Reveal answer</button>
+    <p id="a2" class="answer">It reduces carbon emissions.</p>
+
+
+    <p><b>3. What is one advantage of Hempcrete?</b></p>
+    <button onclick="reveal_answer('a3')">Reveal answer</button>
+    <p id="a3" class="answer">It provides good insulation.</p>
+
+
+    <p><b>4. What is one disadvantage of Hempcrete?</b></p>
+    <button onclick="reveal_answer('a4')">Reveal answer</button>
+    <p id="a4" class="answer">It can be expensive.</p>
+
+
+    <p><b>5. Why are plastic bottles reused in construction?</b></p>
+    <button onclick="reveal_answer('a5')">Reveal answer</button>
+    <p id="a5" class="answer">To recycle waste and reduce pollution.</p>
+
+
+    <p><b>6. What are plastic bottles usually filled with in construction?</b></p>
+    <button onclick="reveal_answer('a6')">Reveal answer</button>
+    <p id="a6" class="answer">Sand or soil.</p>
+
+
+    <p><b>7. What is one benefit of plastic bottle construction?</b></p>
+    <button onclick="reveal_answer('a7')">Reveal answer</button>
+    <p id="a7" class="answer">It is low cost.</p>
+
+
+    <p><b>8. What is one disadvantage of plastic bottle construction?</b></p>
+    <button onclick="reveal_answer('a8')">Reveal answer</button>
+    <p id="a8" class="answer">It takes time to prepare.</p>
+
+
+    <p><b>9. Which material is renewable: hemp or plastic?</b></p>
+    <button onclick="reveal_answer('a9')">Reveal answer</button>
+    <p id="a9" class="answer">Hemp.</p>
+
+
+    <p><b>10. Why are sustainable materials important?</b></p>
+    <button onclick="reveal_answer('a10')">Reveal answer</button>
+    <p id="a10" class="answer">They help protect the environment.</p>
+
+</body>
+
+</html>

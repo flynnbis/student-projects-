@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <style>
+            body {
+                background-color: whitesmoke;
+                font-family: Georgia;
+                margin: 0;
+                padding: 20px;
+                text-align: center;
+            }
+
+            nav{
+                background-color: lightslategray;
+                padding: 12px;
+            }
+
+            nav a {
+                color: white;
+                margin: 0 15px;
+                font-size: 18px;
+            }
+
+            img {
+                width: 400px;
+                height: 250px;
+                object-fit: cover;
+                border: 10px solid lightslategray;
+                margin: 10px auto;
+                display: block;
+            }
+
+            .answer {
+                display: none;
+                color:blue;
+                font-weight: bold;
+            }
+        </style>
+
+        <script>
+            function reveal_answer(id) {
+                document.getElementById(id).style.display='block';
+            }
+        </script>
+
+    </head>
+    
+    <body>
+        
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="references.html">References</a>
+        </nav>
+
+        <h1>QUIZZES</h1>
+
+        <p>Click the butten under each question to reveal the answer</p>
+
+        <p><b>1. Why is Aerogel often called because of its appearance?</b></p>
+        <button onclick="reveal_answer('a1')">Reveal answer</button>
+        <p id="a1" class="answer">Aerogel is often called frozen smoke or solid cloud because of its ethereal appearance and featherlight feel.</p>
+
+        <p><b>2. Why is Aerogel useful in aerospace engineering?</b></p>
+        <button onclick="reveal_answer('a2')">Reveal answer</button>
+        <p id="a2" class="answer">Aerogel is useful in aerospace engineering because it has exceptional thermal insulation and ultra-low density.</p>
+
+        <p><b>3. What two special properties make Nitinol unique?</b></p>
+        <button onclick="reveal_answer('a3')">Reveal answer</button>
+        <p id="a3" class="answer">Nitinol is known for its shape memory effect and superelasticity.</p>
+
+        <p><b>4. What happens to Nitinol when it is heated after being deformed?</b></p>
+        <button onclick="reveal_answer('a4')">Reveal answer</button>
+        <p id="a4" class="answer">Nitinol returns to its original shape when heated.</p>
+
+        <p><b>5. Name two fields where Nitinol is commonly used.</b></p>
+        <button onclick="reveal_answer('a5')">Reveal answer</button>
+        <p id="a5" class="answer">Nitinol is commonly used in medical devices and aerospace engineering.</p>
+
+        <p><b>6. What happens to Ferrofluid when it is near a magnet?</b></p>
+        <button onclick="reveal_answer('a6')">Reveal answer</button>
+        <p id="a6" class="answer">Ferrofluid forms sharp spikes and unique patterns when exposed to a magnetic field.</p>
+
+        <p><b>7. Name two uses of Ferrofluid.</b></p>
+        <button onclick="reveal_answer('a7')">Reveal answer</button>
+        <p id="a7" class="answer">Ferrofluid is used in speakers, electronic devices, medical technology, and space engineering.</p>
+
+    </body>
+</html>

@@ -1,0 +1,98 @@
+body {
+    background-color: lightgreen;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: darkgreen;
+    padding: 12px;
+    margin-bottom: 20px;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+h1 {
+    color: darkgreen;
+}
+
+h2 {
+    color: darkblue;
+    margin-top: 30px;
+}
+
+p {
+    font-size: 16px;
+    max-width: 700px;
+    margin: 10px auto;
+    line-height: 1.6;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+.material-box,
+.quiz-box {
+    background-color: white;
+    padding: 20px;
+    margin: 25px auto;
+    width: 80%;
+    border-radius: 10px;
+    border: 3px solid darkgreen;
+}
+
+.placeholder {
+    width: 320px;
+    height: 200px;
+    border: 3px dashed darkgreen;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0fff0;
+    font-weight: bold;
+}
+
+.large-image {
+    display: none;
+    width: 500px;
+    height: 300px;
+    border: 3px solid darkblue;
+    margin: 20px auto;
+    background-color: #eeeeee;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+button {
+    background-color: darkgreen;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+button:hover {
+    background-color: green;
+}
+
+.answer {
+    display: none;
+    color: darkblue;
+    font-weight: bold;
+    margin-top: 10px;
+}

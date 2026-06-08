@@ -1,0 +1,216 @@
+<html>
+
+<head>
+
+    <title>MIT Project</title>
+
+<style>
+
+    *{
+        box-sizing: border-box;
+    }
+
+    body{
+        background-color: azure;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        margin: 0;
+        padding: 20px;
+    }
+
+    h1{
+        text-align: center;
+        color: rgb(118, 156, 188);
+    }
+
+    h2{
+        color: rgb(102, 129, 150);
+    }
+
+    hr{
+        border: 1px solid rgb(130, 176, 214);
+    }
+
+    .navbar ul{
+        list-style-type: none;
+        background-color: rgb(130, 176, 214);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        border-radius: 3px;
+    }
+
+    .navbar a{
+        color: white;
+        text-decoration: none;
+        padding: 22px;
+        display: block;
+    }
+
+    .navbar a:hover{
+        background-color: rgb(81, 113, 141);
+    }
+
+    .container{
+        display: flex;
+        align-items: flex-start;
+        gap: 30px;
+        margin-top: 20px;
+        margin-right: 30px;
+    }
+
+    p{
+        width: 700px;
+        color: rgb(90, 113, 130);
+        line-height: 1.6;
+        font-size: 18px;
+    }
+
+    .slideshow-container{
+        width: 900px;
+        position: relative;
+    }
+
+    .mySlides1{
+        display: none;
+       
+    }
+
+    .slideshow-container img{
+        width: 100%;
+        height: 320px;
+        object-fit: cover;
+        border-radius: 10px;
+       
+    }
+
+    .prev, .next{
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        padding: 12px;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        background-color: rgb(116, 175, 205);
+        transform: translateY(-50%);
+    }
+
+    .next{
+        right: 0;
+    }
+
+    .prev:hover, .next:hover{
+        background-color: rgba(0,0,0,0.7);
+    }
+
+    
+
+</style>
+
+</head>
+
+<body>
+
+    <h1>Unusual Building Materials</h1>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Plastic.html">Plastic</a></li>
+            <li><a href="Salt.html">Salt</a></li>
+            <li><a href="Quiz.html">Quiz</a></li>
+            <li><a href="Reference.html">Reference</a></li>
+        </ul>
+    </nav>
+
+    <br>
+
+    <h2>Plastic:</h2>
+
+    <hr>
+
+    <div class="container">
+
+        <p>
+            Today, many industries are introducing new materials by recycling 
+            existing ones such as cans, glass, and <b>plastic.</b>Especially, 
+            architects and designers are finding creative ways to reuse <b>plastic </b>
+            in order to reduce waste and support sustainability. Recycled plastic 
+            can now be incorporated into building facades, where it helps create 
+            passive solar shelters and improves both the exterior and interior of 
+            buildings. A well-known example is the <b>plastic</b> facade designed by 
+            Hyunke Joo, the Korean architect.
+        </p>
+
+        <div class="slideshow-container">
+
+            <div class="mySlides1">
+                <img src="https://www.designboom.com/twitterimages/dbsub/367391/2017-10-11/img_1_1507749185_c81e728d9d4c2f636f067f89cc14862c.jpg">
+            </div>
+
+            <div class="mySlides1">
+                <img src="https://www.archpaper.com/wp-content/uploads/2017/11/8-1-645x431.jpg">
+            </div>
+
+            <div class="mySlides1">
+                <img src="https://static.designboom.com/wp-content/dbsub/367391/2017-10-11/img_8_1507749185_45c48cce2e2d7fbdea1afc51c7c6ad26.jpg">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+
+    </div>
+    <h2 style="margin-top: 80px;">How can <i>plastic</i> be a building material?</h2>
+
+    <hr>
+
+    <p style="width:fit-content; margin-top: 40px"><b><i>Plastic</i></b> can be used as a building material <b>by reshaping it</b> into useful building products. <br>
+        Architects and engineers use recycled plastic to create building facades(face of building), <br>wall panels, roof tiles, and even bricks. 
+        Plastic is lightweight, durable and can be waterproofed, which makes it useful in modern architecture.<br>In some buildings, plastic facades
+        also help control sunlight and temperature so it makes passive solar shelters that improve energy efficiency.<br> By reusing plastic waste in construction, architects can reduce pollution and support more sustainable building practices.</p>
+
+    <h2 style="margin-top: 80px;">Advantages:</h2>
+
+    <hr>
+
+    <p style="width:fit-content; margin-top: 40px; margin-bottom: 80px;"> 1) Lightweight and easy to transport while construction <br>
+        2) Durable & long-lasting <br> 3) Can be recycled & reused <br> 4) Flexible & easy to shape <br> 5)Lower maintenance costs
+
+    </p>
+<script>
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n){
+    showSlides(slideIndex += n);
+}
+
+function showSlides(n){
+
+    let i;
+    let slides = document.getElementsByClassName("mySlides1");
+
+    if(n > slides.length){
+        slideIndex = 1;
+    }
+
+    if(n < 1){
+        slideIndex = slides.length;
+    }
+
+    for(i = 0; i < slides.length; i++){
+        slides[i].style.display = "none";
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+}
+
+</script>
+
+</body>
+
+</html>

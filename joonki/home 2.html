@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        
+        body {
+            background-color: #cfdfe8;
+            font-family: sans-serif;
+            margin: 0; 
+            padding: 0;
+        }
+        
+        .button1 {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .button1 img {
+            height: 50px; 
+            width: auto;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #444;
+            margin-right: 20px;
+            font-size: 30px;
+            font-family: Rockwell Extra Bold, Rockwell Bold, monospace;
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            color: #000;             
+            transform: translateY(-2px); 
+            text-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            display: flex;
+            align-items: center; 
+            background-color: #ffffff; 
+            padding: 10px 60px;
+            gap: 40px;
+            border-radius: 50px; 
+            max-width: fit-content; 
+            margin: 40px auto; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        
+        .content-card {
+            background-color: #ffffff; 
+            border: 2px solid #a29bfe; 
+            border-radius: 30px; 
+            max-width: 900px;
+            margin: 0 auto 50px auto; 
+            overflow: hidden; 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            text-align: center;
+            padding: 60px 40px;
+        }
+
+        .content-card h1 {
+            font-family: Rockwell Extra Bold, Rockwell Bold, monospace;
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #2d3436;
+        }
+
+        .content-card p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #636e72;
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+        }
+
+        .fef{
+            font-size: 10px;
+            
+        }
+
+        
+        
+    </style>
+    <script>
+        function gohome(){
+            window.location.href = "home.html";
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="item">
+            <button class="button1" type="button" onclick="gohome()">
+                <img src="Drawing.png" alt="Button Icon" width="167.8" height="87.7">
+        
+            </button>
+        </div>
+        <div class="item">
+             <nav>
+                <a href="popcorn.html">popcorn</a>
+                <a href="mycelium.html">Mycelium</a>
+                
+            </nav>
+        </div>
+    </div>
+   
+    <div class="content-card">
+        <h1>Welcome to UBM</h1>
+        <p>
+            Welcome to the homepage of UBM (unusual building materials). We will be exploring materials that can be an alternative for toxic or bad materials for the environment.
+
+        </p>
+        <hr>
+        <img src="https://img.magnific.com/vector-mien-phi/bieu-tuong-van-ban-lets-go-di-thoi-tren-nen-trang_1308-92274.jpg" alt="">
+        <hr>
+        <a class="ref" href="https://www.worldofporr.com/en/top-5-unusual-building-materials">“Top 5: Unusual Building Materials - World of PORR.” Worldofporr.com, 2024, www.worldofporr.com/en/top-5-unusual-building-materials.</a>
+        <a class="ref" href="https://www.certifiedenergy.com.au/emerging-materials/emerging-materials-mycelium-brick">Ilvy Bonnefin. “Emerging Materials: Mycelium Brick.” Certifiedenergy.com.au, 18 Nov. 2022, www.certifiedenergy.com.au/emerging-materials/emerging-materials-mycelium-brick.</a>
+        
+    </div>
+
+</body>
+</html>

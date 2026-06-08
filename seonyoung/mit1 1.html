@@ -1,0 +1,366 @@
+<html>
+<head>
+  <title>MIT Challenge - The Science</title>
+
+  <style>
+
+    body {
+      font-family: sans-serif;
+      background-color: #080f1a;
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    #particle-canvas {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+    }
+
+    body:before,
+    body:after {
+      content: "";
+      position: fixed;
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      background: rgba(117, 176, 255, 0.1);
+      filter: blur(50px);
+    }
+
+    body:before {
+      top: -100px;
+      left: -100px;
+    }
+
+    body:after {
+      bottom: -120px;
+      right: -80px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    h1 span {
+      display: inline-block;
+      font-size: 5.5rem;
+      font-weight: 800;
+      color: #67a9ff;
+      letter-spacing: 8px;
+      text-shadow:
+        0 2px 0 #dbe9ff,
+        0 4px 0 #dbe9ff,
+        0 10px 25px rgba(83, 135, 255, 0.35);
+      animation: float 1s ease-in-out infinite alternate;
+    }
+
+    h1 span:nth-child(2) {
+      animation-delay: 0.15s;
+    }
+
+    h1 span:nth-child(3) {
+      animation-delay: 0.3s;
+    }
+
+    @keyframes float {
+      100% {
+        transform: translateY(-10px);
+      }
+    }
+
+    nav {
+      max-width: 880px;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      padding: 18px;
+      border-radius: 30px;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(18px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    nav a {
+      color: #b0cdec;
+      text-decoration: none;
+      padding: 13px 28px;
+      border-radius: 15px;
+      font-size: 15px;
+      font-weight: 600;
+      transition: 0.35s ease;
+    }
+
+    nav a:hover {
+      background: rgba(114, 173, 255, 0.18);
+      color: #72adff;
+      transform: translateY(-3px) scale(1.05);
+    }
+
+    .main-container {
+      max-width: 930px;
+      margin: 50px auto;
+      padding: 50px;
+      border-radius: 35px;
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(22px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+      font-size: 40px;
+      color: #e2ecf8;
+      margin-bottom: 25px;
+      line-height: 1.2;
+    }
+
+    h3 {
+      font-size: 26px;
+      color: #b0cdec;
+      margin-bottom: 15px;
+      margin-top: 35px;
+    }
+
+    p {
+      color: #adc0d8;
+      line-height: 2;
+      font-size: 17px;
+    }
+
+    .section {
+      margin-top: 45px;
+      padding: 35px;
+      border-radius: 28px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .tech-card {
+      margin-top: 25px;
+      padding: 28px;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      color: #d7e6f7;
+      font-size: 17px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.35s ease;
+      line-height: 1.8;
+    }
+
+    .tech-card:hover {
+      transform: translateY(-4px);
+      background: rgba(114, 173, 255, 0.08);
+      border-color: rgba(114,173,255,0.2);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+    }
+
+    .hidden-content {
+      display: none;
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      color: #c4d5e8;
+      font-size: 15px;
+      font-weight: normal;
+      line-height: 1.9;
+    }
+
+    hr {
+      margin: 40px 0;
+      border: 0;
+      height: 1px;
+      background: rgba(255,255,255,0.08);
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <canvas id="particle-canvas"></canvas>
+
+  <h1>
+    <span>M</span>
+    <span>I</span>
+    <span>T</span>
+  </h1>
+
+  <nav>
+    <a href="mit.html">Home</a>
+    <a href="mit1.html">The Science</a>
+    <a href="mit2.html">Quiz</a>
+    <a href="mit3.html">MyBib</a>
+  </nav>
+
+  <div class="main-container">
+
+    <h2>Core Technology & Scientific Mechanisms</h2>
+
+    <p>
+      Bio-inspired structural glass seamlessly integrates molecular flexibility and high-stress physics, overcoming the major weaknesses of conventional tempered glass.
+    </p>
+
+    <div class="section">
+
+      <h3>1. Buffer Layer (Ovalbumin + Amylopectin)</h3>
+
+      <p>
+        When ovalbumin proteins from egg whites combine with amylopectin from sticky rice, a flexible internal buffer layer forms. During impact, protein chains unfold and absorb kinetic energy while disulfide bonds strengthen the structure and reduce crack propagation.
+      </p>
+
+      <h3>2. Internal Core Skeleton (Prince Rupert's Drop)</h3>
+
+      <p>
+        Prince Rupert's Drops contain extremely high compressive stress on the outer surface. Applying this principle creates an invisible internal framework that improves impact resistance and allows the structure to withstand heavy loads.
+      </p>
+
+    </div>
+
+    <hr>
+
+    <h2>Overcoming Material Limitations</h2>
+
+    <p>
+      Click each section below to reveal the engineering solutions used in the project.
+    </p>
+
+    <div class="tech-card" onclick="toggleContent('tech-opacity')">
+
+      Breakthrough 1 · Resolving Opacity (Ultrasonic Disintegration)
+
+      <div id="tech-opacity" class="hidden-content">
+        Uneven protein and starch particles scatter light and reduce transparency. High-frequency ultrasonic processing breaks these particles into nano-scale clusters smaller than visible light wavelengths, significantly improving optical clarity and transparency.
+      </div>
+
+    </div>
+
+    <div class="tech-card" onclick="toggleContent('tech-decay')">
+
+      Breakthrough 2 · Preventing Degradation & Mold
+
+      <div id="tech-decay" class="hidden-content">
+        Organic materials naturally absorb moisture and become vulnerable to microbial growth. Inspired by ancient sticky rice-lime mortar technology, calcium hydroxide is added to create antimicrobial protection and increase long-term durability.
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+
+    function toggleContent(id) {
+
+      let content = document.getElementById(id);
+
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+
+    }
+
+    const canvas = document.getElementById('particle-canvas');
+    const ctx = canvas.getContext('2d');
+
+    let particlesArray = [];
+    const mouse = { x: null, y: null };
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    window.addEventListener('mousemove', function(e) {
+
+      mouse.x = e.clientX;
+      mouse.y = e.clientY;
+
+      for (let i = 0; i < 5; i++) {
+        particlesArray.push(new Particle(mouse.x, mouse.y));
+      }
+
+    });
+
+    class Particle {
+
+      constructor(x, y) {
+        this.x = x;
+        this.y = y;
+        this.size = Math.random() * 2.5 + 0.5;
+        this.speedX = (Math.random() - 0.5) * 1.5;
+        this.speedY = (Math.random() - 0.5) * 1.5;
+        this.color = Math.random() > 0.5
+          ? 'rgba(29, 154, 232, '
+          : 'rgba(0, 212, 255, ';
+
+        this.alpha = 1;
+        this.decay = Math.random() * 0.015 + 0.01;
+      }
+
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        this.alpha -= this.decay;
+      }
+
+      draw() {
+
+        ctx.save();
+
+        ctx.globalAlpha = this.alpha;
+
+        ctx.beginPath();
+
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+
+        ctx.shadowBlur = 10;
+        ctx.shadowColor = '#00d4ff';
+
+        ctx.fillStyle = this.color + this.alpha + ')';
+
+        ctx.fill();
+
+        ctx.restore();
+
+      }
+
+    }
+
+    function animate() {
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      for (let i = 0; i < particlesArray.length; i++) {
+
+        particlesArray[i].update();
+        particlesArray[i].draw();
+
+        if (particlesArray[i].alpha <= 0) {
+          particlesArray.splice(i, 1);
+          i--;
+        }
+
+      }
+
+      requestAnimationFrame(animate);
+
+    }
+
+    animate();
+
+  </script>
+
+</body>
+</html>

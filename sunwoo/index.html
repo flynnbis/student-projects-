@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Buildings for the Extreme</title>
+
+    <style>
+      html {scroll-behavior: smooth;}
+
+      body {margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom right, #000000, #0f172a, #1e3a8a);
+            color: white;}
+
+      header {text-align: center;
+              padding: 50px;
+              font-size: 50px;
+              font-weight: bold;
+              letter-spacing: 2px;
+              background: rgba(255,255,255,0.08);
+              backdrop-filter: blur(5px);
+              box-shadow: 0 0 20px rgba(255,255,255,0.1);}
+
+      .subtitle {font-size: 20px;
+                 font-weight: normal;
+                 margin-top: 10px;
+                 color: #cbd5e1;}
+      
+      #introduction {width: 80%;
+                    margin: 30px auto;
+                    padding: 25px;
+                    background-color: rgba(255,255,255,0.12);
+                    backdrop-filter: blur(8px);
+                    border-radius: 20px;
+                    color: white;
+                    text-align: center;
+                    box-shadow: 0 0 15px rgba(255,255,255,0.15);
+                    display: none;}
+
+      #introButton {background: none;
+                    border: none;
+                    color: white;
+                    font-size: 22px;
+                    font-weight: bold;
+                    cursor: pointer;}
+
+      #introButton:hover {color: #93c5fd;
+                          text-shadow: 0 0 10px #93c5fd;}
+
+      nav {display: flex;
+          justify-content: center;
+          gap: 40px;
+          background-color: rgba(255,255,255,0.08);
+          backdrop-filter: blur(8px);
+          padding: 18px;
+          position: sticky;
+          top: 0;}
+
+      nav a {text-decoration: none;
+             color: white;
+             font-size: 22px;
+             font-weight: bold;
+             transition: 0.3s;}
+
+      nav a:hover {color: #93c5fd;
+                   text-shadow: 0 0 10px #93c5fd;}
+
+      .main-content {display: grid;
+                     grid-template-columns: repeat(2, 1fr);
+                     gap: 80px;
+                     padding: 80px;
+                     justify-items: center;}
+
+      .card {background-color: rgba(255,255,255,0.15);
+             width: 320px;
+             border-radius: 30px;
+             padding: 25px;
+             text-align: center;
+             backdrop-filter: blur(8px);
+             box-shadow: 0 0 20px rgba(255,255,255,0.2);
+             transition: 0.3s;}
+
+      .card:hover {transform: translateY(-10px);}
+
+      .picture {height: 200px;
+                background-color: rgba(15,23,42,0.7);
+                border-radius: 20px;
+                margin-bottom: 20px;
+                overflow: hidden;}
+                  
+      .picture img {width: 100%;
+                    height: 200px;
+                    object-fit: cover;
+                    border-radius: 20px;}
+
+      .card a {text-decoration: none;
+               color: white;
+               font-size: 28px;
+               font-weight: bold;}
+
+      .card a:hover {color: #bfdbfe;}
+    </style>
+    <script>
+      function introduction()
+        {
+        let box = document.getElementById("introduction");
+
+        if (box.style.display === "block")
+          {
+          box.style.display = "none";
+          }
+        else
+          {
+          box.style.display = "block";
+          }
+        }
+
+    </script>
+  </head>
+  <body>
+    <header>
+      Buildings for the Extreme
+
+      <p class="subtitle">
+        Adaptive Materials for Survival
+      </p>
+    </header>
+
+    <nav>
+      <input type="button" value="Introduction" onclick="introduction()" id="introButton">
+      <a href="antarctica.html">Antarctica</a>
+      <a href="desert.html">Desert</a>
+      <a href="mars.html">Mars</a>
+      <a href="ocean.html">Ocean</a>
+      <a href="quiz.html">Quiz</a>
+    </nav>
+
+    <div id="introduction">
+      <h2>Introduction</h2>
+      <p>
+        This project explores how people could survive and build homes in some of the most extreme environments on Earth and beyond.
+      </p>
+      <p>
+        To overcome these challenges, engineers and scientists use special materials with different properties.
+      </p>
+    </div>
+
+    <div class="main-content">
+      <div class="card">
+        <div class="picture">
+          <img src="https://sp-ao.shortpixel.ai/client/to_auto,q_lossy,ret_img,w_1536/https://www.swoop-antarctica.com/blog/wp-content/uploads/2024/02/Peninsula-1536x864.jpg">
+        </div>
+        <a href="antarctica.html">Antarctica</a>
+      </div>
+
+      <div class="card">
+        <div class="picture">
+          <img src="https://www.beautifulworld.com/wp-content/uploads/2018/07/sahara-desert.jpg">
+        </div>
+        <a href="desert.html">Desert</a>
+      </div>
+
+      <div class="card">
+        <div class="picture">
+          <img src="https://science.nasa.gov/wp-content/uploads/2017/11/pia17944.jpg">
+        </div>
+        <a href="mars.html">Mars</a>
+      </div>
+
+      <div class="card">
+        <div class="picture">
+          <img src="https://static.ocean.org/oceanorg/2021/11/pexels-sebastian-voortman-189349-1024x683.jpg">
+        </div>
+        <a href="ocean.html">Ocean</a>
+      </div>
+
+  </div>
+
+</body>
+
+</html>

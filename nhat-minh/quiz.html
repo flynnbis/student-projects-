@@ -1,0 +1,146 @@
+<html>
+    <head>
+        <style>
+            body {
+                font-family: 'impact';
+                color: black;
+                margin-top: 20px;
+                background-image: url('Untitled design (5).png')
+            }
+
+            nav {
+                background-color: rgb(255, 211, 33);
+                padding: 35px;
+                margin: 0 20px;
+                text-align: center;
+                border-style: ridge;
+                border-color: rgb(255, 187, 0);
+                border-width: 5px;
+            }
+
+            nav a {
+                color: rgb(0, 0, 0);
+                font-size: 30px;
+                margin: 0 10px;
+            }
+
+            h1 {
+                font-family: "Rockwell";
+                color: black;
+                font-size: 60px;
+                text-align: center;
+                margin-bottom: 0px;
+            }
+
+            h2 {
+                font-family: "Rockwell";
+                color: black;
+                font-size: 20px;
+                text-align: center;
+                margin-top: 10px;
+                margin-bottom: 0px;
+            }
+
+            p {
+                font-family: 'Tahoma';
+                color: black;
+                font-size: 15px;
+                text-align: center;
+                margin-top: 20px;
+                margin-left: 300px;
+                margin-right: 300px;
+            }
+
+            button {
+                background-color:  rgb(255, 247, 141);
+                color: black;
+                font-family: "rockwell";
+                width: 125px;
+                height: 75px;
+                border-style: solid;
+                border-width: 2px;
+                border-color: rgb(233, 219, 113);
+                font-size: 12px;
+                vertical-align: top;
+                margin-top: 10px;
+                transition: 0.3s;
+            }
+
+            button:hover {
+                cursor: pointer;
+                background-color:rgb(242, 226, 107)
+            }
+
+            .container {
+                display: flex;           
+                justify-content: center; 
+                align-items: center;     
+                gap: 20px;              
+            }
+
+
+            a:hover {
+                opacity: 0.5;
+                transition: 0.25s;
+            }
+
+            a {
+                text-decoration: underline;
+                color: black;
+            }
+        </style>
+
+        <script>
+            function reveal1() {
+            var element = document.getElementById("answer1").style.display = "block";
+        }
+            function reveal2() {
+            var element = document.getElementById("answer2").style.display = "block";
+        }
+            function reveal3() {
+            var element = document.getElementById("answer3").style.display = "block";
+        }
+        </script>
+    </head>
+    <body>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="reference.html">Reference</a>
+            <a href="credit.html">Credits</a>
+        </nav>
+
+        <h1>Quiz</h1>
+        <h2>May the four choice be with you</h2>
+        <br>
+        <h2>Hempcrete is bio-composite of what?</h2>
+        <div class = "container">
+            <button onclick = "reveal1()">A. Sand and Cement</button>
+            <button onclick = "reveal1()">B. Plastic and Resin</button>
+            <button onclick = "reveal1()">C. Inner core of hemp plant and lime based binder</button>
+            <button onclick = "reveal1()">D. Wood Chips and Clay</button>
+            <br>
+            <h2 id = "answer1" style="display:none;">It was C!</h2>
+        </div>
+        <br>
+        <h2>Why is mycelium useful for making composites?</h2>
+        <div class = "container">
+            <button onclick = "reveal2()">A. It melts materials</button>
+            <button onclick = "reveal2()">B. It acts like glue</button>
+            <button onclick = "reveal2()">C. It melts metal fibres</button>
+            <button onclick = "reveal2()">D. It needs heavy machines</button>
+            <br>
+            <h2 id = "answer2" style="display:none;">It was B!</h2>
+        </div>
+        <br>
+        <h2>What gives traditional wood its brown color?</h2>
+        <div class = "container">
+            <button onclick = "reveal3()">A. Transparent Polymer</button>
+            <button onclick = "reveal3()">B. Light absorption and scattering</button>
+            <button onclick = "reveal3()">C. Air spaces in the wood</button>
+            <button onclick = "reveal3()">D. Lignin Insertion</button>
+            <br>
+            <h2 id = "answer3" style="display:none;">It was B!</h2>
+        </div>
+    </body>
+</html>

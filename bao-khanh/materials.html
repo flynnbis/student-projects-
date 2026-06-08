@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Research Materials</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function revealAnswer(id) {
+    document.getElementById(id).style.display = 'block';
+}
+
+function showImage(id) {
+    document.getElementById(id).style.display = 'flex';
+}
+    </script>
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="materials.html">Materials</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="references.html">References</a>
+    </nav>
+
+    <h1>Research Materials</h1>
+
+    <section class="material-box">
+
+        <h2>Cracked Clay / Aluminum Casting</h2>
+
+        <div class="placeholder">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWFDbbbhgiY_PcDeNrzLSeWq5yYOFNeFiaGg&s">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKtnHRruGdRrUMNbyeQXrJbHgG2gvi2ZgJHQ&s">
+        </div>
+
+
+        <p>
+            Cracked clay and aluminum casting can create lightweight but strong structures.
+            Aluminum is durable and recyclable, making it useful for sustainable construction.
+        </p>
+
+        <button onclick="revealAnswer('fact1')">Show Interesting Fact</button>
+
+        <p class="answer" id="fact1">
+            Aluminum can be recycled many times without losing quality.
+        </p>
+
+        <button onclick="showImage('image1')">Open Large Image</button>
+
+        <div id="image1" class="large-image">
+            <img src="https://www.steckermachine.com/hs-fs/hubfs/Images/Parts/Aluminum-Sand-Cast/950x522-Hwy.Trans.jpg?height=418&name=950x522-Hwy.Trans.jpg">
+        </div>
+
+    </section>
+
+
+    <section class="material-box">
+
+        <h2>Mycelium Insulation</h2>
+
+        <div class="placeholder">
+            PLACE MATERIAL IMAGE HERE
+        </div>
+
+        <p>
+            Mycelium is the root structure of fungi.
+            It can grow into molds and become a biodegradable insulation material.
+            It is lightweight, eco-friendly, and naturally fire resistant.
+        </p>
+
+        <button onclick="revealAnswer('fact2')">Show Interesting Fact</button>
+
+        <p class="answer" id="fact2">
+            Mycelium insulation can be grown using agricultural waste.
+        </p>
+
+        <button onclick="showImage('image2')">Open Large Image</button>
+
+        <div id="image2" class="large-image">
+            PLACE LARGE IMAGE HERE
+        </div>
+
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Homepage</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background: radial-gradient(circle at top left, #0f172a, #1f2937 45%, #4b5563 100%);
+            color: #e5e7eb;
+            display: flex;
+            flex-direction: column;
+            
+        }
+
+        header {
+            width: 100%;
+            background: rgba(15, 23, 42, 0.9);
+            padding: 16px 0;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.26);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            
+        }
+
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            padding: 0 12px;
+        }
+
+        nav a {
+            color: #d1d5db;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 999px;
+            transition: background 0.25s ease, transform 0.25s ease;
+        }
+
+        nav a:hover,
+        nav a:focus {
+            background: rgba(226, 232, 240, 0.14);
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        nav a.active {
+            background: #2563eb;
+            color: #ffffff;
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.22);
+        }
+
+        nav a.active:hover,
+        nav a.active:focus {
+            background: #1e40af;
+            box-shadow: 0 12px 24px rgba(30, 64, 175, 0.28);
+        }
+
+
+        
+
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 18px;
+            margin: 24px 0;
+        }
+
+        input[type="button"] {
+                background-color: #c1c1c1;
+                border: none;
+                color: black;
+                padding: 15px 40px;
+                text-align: center;
+                display: inline-block;
+                font-size: 16px;
+                margin: 6px 8px;
+                cursor: pointer;
+                border-radius: 14px;
+                box-shadow: 0 10px 22px rgba(0,0,0,0.22);
+                min-width: 130px;
+            }
+
+           
+            
+
+            input[value="Space"] {
+                background-color: #111827;
+                color: #f8fafc;
+                border: 2px solid rgba(255,255,255,0.35);
+            }
+            input[value="Sea"] {
+                background-color: #1d4ed8;
+                color: #f8fafc;
+                border: 2px solid rgba(255,255,255,0.35);
+            }
+            input[value="Desert"] {
+                background-color: #f59e0b;
+                color: #111827;
+                border: 2px solid rgba(255,255,255,0.35);
+            }
+            input[value="Arctic"] {
+                background-color: #e2e8f0;
+                color: #0f1727;
+                border: 2px solid rgba(15,23,39,0.15);
+            }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="Arctic.html">Arctic</a>
+      <a href="Desert.html">Desert</a>
+      <a href="Sea.html">Sea</a>
+      <a href="Space.html">Space</a>
+    </nav>
+    </header>
+    <h1 align="center" style="font-size: 3rem;">Welcome to the Survival Information page</h1>
+    <h2 align="center">Learn about the essential skills and knowledge needed to survive in the extremes.</h2>
+    <div style="max-width: 760px; margin: 0 auto 24px; padding: 20px; background: rgba(255,255,255,0.04); border-radius: 12px; color: #d1d5db; text-align: center;">
+        <p style="margin: 0 0 12px; line-height: 1.6;">Learn practical skills for shelter, water, food, first aid, navigation, and signaling across Arctic, Desert, Sea, and Space.</p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center;">
+            <div style="min-width:180px; padding:12px; background:rgba(255,255,255,0.03); border-radius:10px;">Arctic<br><small style="color:#9ca3af;">Cold-weather survival</small></div>
+            <div style="min-width:180px; padding:12px; background:rgba(255,255,255,0.03); border-radius:10px;">Desert<br><small style="color:#9ca3af;">Heat and water management</small></div>
+            <div style="min-width:180px; padding:12px; background:rgba(255,255,255,0.03); border-radius:10px;">Sea / Space<br><small style="color:#9ca3af;">Navigation and signaling</small></div>
+        </div>
+    </div>
+</div>
+
+    
+    <section style="max-width:1100px; margin:0 auto 48px; padding:20px;">
+        <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap:22px; align-items:center;">
+            
+            <article style="display:flex; gap:16px; align-items:flex-start; background:rgba(255,255,255,0.02); padding:12px; border-radius:12px;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCobexy7S60NsdpFNK5iv1DTrbhZK-rsDuwA&s" alt="Arctic" style="width:260px; height:160px; object-fit:cover; border-radius:10px; box-shadow:0 8px 26px rgba(0,0,0,0.45);">
+                <div style="flex:1; display:flex; flex-direction:column; justify-content:center; gap:8px;">
+                    <strong style="font-size:1.12rem;">Arctic</strong>
+                    <div>Extreme cold region with ice and snow.</div>
+                    <a href="Arctic.html" style="display:inline-block; width:max-content; background:#2563eb; color:#fff; padding:8px 14px; border-radius:8px; text-decoration:none; box-shadow:0 8px 20px rgba(37,99,235,0.18); transition:transform .15s ease;">Learn more →</a>
+                </div>
+            </article>
+
+            <article style="display:flex; gap:16px; align-items:flex-start; background:rgba(255,255,255,0.02); padding:12px; border-radius:12px;">
+                <img src="https://www.shutterstock.com/image-photo/vast-orange-sand-dune-desert-600nw-2725294555.jpg" alt="Desert" style="width:260px; height:160px; object-fit:cover; border-radius:10px; box-shadow:0 8px 26px rgba(0,0,0,0.45);">
+                <div style="flex:1; display:flex; flex-direction:column; justify-content:center; gap:8px;">
+                    <strong style="font-size:1.12rem;">Desert</strong>
+                    <div>Hot, dry landscapes where water is scarce.</div>
+                    <a href="Desert.html" style="display:inline-block; width:max-content; background:#f59e0b; color:#071024; padding:8px 14px; border-radius:8px; text-decoration:none; box-shadow:0 8px 20px rgba(245,158,11,0.18); transition:transform .15s ease;">Learn more →</a>
+                </div>
+            </article>
+
+            <article style="display:flex; gap:16px; align-items:flex-start; background:rgba(255,255,255,0.02); padding:12px; border-radius:12px;">
+                <img src="https://static.toiimg.com/thumb/resizemode-4,width-1280,height-720,msid-122784728/122784728.jpg" alt="Sea" style="width:260px; height:160px; object-fit:cover; border-radius:10px; box-shadow:0 8px 26px rgba(0,0,0,0.45);">
+                <div style="flex:1; display:flex; flex-direction:column; justify-content:center; gap:8px;">
+                    <strong style="font-size:1.12rem;">Sea</strong>
+                    <div>Open water environments focused on navigation and survival.</div>
+                    <a href="Sea.html" style="display:inline-block; width:max-content; background:#0ea5e9; color:#042033; padding:8px 14px; border-radius:8px; text-decoration:none; box-shadow:0 8px 20px rgba(14,165,233,0.14); transition:transform .15s ease;">Learn more →</a>
+                </div>
+            </article>
+
+            <article style="display:flex; gap:16px; align-items:flex-start; background:rgba(255,255,255,0.02); padding:12px; border-radius:12px;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFeMmCDfemKgFdRVK_5C5dJapk9ro97cKGEg&s" alt="Space" style="width:260px; height:160px; object-fit:cover; border-radius:10px; box-shadow:0 8px 26px rgba(0,0,0,0.45);">
+                <div style="flex:1; display:flex; flex-direction:column; justify-content:center; gap:8px;">
+                    <strong style="font-size:1.12rem;">Space</strong>
+                    <div>The vacuum beyond Earth; life support and extreme conditions.</div>
+                    <a href="Space.html" style="display:inline-block; width:max-content; background:#6b21a8; color:#fff; padding:8px 14px; border-radius:8px; text-decoration:none; box-shadow:0 8px 20px rgba(107,33,168,0.16); transition:transform .15s ease;">Learn more →</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <nav>
+
+
+
+    </nav>
+
+</body>
+</html>
+</html>

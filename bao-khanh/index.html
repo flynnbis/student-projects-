@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MIT Web Dev Research Project</title>
+    <style>
+        body {
+    background-color: lightgreen;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: darkgreen;
+    padding: 12px;
+    margin-bottom: 20px;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+h1 {
+    color: darkgreen;
+}
+
+h2 {
+    color: darkblue;
+    margin-top: 30px;
+}
+
+p {
+    font-size: 16px;
+    max-width: 700px;
+    margin: 10px auto;
+    line-height: 1.6;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+.material-box,
+.quiz-box {
+    background-color: white;
+    padding: 20px;
+    margin: 25px auto;
+    width: 80%;
+    border-radius: 10px;
+    border: 3px solid darkgreen;
+}
+
+.placeholder {
+    width: 320px;
+    height: 200px;
+    border: 3px dashed darkgreen;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0fff0;
+    font-weight: bold;
+}
+
+.large-image {
+    display: none;
+    width: 500px;
+    height: 300px;
+    border: 3px solid darkblue;
+    margin: 20px auto;
+    background-color: #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+button {
+    background-color: darkgreen;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+button:hover {
+    background-color: green;
+}
+
+.answer {
+    display: none;
+    color: darkblue;
+    font-weight: bold;
+    margin-top: 10px;
+}
+    </style>>
+    <script>
+        function revealAnswer(id) {
+    document.getElementById(id).style.display = 'block';
+}
+
+function showImage(id) {
+    document.getElementById(id).style.display = 'flex';
+}
+    </script>
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="materials.html">Materials</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="references.html">References</a>
+    </nav>
+
+    <header>
+        <h1>MIT Web Dev Research Project</h1>
+        <h2>Unusual Building Materials</h2>
+    </header>
+
+    <section>
+        <h2>Project Introduction</h2>
+
+        <p>
+            This project explores unusual materials that can be used in future construction.
+            Some modern materials are environmentally friendly, strong, lightweight, and help reduce waste.
+        </p>
+
+        <p>
+            In this website, I researched:
+        </p>
+
+        <ul>
+            <li>Cracked Clay / Aluminum Casting</li>
+            <li>Mycelium Insulation</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>What is Sustainable Construction?</h2>
+
+        <p>
+            Sustainable construction means creating buildings that are environmentally friendly,
+            energy efficient, and reduce waste.
+        </p>
+        <img src="https://media.cnn.com/api/v1/images/stellar/prod/200316115207-02-green-buildings-around-the-world-restricted.jpg?q=w_2930,h_1953,x_0,y_0,c_fill/w_1093" width="1000" height="500">
+    </section>
+        </div>
+    </section>
+
+</body>
+</html>

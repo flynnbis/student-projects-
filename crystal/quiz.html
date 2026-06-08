@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <style>
+            body {
+                background-color:azure;
+                font-family: Georgia;
+                margin: 0;
+                padding: 20px;
+                text-align:center;
+            }
+
+                nav{    
+                    background-color:blue;
+                    padding: 12px;
+                }
+
+                nav a {
+                    color:beige;
+                    margin: 0 15px;
+                    font-size: 18px;
+                }
+            
+
+
+            .answer{
+                display: none;
+                color:brown;
+                font-weight: blod;
+            }
+
+           
+        </style>
+
+        <script>
+            function reveal_answer(id) {
+                document.getElementById(id).style.display='block';
+            }
+        </script>
+    </head>
+    
+    <body>
+    
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="reference.html">Reference</a>
+
+        </nav>
+
+        <h1>QUIZZ TIME!</h1>
+       <P>Click the butten under each question to reveal the answer</P>
+
+       <p>1. What are Popcorn Panels made from?</p>
+       <button onclick="reveal_answer('a1')">Reveal Answer</button>
+       <p id="a1"  class="answer">They are made from popped corn granules. </p>
+
+       <p>2. What type of material is Hempcrete?</p>
+       <button onclick="reveal_answer('a2')">Reveal Answer</button>
+       <p id="a2"  class="answer">It is a lightweight bio-composite building material.</p>
+
+       <p>3. What is mycelium?</p>
+       <button onclick="reveal_answer('a3')">Reveal Answer</button>
+       <p id="a3"  class="answer">It is the root-like structure of a fungus.</p>
+    
+       <p>4. What are Popcorn Panels used for?</p>
+       <button onclick="reveal_answer('a4')">Reveal Answer</button>
+       <p id="a4"  class="answer">They are used as eco-friendly insulation or building panels.</p>
+    
+       <p>5. What plant is used to make Hempcrete?</p>
+       <button onclick="reveal_answer('a5')">Reveal Answer</button>
+       <p id="a5"  class="answer">The industrial hemp plant is used to make it.</p>
+    
+       <p>6. What are the thread-like filaments in mycelium called?</p>
+       <button onclick="reveal_answer('a6')">Reveal Answer</button>
+       <p id="a6"  class="answer">They are called hyphae.</p>
+    
+    
+    
+    
+    
+
+    
+    </body>
+</html>

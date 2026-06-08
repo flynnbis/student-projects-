@@ -1,0 +1,280 @@
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Desert</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background: radial-gradient(circle at top left, #fff7e7 0%, #f2f5ff 42%, #ffffff 100%);
+            color: #1f2937;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        #div-desert {
+            padding: 5rem 2rem;
+            max-width: 1080px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            color: #0f172a;
+            font-size: 3rem;
+            margin: 0 0 0.5rem;
+            text-align: center;
+            letter-spacing: 0.04em;
+        }
+        
+        h2 {
+            color: #0f172a;
+            font-size: 1.9rem;
+            margin-top: 2.2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        h3 {
+            color: #111827;
+            font-size: 1.15rem;
+            line-height: 1.75;
+            margin-top: 0;
+        }
+
+        p {
+            color: #334155;
+            line-height: 1.8;
+            margin: 0.75rem 0;
+        }
+        figcaption {
+            color: #475569;
+            font-size: 0.95rem;
+            padding: 0.9rem 1rem 1rem;
+            background: #f8fafc;
+        }
+
+        li {
+            color: #334155;
+            margin-bottom: 0.75rem;
+        }
+
+        header {
+            width: 100%;
+            background: rgba(15, 23, 42, 0.92);
+            padding: 1rem 0;
+            box-shadow: 0 14px 35px rgba(15, 23, 42, 0.16);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            padding: 0 16px;
+        }
+
+        nav a {
+            color: #d1d5db;
+            text-decoration: none;
+            padding: 0.9rem 1.4rem;
+            border-radius: 999px;
+            transition: background 0.3s ease, transform 0.3s ease, color 0.3s ease;
+        }
+
+        nav a:hover,
+        nav a:focus {
+            background: rgba(226, 232, 240, 0.18);
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        nav a.active {
+            background: #2563eb;
+            color: #ffffff;
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.22);
+        }
+
+        nav a.active:hover,
+        nav a.active:focus {
+            background: #1e40af;
+            box-shadow: 0 12px 24px rgba(30, 64, 175, 0.28);
+        }
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 18px;
+            margin: 24px 0;
+        }
+
+        section {
+            background: rgba(255, 255, 255, 0.93);
+            border-radius: 1.3rem;
+            padding: 1.8rem 1.8rem;
+            box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+            margin: 1.8rem 0;
+        }
+
+        .images {
+            display: grid;
+            gap: 1.25rem;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        }
+
+        .images figure {
+            margin: 0;
+            border-radius: 1rem;
+            overflow: hidden;
+            background: #f8fafc;
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+        }
+
+        .images figure:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 40px rgba(15, 23, 42, 0.14);
+        }
+
+        .images img {
+            width: 100%;
+            display: block;
+            height: auto;
+        }
+
+        footer {
+            margin-top: 2rem;
+            padding: 1.25rem 1.5rem;
+            border-radius: 1.1rem;
+            background: rgba(241, 245, 249, 0.95);
+            color: #475569;
+            font-size: 0.95rem;
+            text-align: center;
+            box-shadow: 0 10px 22px rgba(15, 23, 42, 0.08);
+        }
+
+        #hot {
+            background-color: #f8fafc;
+            color: black;
+            
+        }
+
+        header p {
+      margin: 12px auto 0;
+      max-width: 720px;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: #000000;
+    }
+
+        
+    </style>
+
+
+
+
+
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="Arctic.html">Arctic</a>
+            <a href="Desert.html" class="active">Desert</a>
+            <a href="Sea.html">Sea</a>
+            <a href="Space.html">Space</a>
+        </nav>
+    </header>
+    <header id="hot"><h1 align="center">Desert</h1>
+        <p align="center">A desert is a landscape where little precipitation occurs and, consequently, living conditions create unique biomes and ecosystems.</p>
+    
+    </header>
+    <main id="div-desert">
+        
+        
+        <h2>Why is this environment extreme?</h2>
+        <h3>Deserts are extreme because they have very little water, intense sunlight, and wide temperature swings. Days can be very hot and nights can be very cold, so plants and animals must adapt to survive.</h3>
+
+        <section>
+            <h2>Images of the Desert</h2>
+            <p>Below are example images showing typical desert landscapes, plants and animals.</p>
+            <div class="images">
+                <figure>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Rub_al_Khali_002.JPG/1280px-Rub_al_Khali_002.JPG" alt="Sand dunes"/>
+                    <figcaption>Sand dunes in a hot desert.</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMvBMrGLnruerHCesKhU0TI94riQewIkrmSQ&s" alt="Desert plant"/>
+                    <figcaption>Cacti and drought-adapted plants.</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://media.cntraveler.com/photos/57211a94fe5fd76f60bc2760/master/w_1024%2Cc_limit/deserts-gobi-cr-GettyImages-582205681.jpg" alt="Desert fox"/>
+                    <figcaption>Animals adapted to desert life.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section>
+            <h2>Climate and Environment Details</h2>
+            <h3>Temperature and Rainfall</h3>
+            <p>Hot deserts receive less than 250 mm of rain per year. Daytime temperatures can exceed 45°C (113°F) while nights can fall below freezing in some deserts. Low humidity and strong solar radiation increase evaporative water loss.</p>
+
+            <h3>Soil and Landscape</h3>
+            <p>Desert soils are often sandy or rocky with low organic matter. Vegetation is sparse and concentrated near water sources. Wind shapes the landscape, forming dunes and eroding rock.</p>
+        </section>
+
+        <section>
+            <h2>Flora and Fauna</h2>
+            <p>Plants such as cacti, succulents, and deep-rooted shrubs store water or reduce water loss. Animals are often nocturnal, burrow, or have specialized kidneys to conserve water (e.g., kangaroo rats, fennec foxes, camels).</p>
+        </section>
+
+        <section>
+            <h2>Suitable Materials for Building a Shelter</h2>
+            <p>When building a shelter in a desert, the goal is to reduce sun exposure and retain cooler temperatures. Suitable materials and approaches include:</p>
+            <ul>
+                <li>Mud, adobe or rammed earth: good thermal mass that keeps interiors cool by absorbing heat during the day and releasing it at night.</li>
+                <li>Stone and rock: durable and provides thermal mass; often used for long-term structures.</li>
+                <li>Canvas, woven mats or shade cloth: lightweight options for temporary shade; paired with ventilation to reduce heat.</li>
+                <li>Insulating layers and reflective materials: reflective sheets or light-coloured surfaces reduce heat absorption.</li>
+                <li>Local vegetation and branches: used for simple shade structures or windbreaks.</li>
+            </ul>
+            <p>Design tips: orient entrances away from prevailing sun and wind, use thick walls for thermal buffering, include ventilation for nighttime cooling, and collect or store water if possible.</p>
+        </section>
+
+        <section>
+            <h2>Human Adaptations and Survival Tips</h2>
+            <ul>
+                <li>Wear loose, light-coloured clothing to reflect sunlight and maintain airflow.</li>
+                <li>Stay hydrated; ration activity to early morning or late evening to avoid peak heat.</li>
+                <li>Use shade and insulation—even simple shelters can greatly reduce heat stress.</li>
+                <li>Know signs of heat illness (heat exhaustion, heat stroke) and hypothermia at night.</li>
+                <li>Carry navigation tools and signal devices; deserts can be vast and disorienting.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Conservation and Human Impact</h2>
+            <p>Desert ecosystems are fragile. Overgrazing, off-road vehicles, and unsustainable water extraction can damage soils and native species. Conservation focuses on protecting water sources, preventing erosion, and preserving native plants and habitats.</p>
+        </section>
+
+        <footer>
+            <p>Sources: general ecology and survival knowledge(Source provided from AI).</p>
+        </footer>
+    </main>
+
+   
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,220 @@
+<html>
+    <head>
+        <style>
+            body {
+                background-color: rgb(211, 209, 178);
+                font-family: Arial;
+                margin: 0;
+                padding: 20px;
+                text-align: center;
+            }
+
+            nav {
+                background-color: bisque;
+                padding: 12px;
+
+            }   
+            
+            nav a {
+                color: rgb(111, 164, 124);
+                margin: 0 15px;
+                font-size: 18px;
+            }
+
+            img {
+                width: 320px;
+                height: 300px;
+                object-fit: cover;
+                border: 3px solid rgb(168, 168, 91);
+                margin: 10px auto;
+                display: block;
+            }
+
+            .answer {
+                display: none;
+                color: darkolivegreen;
+                font-weight: bold;
+            }
+
+        </style>
+
+        <script>
+            function reveal_answer(id) {
+                document.getElementById(id).style.display= 'block';
+                
+            }
+        </script>
+    </head>
+
+    <body>
+         <nav>
+            <a href="index.html">Home</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="reference.html">Reference</a>
+
+         </nav>
+    <h1> Time to test your knowledge! </h1>
+<hr>
+    <p>Click the button under each question to reveal the answer</p>
+    <p><b>1. Which material is stronger?  Hemp paper or wood-based paper?</b></p>
+
+    <fieldset>
+        <legend>Choose the correct answer</legend>
+        <div>
+            <input type="checkbox" id="Hemp" name="answer" value="Hemp" />
+            <label for="Hemp">Hemp</label>
+        </div>
+        <div>
+            <input type="checkbox" id="Wood-based" name="answer" value="Wood-based" />
+            <label for="Wood-based">Wood-based</label>
+        </div>
+    </fieldset>
+    <hr> 
+    <button onclick="reveal_answer('a1')">Reveal answer</button>
+    <p id="a1" class="answer">Hemp paper is stronger than wood-based paper.</P>
+
+    
+<hr>
+    <p>Click the button under each question to reveal the answer</p>
+    <p><b>2. Why is hemp considered an environmentally friendly building material?</b></p>
+
+    <fieldset>
+        <legend>Choose the correct answer</legend>
+        <div>
+            <input type="checkbox" id="plastic_waste" name="answer" value="plastic waste" />
+            <label for="plastic_waste">It's made from plastic waste</label>
+        </div>
+        <div>
+            <input type="checkbox" id="Wood-based" name="answer" value="renewable" />
+            <label for="renewable">It grows quickly and is renewable</label>
+        </div>
+        <div>
+            <input type="checkbox" id="underground" name="answer" value="underground" />
+            <label for="underground">It's mined underground
+</label>
+        </div>
+        <div>
+            <input type="checkbox" id="Wood-based" name="answer" value="renewable" />
+            <label for="renewable">It requires large amounts of fuel</label>
+        </div>
+    </fieldset>
+    <hr> 
+    <button onclick="reveal_answer('a2')">Reveal answer</button>
+    <p id="a2" class="answer">It grows quickly and is renewable</P>
+<hr>
+<p>Click the button under each question to reveal the answer</p>
+<p><b>3. What is one major disadvantage of using salt in construction?</b></p>
+
+<fieldset>
+    <legend>Choose the correct answer</legend>
+    <div>
+        <input type="checkbox" id="heavy" name="answer" value="heavy" />
+        <label for="heavy">It is too heavy</label>
+    </div>
+    <div>
+        <input type="checkbox" id="fire" name="answer" value="fire" />
+        <label for="fire">It easily catches fire</label>
+    </div>
+    <div>
+        <input type="checkbox" id="dissolves" name="answer" value="dissolves" />
+        <label for="dissolves">It dissolves in water</label>
+    </div>
+    <div>
+        <input type="checkbox" id="recycle" name="answer" value="recycle" />
+        <label for="recycle">It cannot be recycled</label>
+    </div>
+</fieldset>
+
+<hr>
+<button onclick="reveal_answer('a3')">Reveal answer</button>
+<p id="a3" class="answer">It dissolves in water</p>
+
+<hr>
+<p>Click the button under each question to reveal the answer</p>
+<p><b>4. How are wine bottles commonly used in buildings?</b></p>
+
+<fieldset>
+    <legend>Choose the correct answer</legend>
+    <div>
+        <input type="checkbox" id="roof" name="answer" value="roof" />
+        <label for="roof">As roof tiles</label>
+    </div>
+    <div>
+        <input type="checkbox" id="decorative" name="answer" value="decorative" />
+        <label for="decorative">As decorative walls and insulation</label>
+    </div>
+    <div>
+        <input type="checkbox" id="wiring" name="answer" value="wiring" />
+        <label for="wiring">As electrical wiring</label>
+    </div>
+    <div>
+        <input type="checkbox" id="foundation" name="answer" value="foundation" />
+        <label for="foundation">As concrete foundations</label>
+    </div>
+</fieldset>
+
+<hr>
+<button onclick="reveal_answer('a4')">Reveal answer</button>
+<p id="a4" class="answer">As decorative walls and insulation</p>
+
+<hr>
+<p>Click the button under each question to reveal the answer</p>
+<p><b>5. What is a benefit of hemp in construction?</b></p>
+
+<fieldset>
+    <legend>Choose the correct answer</legend>
+    <div>
+        <input type="checkbox" id="water" name="answer" value="water" />
+        <label for="water">It absorbs large amounts of water</label>
+    </div>
+    <div>
+        <input type="checkbox" id="insulation" name="answer" value="insulation" />
+        <label for="insulation">It provides good thermal insulation</label>
+    </div>
+    <div>
+        <input type="checkbox" id="dissolve" name="answer" value="dissolve" />
+        <label for="dissolve">It dissolves easily</label>
+    </div>
+    <div>
+        <input type="checkbox" id="pollution" name="answer" value="pollution" />
+        <label for="pollution">It increases pollution</label>
+    </div>
+</fieldset>
+
+<hr>
+<button onclick="reveal_answer('a5')">Reveal answer</button>
+<p id="a5" class="answer">It provides good thermal insulation</p>
+
+<hr>
+<p>Click the button under each question to reveal the answer</p>
+<p><b>6. Which unusual building material helps reduce waste by reusing discarded items?</b></p>
+
+<fieldset>
+    <legend>Choose the correct answer</legend>
+    <div>
+        <input type="checkbox" id="salt" name="answer" value="salt" />
+        <label for="salt">Salt</label>
+    </div>
+    <div>
+        <input type="checkbox" id="hemp2" name="answer" value="hemp" />
+        <label for="hemp2">Hemp</label>
+    </div>
+    <div>
+        <input type="checkbox" id="wine" name="answer" value="wine" />
+        <label for="wine">Wine bottles</label>
+    </div>
+    <div>
+        <input type="checkbox" id="cement" name="answer" value="cement" />
+        <label for="cement">Cement</label>
+    </div>
+</fieldset>
+
+<hr>
+<button onclick="reveal_answer('a6')">Reveal answer</button>
+<p id="a6" class="answer">Wine bottles</p>
+        
+    </body>
+</html>
+        </style>
+    </head> 
+</html>

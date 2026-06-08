@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Material Environments</title>
+    <style>
+        body {
+            background-color: lightpink;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #792b55;
+            font-size: 32pt;
+        }
+
+        p {
+            font-size: 16pt;
+            color: #333;
+        }
+
+        table {
+            margin: 20px auto;
+            border-spacing: 15px;
+        }
+
+        .env-button {
+            width: 180px;
+            height: 100px;
+            font-size: 14pt;
+            font-weight: bold;
+            color: #792b55;
+            background-color: lemonchiffon;
+            border: 2px solid #792b55;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .env-button:hover {
+            background-color: #fffdec;
+        }
+
+        #infoDisplay {
+            font-size: 18pt;
+            font-weight: bold;
+            color: #792b55;
+            margin-top: 20px;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Which material works best?</h1>
+    <p>Click on an environment to see which material works best there!</p>
+
+    <table>
+        <tr>
+            <td><button class="env-button" onclick="showMaterial('Desert', 'UV-resistant plastics and treated concrete')">Desert</button></td>
+            <td><button class="env-button" onclick="showMaterial('Marine', 'Stainless steel and fiberglass')">Marine</button></td>
+            <td><button class="env-button" onclick="showMaterial('Grassland', 'Galvanized steel and treated wood')">Grassland</button></td>
+        </tr>
+        <tr>
+            <td><button class="env-button" onclick="showMaterial('Tropical Forest', 'Waterproof composites and copper-treated wood')">Tropical Forest</button></td>
+            <td><button class="env-button" onclick="showMaterial('Freshwater', 'Aluminum and PVC')">Freshwater</button></td>
+            <td><button class="env-button" onclick="showMaterial('Tundra', 'Specialized rubber and low-temperature steel')">Tundra</button></td>
+        </tr>
+        <tr>
+            <td><button class="env-button" onclick="showMaterial('Temperate Forest', 'Cedar wood and coated steel')">Temperate Forest</button></td>
+            <td><button class="env-button" onclick="showMaterial('Savanna', 'Heat-reflective metals')">Savanna</button></td>
+            <td><button class="env-button" onclick="showMaterial('Boreal Forest', 'Heavy timber and rust-resistant alloys')">Boreal Forest</button></td>
+        </tr>
+    </table>
+
+    <div id="infoDisplay">Click a button above to find out!</div>
+
+    <script>
+        function showMaterial(environment, material) {
+            document.getElementById("infoDisplay").innerHTML = environment + " environment: Best material is " + material + ".";
+        }
+    </script>
+
+</body>
+</html>
+

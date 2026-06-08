@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <title>Hempcrete Quiz</title>
+
+        <style>
+
+            body{
+                background-color: #dff7f7;
+                text-align: center;
+                font-family: monospace;
+                padding: 20px;
+                margin: 0px;
+            }
+
+            nav {
+                background-color: #caede0;
+                padding: 12px;
+            }
+
+            nav a {
+                color: #6cccb1;
+                margin: 0 15px;
+                text-decoration: none;
+                font-size: 18px;
+            }
+
+            h1{
+                color: #5c9484;
+            }
+
+            h2{
+                color: #5c9484;
+            }
+
+            p{
+                font-size: 18px;
+                max-width: 650px;
+                margin: 10px auto;
+                color: #6cccb1;
+            }
+
+            img{
+                width: 520px;
+                height: 400px;
+                border: 3px solid #caede0;
+                margin: 10px auto;
+                display: black;
+            }
+
+            .ans{
+                display:none;
+                color:#6cccb1;
+                font-weight: bold;
+            }
+
+            hr{
+                color: #6cccb1;
+            }
+
+            button{
+                background-color:#6cccb1;
+                color:#5c9484;
+                font-family: monospace;
+                border: none;
+            }
+
+        </style>
+
+        <script>
+            function revans(id){
+                document.getElementById(id).style.display='block';
+            }
+        </script>
+    </head>
+
+    <body>
+        <nav>
+            <a href="hempcrete.html">Information</a>
+            <a href="quiz1.html">Quiz</a>
+            <a href="references.html">References</a>
+        </nav>
+
+            <h1>Quiz questions</h1>
+            <p>This is a quiz about hempcrete</p>
+
+            <br>
+
+            <p>Click the button under each question to reveal the answer</p>
+
+            <hr>
+
+            <br>
+
+            <img src="https://www.astm.org/v3/assets/blt5eb0a2cb04534832/blt0ce64a0bcdb7bb14/67b2eeb4c67ec98c6d802dd8/Hempcrete3.jpg">
+            <p><b>What is hempcrete made out of?</b></p>
+            <button onclick="revans('a1')">Reveal Answer</button>
+            <p id="a1" class="ans">Hempcrete is made out of hemp hurds, which are the woody cores of the hemp plant that is mixed with a lime based binder.</p>
+
+            <br>
+
+            <img src="https://static.dezeen.com/uploads/2024/05/house-made-by-many-hands-cairn-hempcrete-london-residential-architecture-extensions_dezeen_2364_hero.jpg">
+            <p><b>What is hempcrete used for?</b></p>
+            <button onclick="revans('a2')">Reveal Answer</button>
+            <p id="a2" class="ans">Hempcrete is mainly used for insulating walls and floors.</p>
+
+            <br>
+            
+            <img src="https://www.interreg-central.eu/wp-content/uploads/2024/11/Hempcrete-Wall-1.webp">
+            <p><b>What makes hempcrete carbon negative?</b></p>
+            <button onclick="revans('a3')">Reveal Answer</button>
+            <p id="a3" class="ans">It absorbs more CO2 in its life cycle than it emits.</p>
+
+        </nav>
+    </body>
+</html>

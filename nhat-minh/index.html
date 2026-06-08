@@ -1,0 +1,145 @@
+<html>
+    <head>
+        <style>
+            body {
+                font-family: 'impact';
+                color: black;
+                margin-top: 20px;
+                background-image: url('Untitled design (5).png')
+            }
+
+            nav {
+                background-color: rgb(255, 211, 33);
+                padding: 35px;
+                margin: 0 20px;
+                text-align: center;
+                border-style: ridge;
+                border-color: rgb(255, 187, 0);
+                border-width: 5px;
+            }
+
+            nav a {
+                color: rgb(0, 0, 0);
+                font-size: 30px;
+                margin: 0 10px;
+            }
+
+            h1 {
+                font-family: "Rockwell";
+                color: black;
+                font-size: 60px;
+                text-align: center;
+                margin-bottom: 0px;
+            }
+
+            h2 {
+                font-family: "Rockwell";
+                color: black;
+                font-size: 20px;
+                text-align: center;
+                margin-top: 10px;
+                margin-bottom: 0px;
+            }
+
+            p {
+                font-family: 'Tahoma';
+                color: black;
+                font-size: 15px;
+                text-align: center;
+                margin-top: 20px;
+            }
+
+
+
+            button {
+                background-color:  rgb(255, 247, 141);
+                color: black;
+                font-family: "rockwell";
+                width: 250px;
+                height: 220px;
+                border-style: solid;
+                border-width: 8px;
+                border-color: rgb(233, 219, 113);
+                font-size: 30px;
+                vertical-align: top;
+                margin-top: 20px;
+                transition: 0.3s;
+            }
+
+            button:hover {
+                cursor: pointer;
+                background-color:rgb(242, 226, 107)
+            }
+
+            .container {
+                display: flex;           
+                justify-content: center; 
+                align-items: center;     
+                gap: 20px;              
+            }
+
+            img {
+                display: block;
+                margin-top: 25px;
+                border-style: dashed;
+                border-color:rgb(255, 233, 63);
+                border-width: 5px;
+                width: 740;
+                height: 416;
+            }
+
+            .imgcontainer {
+                display: flex;
+                justify-content: center;
+            }
+
+            .round {
+                border-radius: 20px
+            }
+
+            a:hover {
+                opacity: 0.5;
+                transition: 0.25s;
+            }
+
+            a {
+                text-decoration: underline;
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="reference.html">Reference</a>
+            <a href="credit.html">Credits</a>
+        </nav>
+
+        <h1>Weirdo Materios</h1>
+        <h2>The dumber the better somehow :)</h2>
+        <br>
+
+        <p>This website will list out 3 very abnormal materials used in today or predominantly in the future. </p>
+        <div class = "container">  
+            <a href = "hempcrete.html">
+                    <button>
+                        Hempcrete
+                    </button>
+            </a>
+            <a href = "mycelium.html">
+                    <button>
+                        Mycelium-Based
+                    </button>
+            </a>
+            <a href = "transparentwood.html">
+                    <button>
+                    Transparent Wood
+                    </button>
+            </a>
+        </div>
+        <div class = "imgcontainer">
+            <img src="https://img.magnific.com/free-vector/yellow-abstract-wallpaper-design_1409-10056.jpg?semt=ais_hybrid&w=740&q=80" alt = "just a fun picture :)" class="round">
+        </div>
+    </body>
+</html>

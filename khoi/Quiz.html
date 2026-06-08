@@ -1,0 +1,144 @@
+<html>
+    <head>
+        <style>
+           nav {
+               background-color: cyan;
+               padding: 12px;
+               text-decoration: none;
+               margin-left:-10px;
+               margin-right:-10px;
+               
+               margin-bottom:-10px;
+                }
+            a{
+                padding-bottom:10px;
+                text-decoration:none;
+                font-size:18px;
+                padding-left: 10px;
+                padding-right: 10px;
+
+            }
+            body{
+                text-align: center;
+                background-image: url('https://static.vecteezy.com/system/resources/thumbnails/039/136/629/small_2x/red-brick-wall-transparent-png.png');
+                background-position: center;
+                background-size: cover;
+                background-attachment: fixed;
+            }
+            h1{
+                font-size: 72px;
+                color:white;
+            }
+            h2{
+                color:white;
+            }
+            p{
+                font-size: 24px;
+                color:white;
+                padding-left:40px;
+                padding-right:40px;
+            }
+            img{
+                margin-left:540px;
+            }
+            button{
+                padding:2px;
+            }
+            #arrow{
+                margin-bottom:90px;
+            }
+            #Rice{
+                margin-bottom:40px;
+            }
+        </style>
+        <script>
+            function Wrong(){
+                document.getElementById("Wrong").style.backgroundColor = "red";
+                document.getElementById("Wrong").style.color = "white";
+            }
+            function Wrong1(){
+                document.getElementById("Wrong1").style.backgroundColor = "red";
+                document.getElementById("Wrong1").style.color = "white";
+            }
+            function Wrong2(){
+                document.getElementById("Wrong2").style.backgroundColor = "red";
+                document.getElementById("Wrong2").style.color = "white";
+            }
+            function Correct(){
+                var img = document.getElementById("Correct");
+                img.style.display = "block";
+                document.getElementById("CorrectButton").style.backgroundColor = "Lime";
+                document.getElementById("CorrectButton").style.color = "white";
+            }
+            function Wrong3(){
+                document.getElementById("Wrong3").style.backgroundColor = "red";
+                document.getElementById("Wrong3").style.color = "white";
+            }
+            function Wrong4(){
+                document.getElementById("Wrong4").style.backgroundColor = "red";
+                document.getElementById("Wrong4").style.color = "white";
+            }
+            function Wrong5(){
+                document.getElementById("Wrong5").style.backgroundColor = "red";
+                document.getElementById("Wrong5").style.color = "white";
+            }
+            function Correct1(){
+                var img = document.getElementById("Correct1");
+                img.style.display = "block";
+                document.getElementById("CorrectButton1").style.backgroundColor = "Lime";
+                document.getElementById("CorrectButton1").style.color = "white";
+            }
+            function Wrong8(){
+                document.getElementById("Wrong8").style.backgroundColor = "red";
+                document.getElementById("Wrong8").style.color = "white";
+            }
+            function Wrong6(){
+                document.getElementById("Wrong6").style.backgroundColor = "red";
+                document.getElementById("Wrong6").style.color = "white";
+            }
+            function Wrong7(){
+                document.getElementById("Wrong7").style.backgroundColor = "red";
+                document.getElementById("Wrong7").style.color = "white";
+            }
+            function Correct2(){
+                var img = document.getElementById("Correct2");
+                img.style.display = "block";
+                document.getElementById("CorrectButton2").style.backgroundColor = "Lime";
+                document.getElementById("CorrectButton2").style.color = "white";
+            }
+        </script>
+    </head>
+    <body>
+        <nav>
+            <a href="Index.html">Home</a>
+            <a href="Sticky Rice Mortar.html">Sticky Rice Mortar</a>
+            <a href="Hempcrete.html">Hempcrete</a>
+            <a href="Popcorn.html">Popcorn</a>
+            <a href="References.html">References</a>
+            <a href="Quiz.html">Quiz</a>
+        </nav>
+        <h1>QUIZ TIME!</h1>
+        <p>Answer the questions below and test your knowledge.</p>
+        <h2>Q1, What wonder of the world is Sticky Rice Mortar found?</h2> 
+        <button onclick="Wrong()" id="Wrong">Taj Mahal</button>
+        <button onclick="Correct()" id="CorrectButton">The Great Wall Of China</button>
+        <button onclick="Wrong1()" id="Wrong1">The Colosseum</button>
+        <button onclick="Wrong2()" id="Wrong2">Machu Picchu</button>
+        <br>
+        <img src="https://thumbs.dreamstime.com/b/grunge-office-stamp-correct-3089029.jpg?w=992" width="200px" style="display:none" id="Correct">
+        <h2>Q2, Which dynasty was Sticky Rice Mortar invented during?</h2>
+        <button onclick="Wrong3()" id="Wrong3">Tang Dynasty</button>
+        <button onclick="Wrong4()" id="Wrong4">Han Dynasty</button>
+        <button onclick="Wrong5()" id="Wrong5">Cao Wei Dynasty</button>
+        <button onclick="Correct1()" id="CorrectButton1">Northern Wei Dynasty</button>
+        <br>
+        <img src="https://thumbs.dreamstime.com/b/grunge-office-stamp-correct-3089029.jpg?w=992" width="200px" style="display:none" id="Correct1">
+        <h2>Q3, During production Hempcrete absorbs massive amounts of which greenhouse gas?</h2>
+        <button onclick="Correct2()" id="CorrectButton2">Carbon Dioxide</button>
+        <button onclick="Wrong6()" id="Wrong6">Methane</button>
+        <button onclick="Wrong7()" id="Wrong7">Nitrous Oxide</button>
+        <button onclick="Wrong8()" id="Wrong8">Water Vapour</button>
+        <br>
+        <img src="https://thumbs.dreamstime.com/b/grunge-office-stamp-correct-3089029.jpg?w=992" width="200px" style="display:none" id="Correct2">
+    </body>
+</html>

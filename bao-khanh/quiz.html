@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function revealAnswer(id) {
+    document.getElementById(id).style.display = 'block';
+}
+
+function showImage(id) {
+    document.getElementById(id).style.display = 'flex';
+}
+    </script>
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="materials.html">Materials</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="references.html">References</a>
+    </nav>
+
+    <h1>Quiz</h1>
+
+    <section class="quiz-box">
+
+        <h2>Question 1</h2>
+
+        <p>
+            Which material is biodegradable?
+        </p>
+
+        <button onclick="revealAnswer('q1')">Show Answer</button>
+
+        <p class="answer" id="q1">
+            Mycelium insulation.
+        </p>
+
+    </section>
+
+
+    <section class="quiz-box">
+
+        <h2>Question 2</h2>
+
+        <p>
+            Why is aluminum useful in sustainable construction?
+        </p>
+
+        <button onclick="revealAnswer('q2')">Show Answer</button>
+
+        <p class="answer" id="q2">
+            It is lightweight, durable, and recyclable.
+        </p>
+
+    </section>
+
+
+    <section class="quiz-box">
+
+        <h2>Question 3</h2>
+
+        <p>
+            What does sustainable construction try to reduce?
+        </p>
+
+        <button onclick="revealAnswer('q3')">Show Answer</button>
+
+        <p class="answer" id="q3">
+            Waste and environmental damage.
+        </p>
+
+    </section>
+
+</body>
+</html>

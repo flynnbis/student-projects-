@@ -1,0 +1,347 @@
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Arctic</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background: radial-gradient(circle at top left, #a4edff 0%, #f2f5ff 42%, #ffffff 100%);
+            color: #1f2937;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        #div-arctic {
+            padding: 5rem 2rem;
+            max-width: 1080px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            color: #0f172a;
+            font-size: 3rem;
+            margin: 0 0 0.5rem;
+            text-align: center;
+            letter-spacing: 0.04em;
+        }
+        
+        h2 {
+            color: #0f172a;
+            font-size: 1.9rem;
+            margin-top: 2.2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        h3 {
+            color: #111827;
+            font-size: 1.15rem;
+            line-height: 1.75;
+            margin-top: 0;
+        }
+
+        p {
+            color: #334155;
+            line-height: 1.8;
+            margin: 0.75rem 0;
+        }
+        figcaption {
+            color: #475569;
+            font-size: 0.95rem;
+            padding: 0.9rem 1rem 1rem;
+            background: #f8fafc;
+        }
+
+        li {
+            color: #334155;
+            margin-bottom: 0.75rem;
+        }
+
+        header {
+            width: 100%;
+            background: rgba(15, 42, 40, 0.92);
+            padding: 1rem 0;
+            box-shadow: 0 14px 35px rgba(15, 23, 42, 0.16);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            letter-spacing: 1px;
+             background: rgba(163, 255, 247, 0.92);
+        }
+
+        #arctic-subheader {
+            background: rgba(181, 253, 255, 0.92);
+            padding: 1rem 0;
+            box-shadow: 0 14px 35px rgba(15, 23, 42, 0.16);
+            margin-top: -1rem;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            padding: 0 16px;
+        }
+
+        nav a {
+            color: #d1d5db;
+            text-decoration: none;
+            padding: 0.9rem 1.4rem;
+            border-radius: 999px;
+            transition: background 0.3s ease, transform 0.3s ease, color 0.3s ease;
+        }
+
+        nav a:hover,
+        nav a:focus {
+            background: rgba(226, 232, 240, 0.18);
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        nav a.active {
+            background: #2563eb;
+            color: #ffffff;
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.22);
+        }
+
+        nav a.active:hover,
+        nav a.active:focus {
+            background: #1e40af;
+            box-shadow: 0 12px 24px rgba(30, 64, 175, 0.28);
+        }
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 18px;
+            margin: 24px 0;
+        }
+
+        section {
+            background: rgba(255, 255, 255, 0.93);
+            border-radius: 1.3rem;
+            padding: 1.8rem 1.8rem;
+            box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+            margin: 1.8rem 0;
+        }
+
+        .images {
+            display: grid;
+            gap: 1.25rem;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        }
+
+        .images figure {
+            margin: 0;
+            border-radius: 1rem;
+            overflow: hidden;
+            background: #f8fafc;
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+        }
+
+        .images figure:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 40px rgba(15, 23, 42, 0.14);
+        }
+
+        .images img {
+            width: 100%;
+            display: block;
+            height: auto;
+        }
+
+        footer {
+            margin-top: 2rem;
+            padding: 1.25rem 1.5rem;
+            border-radius: 1.1rem;
+            background: rgba(241, 245, 249, 0.95);
+            color: #475569;
+            font-size: 0.95rem;
+            text-align: center;
+            box-shadow: 0 10px 22px rgba(15, 23, 42, 0.08);
+        }
+
+        #div-arctic {
+            background-color: #f8fafc;
+            color: black;
+            
+        }
+
+        header p {
+      margin: 12px auto 0;
+      max-width: 720px;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: #000000;
+    }
+
+
+    #QOArctic {
+        width: 150px;
+        height: 150px;
+        font-family: century gothic;
+        font-size: 20px;
+        background-color: #9d9d9d;
+        background-size: cover;
+        background-position: center;
+        color: rgb(0, 0, 0);
+        border: none;
+        cursor: pointer;
+        position: relative;
+        text-shadow: 1px 1px 4px #000;
+        
+    }
+
+    
+
+    
+
+        
+    </style>
+
+    <script>
+        function Q1A_answers()
+        {
+            alert("1. Wear multiple layers of clothing to trap heat and allow for ventilation. 2. Build or find shelter to protect from the elements. 3. Stay hydrated and ration activity to avoid peak heat. 4. Signal for help if in distress. 5. Carry navigation tools and signal devices; deserts can be vast and disorienting.")
+        }
+        function Q2A_answers()
+        {
+            alert("-40 degrees celcius")
+        }
+        function Q3A_answers()
+        {
+            alert("Thick fur or feathers, layers of fat for insulation, and behavioral adaptations")
+        }
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="Arctic.html" class="active">Arctic</a>
+            <a href="Desert.html">Desert</a>
+            <a href="Sea.html">Sea</a>
+            <a href="Space.html">Space</a>
+        </nav>
+    </header>
+    <header id="arctic-subheader"><h1 align="center">Arctic</h1>
+        <p align="center">The Arctic is a polar region located at the northernmost part of Earth, characterized by its cold climate, ice-covered landscapes, and unique wildlife.</p>
+    
+    </header>
+    <main id="div-arctic">
+        
+        
+        <h2>Why is this environment extreme?</h2>
+        <h3>The Arctic is extreme due to its location at the poles, resulting in long periods of darkness and daylight, and extremely low temperatures.</h3>
+
+        <section>
+            <h2>Images of the Arctic</h2>
+            <p>Below are example images showing typical Arctic landscapes, plants and animals.</p>
+            <div class="images">
+                <figure>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-GihQNYPdIhcNH-tErg1rGIaBWAVXK7jjUQ&s" alt="Sand dunes"/>
+                    <figcaption>Ice formations in the Arctic.</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu1-t9eDILJHp3WlfCeZzuKssmzvuvbZnerw&s" alt="Arctic plant"/>
+                    <figcaption>Plants adapted to the cold Arctic environment.</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnVAFWmLec0FTvcDOsil2alQJfb5H43mVYzQ&s" alt="Arctic fox"/>
+                    <figcaption>Animals adapted to the cold Arctic environment.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section>
+            <h2>Climate and Environment Details</h2>
+            <h3>Temperature and Precipitation</h3>
+            <p>The Arctic experiences extremely low temperatures, often dropping below -40°C (-40°F). Precipitation is minimal, mostly in the form of snow.</p>
+
+            <h3>Soil and Landscape</h3>
+            <p>Arctic soils are typically frozen (permafrost) and have low organic matter. The landscape is dominated by ice, snow, and rocky terrain. Vegetation is sparse and mainly consists of mosses, lichens, and hardy shrubs.</p>
+        </section>
+
+        <section>
+            <h2>Life in the Arctic</h2>
+            <p>Animals in the Arctic are adapted to the cold environment through various mechanisms such as thick fur or feathers, layers of fat for insulation, and behavioral adaptations like hibernation or migration. Many species also have specialized kidneys to conserve water (e.g., polar bears, Arctic foxes, seals).</p>
+        </section>
+
+        <section>
+            <h2>Suitable Materials for Building a Shelter</h2>
+            <p>When building a shelter in the Arctic, the goal is to retain heat and protect against the cold. Suitable materials and approaches include:</p>
+            <ul>
+                <li>Mud, adobe or rammed earth: good thermal mass that keeps interiors warm by absorbing heat during the day and releasing it at night.</li>
+                <li>Stone and rock: durable and provides thermal mass; often used for long-term structures.</li>
+                <li>Canvas, woven mats or shade cloth: lightweight options for temporary shelter; paired with insulation to reduce heat loss.</li>
+                <li>Insulating layers and reflective materials: reflective sheets or dark-coloured surfaces increase heat absorption.</li>
+                <li>Local vegetation and branches: used for simple shelter structures or windbreaks.</li>
+            </ul>
+            <p>Design tips: orient entrances away from prevailing wind, use thick walls for thermal buffering, include ventilation for moisture control, and collect or store water if possible.</p>
+        </section>
+
+        <section>
+            <h2>Human Adaptations and Survival tips</h2>
+            <ul>
+                <li>Wear multiple layers of clothing to trap heat and allow for ventilation.</li>
+                <li>Build or find shelter to protect from the elements.</li>
+                <li>Stay hydrated and ration activity to avoid peak heat.</li>
+                <li>Signal for help if in distress.</li>
+                <li>Carry navigation tools and signal devices; deserts can be vast and disorienting.</li>
+            </ul>
+        </section>
+
+        <section>
+                <h2>Conservation and Human Impact</h2>
+                <p>Human activities such as climate change, pollution, and habitat destruction pose significant threats to the Arctic ecosystem. Conservation efforts focus on reducing carbon emissions, protecting critical habitats, and supporting indigenous communities who have lived in harmony with the Arctic environment for thousands of years.</p>
+        </section>
+
+        <section>
+            <h2>Memory quiz!</h2>
+            <p>What are the tips to survival in this environment?</p>
+            <input type="button" value="Click to reveal answers" onclick="Q1A_answers()" id="QOArctic">
+            <p>What is the average temperature of this environment?</p>
+            <input type="button" value="Click to reveal answers" onclick="Q2A_answers()" id="QOArctic">
+            <p>What are some adaptations animal made to live in this environment?</p>
+            <input type="button" value="Click to reveal answers" onclick="Q3A_answers()" id="QOArctic">
+        </section>
+
+        <footer>
+            <p>Sources: Wekipedia, and other cources(Source provided from AI).</p>
+        </footer>
+    </main>
+
+   
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

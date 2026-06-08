@@ -1,0 +1,103 @@
+<html> 
+
+<head>
+
+<title>Quiz page</title>
+
+<style>
+   body {
+        background-color:whitesmoke;
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        padding: 30px;
+        margin: 0px;
+    }
+
+    nav{
+        background-color:rgb(191, 220, 245);
+        padding: 12px;
+    }
+
+    nav a {
+        color: azure;
+        margin: 0 15px;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    h1 {color:rgb(113, 152, 185);}
+    h2 {color:rgb(77, 115, 147);
+        margin-top: 30px;
+    }
+
+  
+    p{
+        color:rgb(113, 155, 175);
+        font-size: 20px;
+        max-width: 500px;
+        margin: 10px auto;
+     }
+
+     img {
+        width: 320px;
+        height: 200px;
+        border: 10px auto;
+        display: block;
+     }
+
+     .answer {
+        display: none;
+        color: rgb(74, 100, 121);
+        font-weight:bold;
+     }
+
+</style>
+
+<script>
+    function revealAnswer(id){
+        document.getElementById(id).style.display='block';
+    }
+</script>
+
+</head>
+
+<body>
+    
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="reference.html">References</a>
+
+    </nav>
+
+    <h1>Quiz questions</h1>
+    <p>This is a quiz on building materials</p>
+
+    <p>Click the button under each question to reveal the answer</p>
+
+    <hr>
+
+    <p><b>Number 1. What are the advantages of Translucent Wood?</b></p>
+    <button onclick="revealAnswer('a1')">Reveal Answer</button>
+    <p id="a1" class = "answer"> They are
+Superior Durability,
+
+ Shatterproof
+
+ ,Energy Efficient
+
+ Light Diffusion
+
+  and Sustainable</p>
+<hr>
+    <p><b><br>Number 2. Why are they good for being used for building materials?</b></br></p>
+    <button onclick="revealAnswer('a2')">Reveal Answer</button>
+    <p id="a2" class = "answer">They are food for being used for building materials because it offers the significant advantage of being five times more efficient than conventional glass.</p>
+ <hr>
+    <p><b>Number 3. What capabilities does transparent wood have besides energy efficiency? Also, is it environmentally friendly?</b></p>
+    <button onclick="revealAnswer('a3')">Reveal Answer</button>
+    <p id="a3" class = "answer">In addition to energy efficiency, transparent wood is eco-friendly because it possesses the ability to store carbon</p>
+
+</body>
+
+</html> 

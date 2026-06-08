@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sea - Ocean Life and Facts</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #0b3d6e, #1b6ba6);
+      color: #eef3f7;
+    }
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: rgba(0, 0, 0, 0.25);
+      border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    }
+    header {
+            width: 100%;
+            background: rgba(15, 23, 42, 0.9);
+            padding: 16px 0;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.26);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+    
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      letter-spacing: 1px;
+    }
+    header p {
+      margin: 12px auto 0;
+      max-width: 720px;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: #dce9f5;
+    }
+    
+    nav {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            padding: 0 12px;
+        }
+
+        nav a {
+            color: #d1d5db;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 999px;
+            transition: background 0.25s ease, transform 0.25s ease;
+        }
+
+        nav a:hover,
+        nav a:focus {
+            background: rgba(226, 232, 240, 0.14);
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        nav a.active {
+            background: #2563eb;
+            color: #ffffff;
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.22);
+        }
+
+        nav a.active:hover,
+        nav a.active:focus {
+            background: #1e40af;
+            box-shadow: 0 12px 24px rgba(30, 64, 175, 0.28);
+        }
+
+        
+
+        header {
+          animation: fadeInUp 0.9s ease both;
+        }
+        .section {
+          animation: fadeInUp 1s ease both;
+        }
+        .card {
+          animation: floatUp 6s ease-in-out infinite alternate;
+        }
+        .fact {
+          animation: glowPulse 4s ease-in-out infinite;
+        }
+    main {
+      padding: 30px 20px;
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+    .section {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 18px;
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+    }
+    .section h2 {
+      margin-top: 0;
+      color: #f7fbff;
+      border-bottom: 2px solid rgba(255,255,255,0.15);
+      padding-bottom: 10px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 14px;
+      padding: 18px;
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #b7e2ff;
+    }
+    .card p {
+      line-height: 1.6;
+      color: #dbeaf5;
+    }
+    .facts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+    .fact {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 14px;
+      padding: 18px;
+      text-align: center;
+    }
+    .fact strong {
+      display: block;
+      font-size: 1.6rem;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+    footer {
+      text-align: center;
+      padding: 18px 20px 36px;
+      color: #b8d9f3;
+      font-size: 0.95rem;
+    }
+
+
+    .images {
+            display: grid;
+            gap: 1.25rem;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        }
+
+        .images figure {
+            margin: 0;
+            border-radius: 1rem;
+            overflow: hidden;
+            background: linear-gradient(180deg, #0b3d6e, #1b6ba6);
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+        }
+
+        .images figure:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 40px rgba(15, 23, 42, 0.14);
+        }
+
+        .images img {
+            width: 100%;
+            display: block;
+            height: auto;
+        }
+        section {
+            background: linear-gradient(180deg, #0b3d6e, #1b6ba6);
+            border-radius: 1.3rem;
+            padding: 1.8rem 1.8rem;
+            box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+            margin: 1.8rem 0;
+        }
+
+        figcaption {
+            color: #dbeaf5;
+            font-size: 0.95rem;
+            padding: 0.9rem 1rem 1rem;
+            background: linear-gradient(180deg, #0b3d6e, #1b6ba6);
+        }
+
+        footer {
+            margin-top: 2rem;
+            padding: 1.25rem 1.5rem;
+            border-radius: 1.1rem;
+            background: linear-gradient(180deg, #0b3d6e, #1b6ba6);
+            color: white;
+            font-size: 0.95rem;
+            text-align: center;
+            box-shadow: 0 10px 22px rgba(15, 23, 42, 0.08);
+        }
+    
+    
+  </style>
+</head>
+<body>
+    <header>
+        <nav>
+      <a href="index.html">Home</a>
+      <a href="Arctic.html">Arctic</a>
+      <a href="Desert.html">Desert</a>
+      <a href="Sea.html" class="active">Sea</a>
+      <a href="Space.html">Space</a>
+    </nav>
+</header>
+    </body>
+  <header>
+    <h1>Sea</h1>
+    <p>The sea is a rich and powerful part of our planet. It covers more than 70% of Earth's surface and supports a huge variety of life, from tiny plankton to massive whales.</p>
+  </header>
+  <main>
+    <section class="section">
+      <h2>What is the Sea?</h2>
+      <p>The sea is the large body of salt water that surrounds the continents. It is made up of several oceans, including the Pacific, Atlantic, Indian, Southern, and Arctic Oceans. Seas are important for weather, transportation, food, and the Earth's water cycle.</p>
+    </section>
+
+    <section class="section">
+      <h2>Sea Images</h2>
+      <section>
+            <h2>Images of the Sea</h2>
+            <p>Below are example images showing typical marine landscapes, plants and animals.</p>
+            <div class="images">
+                <figure>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbiNhqyFILVoVIQq2SIKsFhFfDmSxAHHRYFA&s" alt="Ocean waves"/>
+                    <figcaption>Ocean waves</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1660008552175-ab979a7ed52a?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sunset over sea"/>
+                    <figcaption>Sunset over Sea</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://cms.bbcearth.com/sites/default/files/2021-06/Coral%20Reef_Vincent%20Pommeyrol_GettyImages-521652072.jpg" alt="Coral Reef"/>
+                    <figcaption>Coral Reefs</figcaption>
+                </figure>
+            </div>
+        </section>
+    </section>
+
+    <section class="section grid">
+      <div class="card">
+        <h3>Marine Life</h3>
+        <p>The sea is home to millions of plants and animals. Coral reefs, fish, jellyfish, sharks, dolphins, sea turtles, and seabirds are just a few of the creatures that live in marine habitats.</p>
+      </div>
+      <div class="card">
+        <h3>Habitats</h3>
+        <p>Ocean habitats vary from shallow coastal areas to deep-sea trenches. Each habitat has its own climate, temperature, and wildlife. Some creatures live in coral reefs, while others survive in cold polar waters.</p>
+      </div>
+      <div class="card">
+        <h3>Human Connection</h3>
+        <p>People use the sea for fishing, travel, recreation, and trade. Coastal towns and cities grow around seas because of their resources and access to global shipping routes.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Why the Sea Matters</h2>
+      <div class="facts">
+        <div class="fact">
+          <strong>70%</strong>
+          <span>of Earth's surface is covered by water.</span>
+        </div>
+        <div class="fact">
+          <strong>2/3</strong>
+          <span>of all life on Earth lives in the ocean.</span>
+        </div>
+        <div class="fact">
+          <strong>30%</strong>
+          <span>of the world’s oxygen comes from ocean plants.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Sea Threats</h2>
+      <p>The sea faces many problems today. Pollution, plastic waste, climate change, and overfishing harm ocean life. Warmer waters can damage coral reefs and cause sea animals to move to new areas.</p>
+      <p>It is important to protect seas by reducing plastic use, recycling, and supporting clean water projects. Healthy oceans help the climate and keep the planet balanced.</p>
+    </section>
+
+    <section class="section">
+      <h2>Fun Facts</h2>
+      <div class="facts">
+        <div class="fact">
+          <strong>Deepest</strong>
+          <span>The deepest part of the ocean is called the Mariana Trench.</span>
+        </div>
+        <div class="fact">
+          <strong>Blue Whale</strong>
+          <span>The blue whale is the largest animal ever known.</span>
+        </div>
+        <div class="fact">
+          <strong>Salt</strong>
+          <span>Sea water contains about 3.5% salt by weight.</span>
+        </div>
+      </div>
+    </section>
+    
+  </main>
+  <footer>
+    <p>Sources: Wekipedia, Sea limited, and Marine Conservation Society(provided by AI)</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MIT Project — Mashechutes Institute of Technology</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #f9f7ff;
+      --white:    #ffffff;
+      --ink:      #2d2a3e;
+      --ink-2:    #6b6882;
+      --ink-3:    #b0adc8;
+      --border:   #e8e4f4;
+
+      /* class colours — soft pastels */
+      --c9b:      #4f9eff;  --c9b-bg: #eaf3ff;
+      --c9i:      #f5a623;  --c9i-bg: #fff7e6;
+      --c8s:      #e05c8a;  --c8s-bg: #ffeef5;
+
+      --radius-card: 20px;
+      --radius-pill: 99px;
+      --gap: clamp(16px, 2.5vw, 24px);
+      --page-pad: clamp(20px, 6vw, 64px);
+    }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      min-height: 100vh;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--white);
+      border-bottom: 2px solid var(--border);
+      padding: 40px var(--page-pad) 36px;
+    }
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .header-left { flex: 1; min-width: 260px; }
+
+    .mit-title {
+      font-size: clamp(32px, 6vw, 56px);
+      font-weight: 900;
+      line-height: 1.0;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+    .mit-title .highlight-9b { color: var(--c9b); }
+    .mit-title .highlight-8s { color: var(--c8s); }
+
+    .mit-sub {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--ink-2);
+      margin-bottom: 18px;
+    }
+
+    .header-desc {
+      font-size: 14px;
+      color: var(--ink-2);
+      font-weight: 600;
+      line-height: 1.7;
+      max-width: 520px;
+    }
+
+    /* class legend pills */
+    .legend {
+      display: flex;
+      gap: 8px;
+      margin-top: 18px;
+      flex-wrap: wrap;
+    }
+    .legend-pill {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 14px 5px 8px;
+      border-radius: var(--radius-pill);
+      font-size: 12px;
+      font-weight: 800;
+    }
+    .legend-pill.c9b { background: var(--c9b-bg); color: var(--c9b); }
+    .legend-pill.c9i { background: var(--c9i-bg); color: var(--c9i); }
+    .legend-pill.c8s { background: var(--c8s-bg); color: var(--c8s); }
+    .legend-dot {
+      width: 9px; height: 9px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* counter bubble */
+    .header-right { flex-shrink: 0; text-align: center; }
+    .count-bubble {
+      width: 110px; height: 110px;
+      border-radius: 50%;
+      background: var(--c9b-bg);
+      border: 3px solid var(--c9b);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .count-bubble .num {
+      font-size: 40px;
+      font-weight: 900;
+      color: var(--c9b);
+      line-height: 1;
+    }
+    .count-bubble .label {
+      font-size: 10px;
+      font-weight: 800;
+      color: var(--c9b);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* ── FILTER BAR ── */
+    .filter-bar {
+      background: var(--white);
+      border-bottom: 2px solid var(--border);
+      padding: 0 var(--page-pad);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .filter-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      padding: 12px 0;
+    }
+    .filter-inner::-webkit-scrollbar { display: none; }
+
+    .filter-btn {
+      background: var(--bg);
+      border: 2px solid var(--border);
+      border-radius: var(--radius-pill);
+      cursor: pointer;
+      font-family: 'Nunito', sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--ink-2);
+      padding: 7px 18px;
+      white-space: nowrap;
+      transition: all 0.15s;
+      flex-shrink: 0;
+    }
+    .filter-btn:hover { border-color: var(--c9b); color: var(--c9b); background: var(--c9b-bg); }
+    .filter-btn[data-filter="all"].active  { background: var(--ink);   color: #fff; border-color: var(--ink); }
+    .filter-btn[data-filter="9B"].active   { background: var(--c9b);   color: #fff; border-color: var(--c9b); }
+    .filter-btn[data-filter="9I"].active   { background: var(--c9i);   color: #fff; border-color: var(--c9i); }
+    .filter-btn[data-filter="8B"].active   { background: var(--c8s);   color: #fff; border-color: var(--c8s); }
+
+    /* search */
+    .search-wrap { margin-left: auto; position: relative; flex-shrink: 0; }
+    .search-wrap input {
+      background: var(--bg);
+      border: 2px solid var(--border);
+      border-radius: var(--radius-pill);
+      padding: 7px 16px 7px 36px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--ink);
+      outline: none;
+      width: 160px;
+      transition: all 0.2s;
+    }
+    .search-wrap input:focus { border-color: var(--c9b); width: 200px; background: var(--white); }
+    .search-wrap input::placeholder { color: var(--ink-3); }
+    .search-icon { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); width: 14px; height: 14px; color: var(--ink-3); pointer-events: none; }
+
+    /* ── MAIN ── */
+    main { max-width: 1100px; margin: 0 auto; padding: 40px var(--page-pad) 80px; }
+
+    .count-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--ink-3);
+      margin-bottom: 28px;
+    }
+    .count-label span { color: var(--ink-2); }
+
+    /* section headings */
+    .section-heading {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin: 36px 0 20px;
+    }
+    .section-heading:first-child { margin-top: 0; }
+    .section-icon { font-size: 22px; }
+    .section-heading h2 {
+      font-size: 17px;
+      font-weight: 900;
+      color: var(--ink);
+    }
+    .section-heading .class-badge {
+      font-size: 11px;
+      font-weight: 800;
+      padding: 3px 12px;
+      border-radius: var(--radius-pill);
+      letter-spacing: 0.06em;
+    }
+    .section-heading .class-badge.c9b { background: var(--c9b-bg); color: var(--c9b); }
+    .section-heading .class-badge.c9i { background: var(--c9i-bg); color: var(--c9i); }
+    .section-heading .class-badge.c8s { background: var(--c8s-bg); color: var(--c8s); }
+
+    /* ── GRID ── */
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: var(--gap); }
+
+    /* ── CARD ── */
+    .card {
+      background: var(--white);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      border: 2px solid var(--border);
+      transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+      animation: popUp 0.35s cubic-bezier(0.34,1.5,0.64,1) both;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 32px rgba(79,158,255,0.12);
+      border-color: var(--stripe, var(--c9b));
+    }
+    @keyframes popUp {
+      from { opacity: 0; transform: translateY(14px) scale(0.97); }
+      to   { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    .card:nth-child(1)  { animation-delay: 0.03s; }
+    .card:nth-child(2)  { animation-delay: 0.06s; }
+    .card:nth-child(3)  { animation-delay: 0.09s; }
+    .card:nth-child(4)  { animation-delay: 0.12s; }
+    .card:nth-child(5)  { animation-delay: 0.15s; }
+    .card:nth-child(6)  { animation-delay: 0.18s; }
+    .card:nth-child(7)  { animation-delay: 0.21s; }
+    .card:nth-child(8)  { animation-delay: 0.24s; }
+
+    .card[data-filter="9B"] { --stripe: var(--c9b); --stripe-bg: var(--c9b-bg); }
+    .card[data-filter="9I"] { --stripe: var(--c9i); --stripe-bg: var(--c9i-bg); }
+    .card[data-filter="8B"] { --stripe: var(--c8s); --stripe-bg: var(--c8s-bg); }
+
+    /* thumbnail area */
+    .card-thumb {
+      aspect-ratio: 16/9;
+      background: var(--stripe-bg, #eaf3ff);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
+    .card:hover .card-thumb img { transform: scale(1.05); }
+
+    .thumb-initial {
+      font-size: 56px;
+      font-weight: 900;
+      color: var(--stripe, var(--c9b));
+      opacity: 0.25;
+      user-select: none;
+    }
+    .thumb-overlay {
+      position: absolute; inset: 0;
+      background: rgba(45,42,62,0);
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.2s;
+    }
+    .card:hover .thumb-overlay { background: rgba(45,42,62,0.55); }
+    .open-btn {
+      opacity: 0; transform: scale(0.88);
+      transition: opacity 0.18s, transform 0.18s;
+      background: var(--white);
+      color: var(--stripe, var(--c9b));
+      border: none;
+      border-radius: var(--radius-pill);
+      padding: 10px 22px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .card:hover .open-btn { opacity: 1; transform: scale(1); }
+
+    /* card body */
+    .card-body { padding: 18px 18px 10px; flex: 1; display: flex; flex-direction: column; }
+
+    .card-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: var(--stripe-bg, #eaf3ff);
+      color: var(--stripe, var(--c9b));
+      border-radius: var(--radius-pill);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      padding: 3px 12px;
+      margin-bottom: 10px;
+      align-self: flex-start;
+    }
+    .card-title {
+      font-size: 17px;
+      font-weight: 900;
+      color: var(--ink);
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
+    .card-desc {
+      font-size: 13px;
+      color: var(--ink-2);
+      line-height: 1.65;
+      font-weight: 600;
+      flex: 1;
+    }
+
+    /* card footer */
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 18px;
+      border-top: 2px solid var(--border);
+      margin-top: 10px;
+    }
+    .student-name {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--ink-2);
+    }
+    .card-link {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--stripe, var(--c9b));
+      text-decoration: none;
+      background: var(--stripe-bg, #eaf3ff);
+      padding: 5px 14px;
+      border-radius: var(--radius-pill);
+      transition: opacity 0.15s;
+    }
+    .card-link:hover { opacity: 0.8; }
+
+    /* ── EMPTY STATE ── */
+    .empty-state { text-align: center; padding: 64px 24px; display: none; }
+    .empty-state.visible { display: block; }
+    .empty-state .empty-icon { font-size: 48px; margin-bottom: 12px; }
+    .empty-state p { font-size: 15px; font-weight: 700; color: var(--ink-2); }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 2px solid var(--border);
+      background: var(--white);
+      padding: 24px var(--page-pad);
+      text-align: center;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--ink-3);
+    }
+
+    @media (max-width: 560px) {
+      .header-right { display: none; }
+      .count-label { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="header-left">
+      <h1 class="mit-title"><span class="highlight-9b">MIT</span> Project ✨</h1>
+      <p class="mit-sub">Mashechutes Institute of Technology &mdash; 2025/2026</p>
+      <p class="header-desc">
+        Year 9 asked: <strong>what if you built with mushrooms, popcorn, or transparent wood?</strong><br>
+        Year 8 asked: <strong>how do you build somewhere extreme?</strong><br>
+        Here's what they came up with! 👇
+      </p>
+      <div class="legend">
+        <div class="legend-pill c9b"><div class="legend-dot" style="background:var(--c9b)"></div>9B &mdash; Weird Materials</div>
+        <div class="legend-pill c9i"><div class="legend-dot" style="background:var(--c9i)"></div>9I &mdash; Weird Materials</div>
+        <div class="legend-pill c8s"><div class="legend-dot" style="background:var(--c8s)"></div>8S &mdash; Extreme Locations</div>
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="count-bubble">
+        <div class="num" id="total-count">22</div>
+        <div class="label">projects</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="filter-bar">
+  <div class="filter-inner">
+    <button class="filter-btn active" data-filter="all">All 22 projects</button>
+    <button class="filter-btn" data-filter="9B">🧪 9B</button>
+    <button class="filter-btn" data-filter="9I">🧱 9I</button>
+    <button class="filter-btn" data-filter="8B">🌋 8S</button>
+    <div class="search-wrap">
+      <svg class="search-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="6.5" cy="6.5" r="4.5"/><path d="M10.5 10.5L14 14"/>
+      </svg>
+      <input type="text" id="search" placeholder="Search..." autocomplete="off">
+    </div>
+  </div>
+</div>
+
+<main>
+  <p class="count-label">Showing <span id="showing-count">22</span> projects</p>
+
+  <!-- Year 9 / 9B -->
+  <div class="section-heading" id="yr9-heading">
+    <span class="section-icon">🧪</span>
+    <h2>Year 9 — Weird &amp; Wonderful Materials</h2>
+    <span class="class-badge c9b">9B</span>
+  </div>
+
+  <div class="grid" id="grid">
+
+    <div class="card" data-name="caleb" data-filter="9B">
+      <div class="card-thumb">
+        <div class="thumb-initial">C</div>
+        <div class="thumb-overlay"><a href="caleb/index.html" target="_blank" class="open-btn">Open ↗</a></div>
+      </div>
+      <div class="card-body">
+        <p class="card-tag">🧪 9B</p>
+        <h2 class="card-title">Unusual Building Materials</h2>
+        <p class="card-desc">Popcorn, hemp, and mycelium — with interactive buttons that reveal each material's superpowers.</p>
+      </div>
+      <div class="card-footer">
+        <span class="student-name">Caleb</span>
+        <a href="caleb/index.html" target="_blank" class="card-link">View ↗</a>
+      </div>
+    </div>
+
+    <div class="card" data-name="chaeyu" data-filter="9B">
+      <div class="card-thumb">
+        <div class="thumb-initial">C</div>
+        <div class="thumb-overlay"><a href="chaeyu/index.html" target="_blank" class="open-btn">Open ↗</a></div>
+      </div>
+      <div class="card-body">
+        <p class="card-tag">🧪 9B</p>
+        <h2 class="card-title">Translucent Wood</h2>
+        <p class="card-desc">Wood you can see through! A deep dive into how lignin removal turns timber into a glowing, eco-friendly building material.</p>
+      </div>
+      <div class="card-footer">
+        <span class="student-name">Chaeyu</span>
+        <a href="chaeyu/index.html" target="_blank" class="card-link">View ↗</a>
+      </div>
+    </div>
+
+    <div class="card" data-name="chilli" data-filter="9B">
+      <div class="card-thumb">
+        <div class="thumb-initial">C</div>
+        <div class="thumb-overlay"><a href="chilli/index.html" target="_blank" class="open-btn">Open ↗</a></div>
+      </div>
+      <div class="card-body">
+        <p class="card-tag">🧪 9B</p>
+        <h2 class="card-title">Hempcrete &amp; Mycelium</h2>
+        <p class="card-desc">Could fungus and hemp replace concrete? Investigates both materials — plus a quiz to test what you've learnt.</p>
+      </div>
+      <div class="card-footer">
+        <span class="student-name">Chilli</span>
+        <a href="chilli/index.html" target="_blank" class="card-link">View ↗</a>
+      </div>
+    </div>
+
+    <div class="card" data-name="jessica" data-filter="9B">
+      <div class="card-thumb">
+        <div class="thumb-initial">J</div>
+        <div class="thumb-overlay"><a href="jessica/index.html" target="_blank" class="open-btn">Open ↗</a></div>
+      </div>
+      <div class="card-body">
+        <p class="card-tag">🧪 9B</p>
+        <h2 class="card-title">Hempcrete</h2>
+        <p class="card-desc">A focused look at hempcrete — what it is, how it's made, and why it might just replace traditional concrete one day.</p>
+      </div>
+      <div class="card-footer">
+        <span class="student-name">Jessica</span>
+        <a href="jessica/index.html" target="_blank" class="card-link">View ↗</a>
+      </div>
+    </div>
+
+    <div class="card" data-name="joonki" data-filter="9B">
+      <div class="card-thumb">
+        <div class="thumb-initial">J</div>
+        <div class="thumb-overlay"><a href="joonki/index.html" target="_blank" class="open-btn">Open ↗</a></div>
+      </div>
+      <div class="card-body">
+        <p class="card-tag">🧪 9B</p>
+        <h2 class="card-title">UBM — Unusual Building Materials</h2>
+        <p class="card-desc">Popcorn concrete and mycelium bricks, presented in a polished card layout with a custom logo and smooth hover effects.</p>
+      </div>
+      <div class="card-footer">
+        <span class="student-name">Joonki</span>
+        <a href="joonki/index.html" target="_blank" class="card-link">View ↗</a>
+      </div>
+    </div>
+
+    <div class="card" data-name="khoi nguyen" data-filter="9B">
+      <div class="card-thumb">
+        <div class="thumb-initial">K</div>
+        <div class="thumb-overlay"><a href="khoi/index.html" target="_blank" class="open-btn">Open ↗</a></div>
+      </div>
+      <div class="card-body">
+        <p class="card-tag">🧪 9B</p>
+        <h2 class="card-title">Sticky Rice Mortar, Hempcrete &amp; Popcorn</h2>
+        <p class="card-desc">Ancient sticky rice mortar, hempcrete, and popcorn concrete — three unlikely heroes of construction, with a quiz to match.</p>
+      </div>
+      <div class="card-footer">
+        <span class="student-name">Khoi Nguyen</span>
+        <a href="khoi/index.html" target="_blank" class="card-link">View ↗</a>
+      </div>
+    </div>
+
+    <div class="card" data-name="minh hieu" data-filter="9B">
+      <div class="card-thumb">
+        <div class="thumb-initial">M</div>
+        <div class="thumb-overlay"><a href="minh-hieu/index.html" target="_blank" class="open-btn">Open ↗</a></div>
+      </div>
+      <div class="card-body">
+        <p class="card-tag">🧪 9B</p>
+        <h2 class="card-title">Newspaper Wood &amp; Mycelium</h2>
+        <p class="card-desc">Building with yesterday's news — and fungus. Explores two materials revolutionising modern construction, with bold button navigation.</p>
+      </div>
+      <div class="card-footer">
+        <span class="student-name">Minh Hieu</span>
+        <a href="minh-hieu/index.html" target="_blank" class="card-link">View ↗</a>
+      </div>
+    </div>
+
+    <div class="card" data-name="nhat minh tom" data-filter="9B">
+      <div class="card-thumb">
+        <div class="thumb-initial">T</div>
+        <div class="thumb-overlay"><a href="nhat-minh/index.html" target="_blank" class="open-btn">Open ↗</a></div>
+      </div>
+      <div class="card-body">
+        <p class="card-tag">🧪 9B</p>
+        <h2 class="card-title">Weirdo Materios</h2>
+        <p class="card-desc">"The dumber the better somehow :)" — hempcrete, mycelium, and transparent wood served with bold yellow styling and zero pretension.</p>
+      </div>
+      <div class="card-footer">
+        <span class="student-name">Nhat Minh (Tom)</span>
+        <a href="nhat-minh/index.html" target="_blank" class="card-link">View ↗</a>
+      </div>
+    </div>
+
+    <div class="card" data-name="seonyoung" data-filter="9B">
+      <div class="card-thumb">
+        <div class="thumb-initial">S</div>
+        <div class="thumb-overlay"><a href="seonyoung/index.html" target="_blank" class="open-btn">Open ↗</a></div>
+      </div>
+      <div class="card-body">
+        <p class="card-tag">🧪 9B</p>
+        <h2 class="card-title">Bio-Inspired Structural Glass</h2>
+        <p class="card-desc">Dark theme, animated floating text, and particle effects. One of the most technically ambitious sites in the whole class.</p>
+      </div>
+      <div class="card-footer">
+        <span class="student-name">Seonyoung</span>
+        <a href="seonyoung/index.html" target="_blank" class="card-link">View ↗</a>
+      </div>
+    </div>
+
+    <div class="card" data-name="tri anh" data-filter="9B">
+      <div class="card-thumb">
+        <div class="thumb-initial">T</div>
+        <div class="thumb-overlay"><a href="tri-anh/index.html" target="_blank" class="open-btn">Open ↗</a></div>
+      </div>
+      <div class="card-body">
+        <p class="card-tag">🧪 9B</p>
+        <h2 class="card-title">Strange Building Materials</h2>
+        <p class="card-desc">Salt blocks, and more unexpected construction materials. Clean blue design with image galleries, a quiz, and references.</p>
+      </div>
+      <div class="card-footer">
+        <span class="student-name">Tri Anh</span>
+        <a href="tri-anh/index.html" target="_blank" class="card-link">View ↗</a>
+      </div>
+    </div>
+
+    <!-- 9I section -->
+    <div style="grid-column: 1 / -1;" id="yr9i-divider">
+      <div class="section-heading" style="margin-top: 20px;">
+        <span class="section-icon">🧱</span>
+        <h2>Year 9 — Weird &amp; Wonderful Materials</h2>
+        <span class="class-badge c9i">9I</span>
+      </div>
+    </div>
+
+    <div class="card" data-name="alice" data-filter="9I">
+      <div class="card-thumb">
+        <div class="thumb-initial">A</div>
+        <div class="thumb-overlay"><a href="alice/index.html" target="_blank" class="open-btn">Open ↗</a></div>
+      </div>
+      <div class="card-body">
+        <p class="card-tag">🧱 9I</p>
+        <h2 class="card-title">Hemp Fabric, Wine Bottles &amp; Salt</h2>
+        <p class="card-desc">Three surprisingly versatile materials — from hemp textiles to recycled wine bottle walls and compressed salt bricks.</p>
+      </div>
+      <div class="card-footer">
+        <span class="student-name">Alice</span>
+        <a href="alice/index.html" target="_blank" class="card-link">View ↗</a>
+      </div>
+    </div>
+
+    <div class="card" data-name="bao khanh" data-filter="9I">
+      <div class="card-thumb">
+        <div class="thumb-initial">B</div>
+        <div class="thumb-overlay"><a href="bao-khanh/index.html" target="_blank" class="open-btn">Open ↗</a></div>
+      </div>
+      <div class="card-body">
+        <p class="card-tag">🧱 9I</p>
+        <h2 class="card-title">Cracked Clay &amp; Mycelium Insulation</h2>
+        <p class="card-desc">Cracked clay casting and mycelium insulation — sustainable choices presented in a clean card layout with reveal buttons.</p>
+      </div>
+      <div class="card-footer">
+        <span class="student-name">Bao Khanh</span>
+        <a href="bao-khanh/index.html" target="_blank" class="card-link">View ↗</a>
+      </div>
+    </div>
+
+    <div class="card" data-name="crystal" data-filter="9I">
+      <div class="card-thumb">
+        <div class="thumb-initial">C</div>
+        <div class="thumb-overlay"><a href="crystal/index.html" target="_blank" class="open-btn">Open ↗</a></div>
+      </div>
+      <div class="card-body">
+        <p class="card-tag">🧱 9I</p>
+        <h2 class="card-title">Popcorn Panels, Hempcrete &amp; Mycelium</h2>
+        <p class="card-desc">Three big info buttons that pop up descriptions of each material. Simple, direct, and satisfying to click.</p>
+      </div>
+      <div class="card-footer">
+        <span class="student-name">Crystal</span>
+        <a href="crystal/index.html" target="_blank" class="card-link">View ↗</a>
+      </div>
+    </div>
+
+    <div class="card" data-name="junyoung" data-filter="9I">
+      <div class="card-thumb">
+        <div class="thumb-initial">J</div>
+        <div class="thumb-overlay"><a href="junyoung/index.html" target="_blank" class="open-btn">Open ↗</a></div>
+      </div>
+      <div class="card-body">
+        <p class="card-tag">🧱 9I</p>
+        <h2 class="card-title">Woodoo, Aerographit &amp; Hanf</h2>
+        <p class="card-desc">Woodoo augmented wood is stronger than concrete and see-through. Alongside aerographit and hemp, a truly futuristic lineup.</p>
+      </div>
+      <div class="card-footer">
+        <span class="student-name">Junyoung</span>
+        <a href="junyoung/index.html" target="_blank" class="card-link">View ↗</a>
+      </div>
+    </div>
+
+    <div class="card" data-name="khanh vy" data-filter="9I">
+      <div class="card-thumb">
+        <div class="thumb-initial">K</div>
+        <div class="thumb-overlay"><a href="khanh-vy/index.html" target="_blank" class="open-btn">Open ↗</a></div>
+      </div>
+      <div class="card-body">
+        <p class="card-tag">🧱 9I</p>
+        <h2 class="card-title">Aerogel, Nitinol &amp; Ferrofluid</h2>
+        <p class="card-desc">The most out-there material picks — the world's lightest solid, a shape-memory alloy, and a liquid that spikes near magnets. Each with a fun-fact button!</p>
+      </div>
+      <div class="card-footer">
+        <span class="student-name">Khanh Vy</span>
+        <a href="khanh-vy/index.html" target="_blank" class="card-link">View ↗</a>
+      </div>
+    </div>
+
+    <div class="card" data-name="raewon" data-filter="9I">
+      <div class="card-thumb">
+        <div class="thumb-initial">R</div>
+        <div class="thumb-overlay"><a href="raewon/index.html" target="_blank" class="open-btn">Open ↗</a></div>
+      </div>
+      <div class="card-body">
+        <p class="card-tag">🧱 9I</p>
+        <h2 class="card-title">Hempcrete &amp; Plastic Bottles</h2>
+        <p class="card-desc">Eco-friendly construction done right — hempcrete and repurposed plastic bottles, with image cards and hover zoom effects.</p>
+      </div>
+      <div class="card-footer">
+        <span class="student-name">Raewon</span>
+        <a href="raewon/index.html" target="_blank" class="card-link">View ↗</a>
+      </div>
+    </div>
+
+    <div class="card" data-name="soobin" data-filter="9I">
+      <div class="card-thumb">
+        <div class="thumb-initial">S</div>
+        <div class="thumb-overlay"><a href="soobin/index.html" target="_blank" class="open-btn">Open ↗</a></div>
+      </div>
+      <div class="card-body">
+        <p class="card-tag">🧱 9I</p>
+        <h2 class="card-title">Plastic &amp; Salt as Building Materials</h2>
+        <p class="card-desc">A polished site with a swipe-away animated intro screen. Covers recycled plastic and salt blocks with a quiz to finish.</p>
+      </div>
+      <div class="card-footer">
+        <span class="student-name">Soobin</span>
+        <a href="soobin/index.html" target="_blank" class="card-link">View ↗</a>
+      </div>
+    </div>
+
+    <!-- Year 8 section -->
+    <div style="grid-column: 1 / -1;" id="yr8-divider">
+      <div class="section-heading" style="margin-top: 20px;">
+        <span class="section-icon">🌋</span>
+        <h2>Year 8 — Extreme Locations</h2>
+        <span class="class-badge c8s">8S</span>
+      </div>
+    </div>
+
+    <div class="card" data-name="dohyun" data-filter="8B">
+      <div class="card-thumb">
+        <div class="thumb-initial">D</div>
+        <div class="thumb-overlay"><a href="dohyun/index.html" target="_blank" class="open-btn">Open ↗</a></div>
+      </div>
+      <div class="card-body">
+        <p class="card-tag">🌋 8S</p>
+        <h2 class="card-title">ExtremeBuild</h2>
+        <p class="card-desc">Mars, deep ocean, desert, Antarctica — a slick dual-panel site with a custom logo, sidebar nav, and a quiz.</p>
+      </div>
+      <div class="card-footer">
+        <span class="student-name">Dohyun</span>
+        <a href="dohyun/index.html" target="_blank" class="card-link">View ↗</a>
+      </div>
+    </div>
+
+    <div class="card" data-name="duc hung" data-filter="8B">
+      <div class="card-thumb">
+        <div class="thumb-initial">D</div>
+        <div class="thumb-overlay"><a href="duc-hung/index.html" target="_blank" class="open-btn">Open ↗</a></div>
+      </div>
+      <div class="card-body">
+        <p class="card-tag">🌋 8S</p>
+        <h2 class="card-title">Arctic, Desert, Sea &amp; Space</h2>
+        <p class="card-desc">Four extreme environments on a dark gradient site with sticky pill-shaped navigation and material-selector buttons on every page.</p>
+      </div>
+      <div class="card-footer">
+        <span class="student-name">Duc Hung</span>
+        <a href="duc-hung/index.html" target="_blank" class="card-link">View ↗</a>
+      </div>
+    </div>
+
+    <div class="card" data-name="evika" data-filter="8B">
+      <div class="card-thumb">
+        <div class="thumb-initial">E</div>
+        <div class="thumb-overlay"><a href="evika/index.html" target="_blank" class="open-btn">Open ↗</a></div>
+      </div>
+      <div class="card-body">
+        <p class="card-tag">🌋 8S</p>
+        <h2 class="card-title">Which Material Works Best?</h2>
+        <p class="card-desc">Nine environment buttons — desert, tundra, tropical forest and more. Click one and instantly find out what to build with. So satisfying!</p>
+      </div>
+      <div class="card-footer">
+        <span class="student-name">Evika</span>
+        <a href="evika/index.html" target="_blank" class="card-link">View ↗</a>
+      </div>
+    </div>
+
+    <div class="card" data-name="sunwoo" data-filter="8B">
+      <div class="card-thumb">
+        <div class="thumb-initial">S</div>
+        <div class="thumb-overlay"><a href="sunwoo/index.html" target="_blank" class="open-btn">Open ↗</a></div>
+      </div>
+      <div class="card-body">
+        <p class="card-tag">🌋 8S</p>
+        <h2 class="card-title">Buildings for the Extreme</h2>
+        <p class="card-desc">Antarctica, desert, Mars, ocean — on a stunning space-themed site with glowing hover effects, glassmorphism cards, and smooth scroll.</p>
+      </div>
+      <div class="card-footer">
+        <span class="student-name">Sunwoo</span>
+        <a href="sunwoo/index.html" target="_blank" class="card-link">View ↗</a>
+      </div>
+    </div>
+
+    <div class="card" data-name="to nam" data-filter="8B">
+      <div class="card-thumb">
+        <div class="thumb-initial">T</div>
+        <div class="thumb-overlay"><a href="to-nam/index.html" target="_blank" class="open-btn">Open ↗</a></div>
+      </div>
+      <div class="card-body">
+        <p class="card-tag">🌋 8S</p>
+        <h2 class="card-title">Extreme Survival Environments</h2>
+        <p class="card-desc">A bold full-screen hero site with a deep blue gradient and cinematic opening. Smooth glowing nav links throughout.</p>
+      </div>
+      <div class="card-footer">
+        <span class="student-name">To Nam</span>
+        <a href="to-nam/index.html" target="_blank" class="card-link">View ↗</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="empty-state" id="empty">
+    <div class="empty-icon">🔍</div>
+    <p>No projects match your search.</p>
+  </div>
+</main>
+
+<footer>
+  <p>MIT Project &mdash; Mashechutes Institute of Technology &mdash; 2025/2026</p>
+</footer>
+
+<script>
+  const cards = Array.from(document.querySelectorAll('.card'));
+  const empty = document.getElementById('empty');
+  const showingCount = document.getElementById('showing-count');
+  const totalCount = document.getElementById('total-count');
+  const searchInput = document.getElementById('search');
+  let activeFilter = 'all';
+  let searchTerm = '';
+
+  totalCount.textContent = cards.length;
+  showingCount.textContent = cards.length;
+
+  function applyFilters() {
+    let visible = 0;
+    cards.forEach(card => {
+      const matchFilter = activeFilter === 'all' || card.dataset.filter === activeFilter;
+      const matchSearch = card.dataset.name.includes(searchTerm) ||
+                          card.querySelector('.card-title').textContent.toLowerCase().includes(searchTerm) ||
+                          card.querySelector('.card-desc').textContent.toLowerCase().includes(searchTerm);
+      const show = matchFilter && matchSearch;
+      card.style.display = show ? '' : 'none';
+      if (show) visible++;
+    });
+    showingCount.textContent = visible;
+    empty.classList.toggle('visible', visible === 0);
+
+    const yr9heading = document.getElementById('yr9-heading');
+    if (yr9heading) {
+      yr9heading.style.display = cards.some(c => c.dataset.filter === '9B' && c.style.display !== 'none') ? '' : 'none';
+    }
+    const yr9iDivider = document.getElementById('yr9i-divider');
+    if (yr9iDivider) {
+      yr9iDivider.style.display = cards.some(c => c.dataset.filter === '9I' && c.style.display !== 'none') ? '' : 'none';
+    }
+    const yr8Divider = document.getElementById('yr8-divider');
+    if (yr8Divider) {
+      yr8Divider.style.display = cards.some(c => c.dataset.filter === '8B' && c.style.display !== 'none') ? '' : 'none';
+    }
+  }
+
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelector('.filter-btn.active').classList.remove('active');
+      btn.classList.add('active');
+      activeFilter = btn.dataset.filter;
+      applyFilters();
+    });
+  });
+
+  searchInput.addEventListener('input', () => {
+    searchTerm = searchInput.value.toLowerCase();
+    applyFilters();
+  });
+</script>
+
+</body>
+</html>

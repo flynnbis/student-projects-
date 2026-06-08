@@ -1,0 +1,159 @@
+<html>
+<head>
+    
+    <title>MIT Project</title>
+
+<style>
+
+    body{
+        background-color: azure;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        margin: 0;
+        padding: 20px;
+        text-align: left;
+        overflow-x: hidden;
+    }
+
+
+    
+    .navbar ul{
+        list-style-type: none;
+        background-color: rgb(130, 176, 214);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        overflow: hidden;
+        border-radius: 3px
+    }
+
+    
+
+    .navbar a{
+        color: rgb(255, 255, 240);
+        text-decoration: none;
+        padding: 22px ;
+        display: block;
+        text-align: center;
+       
+    }
+
+    .navbar a:hover{
+        background-color: rgb(81, 113, 141);
+    }
+
+    .navbar li{
+        font-size: 18px;
+    }
+
+     p{
+        width: 700px;
+        color: rgb(90, 113, 130);
+        line-height: 1.6;
+        font-size: 18px;
+    }
+
+    h1{
+        text-align: center;
+        color: rgb(118, 156, 188);
+    }
+
+    h2{
+        color: rgb(102, 129, 150);
+    }
+
+    h3{
+        color:rgb(107, 128, 146) ;
+    }
+
+    .answer{
+        display: none;
+        color: rgb(83, 120, 134);
+           font-weight: bold;
+
+    }
+
+    button{
+        cursor: pointer;
+        padding: 10px 15px;
+        color:rgb(58, 79, 97);
+        border-radius: 5px;
+        border: none;
+        box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+        background-color:aliceblue;
+        font-size: 15px;
+        margin-top: 30px;
+    }
+
+</style>
+<script>
+    function reveal_answer(id) {
+        document.getElementById(id).style.display='block';
+    }
+</script>
+
+</head>
+
+<body>
+
+    
+
+    <h1><b>Unusual Building Materials</b></h1>
+
+    <nav class="navbar">
+        <div class="navdiv">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Plastic.html">Plastic</a></li>
+                <li><a href="Salt.html">Salt</a></li>
+                <li><a href="Quiz.html">Quiz</a></li>
+                <li><a href="Reference.html">Reference</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <br>
+     <h2><b><i>Quiz</i></b> </h2>
+
+    
+    
+    <h3 style="margin-top: 50px;">1. Why do architects use recycled plastics in buildings?</h3>
+
+    <hr>
+
+    <p style="width:fit-content; margin-top: 40px"> a) To make buildings heavier<br>
+b) To reduce waste and support sustainability<br>
+c) To increase pollution<br>
+d) To melt buildings easily<br>
+    </p>
+    <button onclick ="reveal_answer('a1')"> Reveal answer</button>
+      <p id="a1" class = "answer">b) To reduce waste and support sustainability</p>
+
+    <h3 style="margin-top: 80px;">2. Why do architects use recycled plastics in buildings?</h3>
+
+    <hr>
+
+    <p style="width:fit-content; margin-top: 40px"> a) Roof tiles<br>
+b) Building facades<br>
+c) Bricks<br>
+d) All of the above<br>
+    </p>
+    <button onclick ="reveal_answer('a2')"> Reveal answer</button>
+      <p id="a2" class = "answer"> d) All of the above </p>
+
+<h3 style="margin-top: 80px;">3. How can salt be turned into a building material?</h3>
+
+    <hr>
+
+    <p style="width:fit-content; margin-top: 40px"> a) By freezing it<br>
+b) By turning it into solid panels or bricks<br>
+c) By mixing it with sugar<br>
+d) By burning it<br>
+    </p>
+    <button onclick ="reveal_answer('a3')"> Reveal answer</button>
+      <p id="a3" class = "answer" style= "margin-bottom: 80px;">b) By turning it into solid panels or bricks</p>
+
+
+</body>
+</html>

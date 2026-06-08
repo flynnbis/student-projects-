@@ -1,0 +1,111 @@
+<html>
+    <head>
+        <style>
+            #infobutton {width: 225px; height: 225px;
+                        font-family: century gothic;
+                        color:chocolate;
+                        font-size: 20pt;
+                        background-color: burlywood;
+                        }       
+
+
+            body {
+                background:azure;
+                text-align: center;
+                font-family: Georgia;
+                margin: 0;
+                padding: 20px;
+                text-align:center;
+                }
+
+                nav{
+                    background-color:blue;
+                    padding: 12px;
+                }
+
+                nav a {
+                    color:beige;
+                    margin: 0 15px;
+                    font-size: 18px;
+                }
+            
+
+            img {
+                width: 450px;
+                height: 320px;
+                object-fit: cover;
+                border: 3px solid bisque;
+                margin: 10px auto;
+                display:block;
+            }
+            
+
+            .box {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0% 50% 0% 50%;
+            }
+
+
+
+
+        </style>
+        <script>
+            function popcornpanelsInfo()
+                {
+                    alert("Popcorn Panels generally refer to sustainable, bio-based construction materials made from popped corn granules, used as eco-friendly insulation or building panels. ");
+                }
+
+            function hempcreteInfo()
+                {
+                    alert("Hempcrete is a sustainable, lightweight bio-composite building material made by mixing the woody inner core of the industrial hemp plant (known as hurd or shiv) with a lime-based binder and water.");
+                }
+            function myceliumInfo()
+                {
+                    alert("Mycelium is the vegetative, root-like structure of a fungus, consisting of a vast, branching network of thread-like filaments called hyphae.");
+                }
+     </script>
+    </head>
+
+    <body>
+        
+        <!-- <input type="button" value="Popcorn Panels" onclick="popcornpanelsInfo()"> -->
+        <!-- <input type="button" value="Hempcrete" onclick="hempcreteInfo()"> -->
+        <!-- <input type="button" value="Mycelium"  onclick="myceliumInfo()"> -->
+
+        
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="reference.html">Reference</a>
+            
+             
+
+        </nav>
+        
+            <h>Strange Materials For Building</h>
+
+        <img src="https://media.istockphoto.com/id/450837501/ko/%EC%82%AC%EC%A7%84/%EC%83%88%EB%A1%9C%EC%9A%B4-%EC%82%B0%EC%97%85-%EA%B3%B5%EC%82%AC%EC%9E%A5.jpg?s=1024x1024&w=is&k=20&c=puxD2Wo_6ePR7CSUw0eE5czTVm21b4u_672kxNi194I=">
+        
+        <div class="box">
+            <table>
+
+                <tr>
+
+                    <td><input type="button" value="Popcorn Panels" onclick="popcornpanelsInfo()" id="infobutton"></td>
+                    <td><input type="button" value="Hempcrete" onclick="hempcreteInfo()" id="infobutton"></td>
+                    <td><input type="button" value="Mycelium" onclick="myceliumInfo()" id="infobutton"></td>
+
+                </tr>
+        
+            </table>
+            
+        </div>
+
+        <br>
+        
+            
+        
+    </body>
+</html>

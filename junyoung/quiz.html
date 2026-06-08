@@ -1,0 +1,77 @@
+<html>
+    <head>
+
+        <style>
+            body {
+                background-color: lightblue;
+                font-family: sans-serif;
+                margin: 0;
+                padding: 20px;
+                text-align: center;
+            }
+
+            nav {
+                background-color: blue;
+                padding: 12px;
+            }
+
+            nav a {
+                color: white;
+                margin: 0 15px;
+                font-size: 18px;
+            }
+
+            img{   
+                    width: 320px;
+                    height: 200px;
+                    object-fit: cover;
+                    border: 3px solid black;
+                    margin: 10px auto;
+                    display: block; 
+                }
+
+                 .answer {
+                display: none;
+            }
+         </style> 
+
+              <script>
+            function reveal_answer(id) {
+                document.getElementById(id).style.display = "block";
+            }
+            
+            </script>
+
+         <h1>Unusual Building Materials</h1> 
+
+    </head>
+    <body>
+        <nav>
+            <a href="index.html">Woodoo</a>
+            <a href="second.html">Aerographit</a>
+            <a href="third.html">Hanf</a>
+            <a href="quiz.html">quiz</a>
+            <a href="reference.html">references</a>
+         </nav>
+         
+             <h1>Quizzes</h1>
+
+    <p>Click the button under each question to reveal the answer</p>
+
+    <p><b>1. Who made the building material, Woodoo?</b></p>
+    <button onclick="reveal_answer('a1')"> Reveal answer</button>
+    <p id="a1" class="answer">French architect Timothée Boitouzet</p>
+
+    <p><b>2. What is the light, strong, and useful building material?</b></p>
+    <button onclick="reveal_answer('a2')"> Reveal answer</button>
+    <p id="a2" class="answer">Aerographit</p>
+
+    <p><b>3. What can Hanf use for?</b></p>
+    <button onclick="reveal_answer('a3')"> Reveal answer</button>   
+    <p id="a3" class="answer">absorbing and releasing moisture</p>
+
+
+
+    <hr>
+</body>
+</html>

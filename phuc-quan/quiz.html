@@ -1,0 +1,86 @@
+   <style>
+      body {
+        background-color: lightgrey; 
+        font-family: Arial, sans-serif; 
+        padding: 20px; 
+      }
+      h1, h2, h3, h4, h5 {
+        color: black; 
+      }
+      img {
+        display: block;
+        margin: 10px 0; 
+      }
+    }
+    </style>
+
+<div class="quiz-container">
+      <h3>Question 1</h3>
+      <p>What is a major benefit of using recycled bio-based fibers like bamboo and hemp in concrete beams?</p>
+      <div class="options">
+        <button onclick="checkAnswer('They increase the weight', 'They reduce the environmental footprint', 'msg4')">They increase the weight of the structure</button>
+        <button onclick="checkAnswer('They reduce the environmental footprint', 'They reduce the environmental footprint', 'msg4')">They significantly reduce the environmental footprint</button>
+        <button onclick="checkAnswer('They make it waterproof', 'They reduce the environmental footprint', 'msg4')">They make the concrete completely waterproof</button>
+      </div>
+      <p id="msg4" class="message"></p>
+    </div>
+
+    <div class="quiz-container">
+      <h3>Question 2</h3>
+      <p>Which genus of bacteria is typically embedded into "healing" concrete to repair cracks?</p>
+      <div class="options">
+        <button onclick="checkAnswer('Bacillus', 'Bacillus', 'msg5')">Bacillus</button>
+        <button onclick="checkAnswer('Streptococcus', 'Bacillus', 'msg5')">Streptococcus</button>
+        <button onclick="checkAnswer('Lactobacillus', 'Bacillus', 'msg5')">Lactobacillus</button>
+      </div>
+      <p id="msg5" class="message"></p>
+    </div>
+
+    <div class="quiz-container">
+      <h3>Question 3</h3>
+      <p>What happens when moisture enters a fracture in bacterial "healing" concrete?</p>
+      <div class="options">
+        <button onclick="checkAnswer('Rust', 'Calcium Carbonate', 'msg6')">The steel inside rusts</button>
+        <button onclick="checkAnswer('Melt', 'Calcium Carbonate', 'msg6')">The concrete melts and resets</button>
+        <button onclick="checkAnswer('Calcium Carbonate', 'Calcium Carbonate', 'msg6')">Bacteria activate and produce calcium carbonate to seal the gap</button>
+      </div>
+      <p id="msg6" class="message"></p>
+    </div>
+
+    <div class="quiz-container">
+      <h3>Question 4</h3>
+      <p>Why are Plastic Waste Bricks generally restricted to non-structural applications?</p>
+      <div class="options">
+        <button onclick="checkAnswer('Too heavy', 'Lower compressive strength', 'msg7')">They are too heavy</button>
+        <button onclick="checkAnswer('Lower compressive strength', 'Lower compressive strength', 'msg7')">They have a lower compressive strength</button>
+        <button onclick="checkAnswer('Too expensive', 'Lower compressive strength', 'msg7')">They are too expensive to make</button>
+      </div>
+      <p id="msg7" class="message"></p>
+    </div>
+
+    <div class="quiz-container">
+      <h3>Question 5</h3>
+      <p>Despite their lower strength, what superior qualities do Plastic Waste Bricks offer compared to traditional clay bricks?</p>
+      <div class="options">
+        <button onclick="checkAnswer('Water resistance and thermal insulation', 'Water resistance and thermal insulation', 'msg8')">Superior water resistance and thermal insulation</button>
+        <button onclick="checkAnswer('Fire resistance', 'Water resistance and thermal insulation', 'msg8')">Total fire resistance</button>
+        <button onclick="checkAnswer('Soundproofing', 'Water resistance and thermal insulation', 'msg8')">Better soundproofing</button>
+      </div>
+      <p id="msg8" class="message"></p>
+    </div>
+
+<script>
+      function checkAnswer(choice, correctAnswer, messageId) {
+        const messageElement = document.getElementById(messageId);
+        
+        if (choice === correctAnswer) {
+          messageElement.textContent = "Right!";
+          messageElement.style.color = "green";
+        } else {
+          messageElement.textContent = "Wrong! ❌"; 
+          messageElement.style.color = "red";
+        }
+      }
+    </script>
+
+  <p> Go back <a href="index.html">here </a> </p>

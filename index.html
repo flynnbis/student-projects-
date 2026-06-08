@@ -21,6 +21,8 @@
       --c9b:      #4f9eff;  --c9b-bg: #eaf3ff;
       --c9i:      #f5a623;  --c9i-bg: #fff7e6;
       --c8s:      #e05c8a;  --c8s-bg: #ffeef5;
+      --c9h:      #7c3aed;  --c9h-bg: #f3eeff;
+      --c8b:      #0891b2;  --c8b-bg: #e0f7fa;
 
       --radius-card: 20px;
       --radius-pill: 99px;
@@ -168,6 +170,9 @@
     .filter-btn[data-filter="9B"].active   { background: var(--c9b);   color: #fff; border-color: var(--c9b); }
     .filter-btn[data-filter="9I"].active   { background: var(--c9i);   color: #fff; border-color: var(--c9i); }
     .filter-btn[data-filter="8B"].active   { background: var(--c8s);   color: #fff; border-color: var(--c8s); }
+    .filter-btn[data-filter="9H"].active   { background: var(--c9h);   color: #fff; border-color: var(--c9h); }
+    .filter-btn[data-filter="8B"].active   { background: var(--c8b);   color: #fff; border-color: var(--c8b); }
+    .filter-btn[data-filter="8S"].active   { background: var(--c8s);   color: #fff; border-color: var(--c8s); }
 
     /* search */
     .search-wrap { margin-left: auto; position: relative; flex-shrink: 0; }
@@ -259,6 +264,9 @@
     .card[data-filter="9B"] { --stripe: var(--c9b); --stripe-bg: var(--c9b-bg); }
     .card[data-filter="9I"] { --stripe: var(--c9i); --stripe-bg: var(--c9i-bg); }
     .card[data-filter="8B"] { --stripe: var(--c8s); --stripe-bg: var(--c8s-bg); }
+    .card[data-filter="9H"] { --stripe: var(--c9h); --stripe-bg: var(--c9h-bg); }
+    .card[data-filter="8B"] { --stripe: var(--c8b); --stripe-bg: var(--c8b-bg); }
+    .card[data-filter="8S"] { --stripe: var(--c8s); --stripe-bg: var(--c8s-bg); }
 
     /* name banner header */
     .card-banner {
@@ -365,7 +373,9 @@
       <div class="legend">
         <div class="legend-pill c9b"><div class="legend-dot" style="background:var(--c9b)"></div>9B &mdash; Weird Materials</div>
         <div class="legend-pill c9i"><div class="legend-dot" style="background:var(--c9i)"></div>9I &mdash; Weird Materials</div>
+        <div class="legend-pill" style="background:var(--c8b-bg);color:var(--c8b)"><div class="legend-dot" style="background:var(--c8b)"></div>8B &mdash; Extreme Locations</div>
         <div class="legend-pill c8s"><div class="legend-dot" style="background:var(--c8s)"></div>8S &mdash; Extreme Locations</div>
+        <div class="legend-pill" style="background:var(--c9h-bg);color:var(--c9h)"><div class="legend-dot" style="background:var(--c9h)"></div>9H &mdash; Weird Materials</div>
       </div>
     </div>
     <div class="header-right">
@@ -382,7 +392,9 @@
     <button class="filter-btn active" data-filter="all">All 22 projects</button>
     <button class="filter-btn" data-filter="9B">🧪 9B</button>
     <button class="filter-btn" data-filter="9I">🧱 9I</button>
-    <button class="filter-btn" data-filter="8B">🌋 8S</button>
+    <button class="filter-btn" data-filter="8B">🏗️ 8B</button>
+    <button class="filter-btn" data-filter="8S">🌋 8S</button>
+    <button class="filter-btn" data-filter="9H">🔬 9H</button>
     <div class="search-wrap">
       <svg class="search-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
         <circle cx="6.5" cy="6.5" r="4.5"/><path d="M10.5 10.5L14 14"/>
@@ -662,7 +674,7 @@
 
     <div class="card" data-name="dohyun" data-filter="8B">
       <div class="card-banner">
-        <span class="banner-tag">🌋 8S</span>
+        <span class="banner-tag">🏗️ 8B</span>
         <div class="student-name">Dohyun</div>
       </div>
       <div class="card-body">
@@ -676,7 +688,7 @@
 
     <div class="card" data-name="duc hung" data-filter="8B">
       <div class="card-banner">
-        <span class="banner-tag">🌋 8S</span>
+        <span class="banner-tag">🏗️ 8B</span>
         <div class="student-name">Duc Hung</div>
       </div>
       <div class="card-body">
@@ -690,7 +702,7 @@
 
     <div class="card" data-name="evika" data-filter="8B">
       <div class="card-banner">
-        <span class="banner-tag">🌋 8S</span>
+        <span class="banner-tag">🏗️ 8B</span>
         <div class="student-name">Evika</div>
       </div>
       <div class="card-body">
@@ -704,7 +716,7 @@
 
     <div class="card" data-name="sunwoo" data-filter="8B">
       <div class="card-banner">
-        <span class="banner-tag">🌋 8S</span>
+        <span class="banner-tag">🏗️ 8B</span>
         <div class="student-name">Sunwoo</div>
       </div>
       <div class="card-body">
@@ -718,7 +730,7 @@
 
     <div class="card" data-name="to nam" data-filter="8B">
       <div class="card-banner">
-        <span class="banner-tag">🌋 8S</span>
+        <span class="banner-tag">🏗️ 8B</span>
         <div class="student-name">To Nam</div>
       </div>
       <div class="card-body">
@@ -729,6 +741,222 @@
         <a href="to-nam/index.html" target="_blank" class="card-link">Open project ↗</a>
       </div>
     </div>
+
+
+    <div style="grid-column: 1 / -1;" id="yr8s-divider">
+      <div class="section-heading" style="margin-top: 20px;">
+        <span class="section-icon">🌋</span>
+        <h2>Year 8 &mdash; Extreme Locations</h2>
+        <span class="class-badge c8s">8S</span>
+      </div>
+    </div>
+
+    <div class="card" data-name="ben tuan minh" data-filter="8S">
+      <div class="card-banner">
+        <span class="banner-tag">🌋 8S</span>
+        <div class="student-name">Ben &amp; Tuan Minh</div>
+      </div>
+      <div class="card-body">
+        <h2 class="card-title">MIT Project</h2>
+        <p class="card-desc">Extreme locations — hosted on CSUK Coder.</p>
+      </div>
+      <div class="card-footer">
+        <a href="https://coder.csuk.io/htmlcoder/Rl3LR/" target="_blank" class="card-link">Open project ↗</a>
+      </div>
+    </div>
+
+    <div class="card" data-name="kim bao" data-filter="8S">
+      <div class="card-banner">
+        <span class="banner-tag">🌋 8S</span>
+        <div class="student-name">Kim Bao</div>
+      </div>
+      <div class="card-body">
+        <h2 class="card-title">MIT Project</h2>
+        <p class="card-desc">Extreme locations — hosted on CSUK Coder.</p>
+      </div>
+      <div class="card-footer">
+        <a href="https://coder.csuk.io/htmlcoder/Og3ZN/" target="_blank" class="card-link">Open project ↗</a>
+      </div>
+    </div>
+
+    <div class="card" data-name="linh nga nha quyen" data-filter="8S">
+      <div class="card-banner">
+        <span class="banner-tag">🌋 8S</span>
+        <div class="student-name">Linh Nga &amp; Nha Quyen</div>
+      </div>
+      <div class="card-body">
+        <h2 class="card-title">MIT Project</h2>
+        <p class="card-desc">Extreme locations — hosted on CSUK Coder.</p>
+      </div>
+      <div class="card-footer">
+        <a href="https://coder.csuk.io/htmlcoder/Z87w6/" target="_blank" class="card-link">Open project ↗</a>
+      </div>
+    </div>
+
+    <div class="card" data-name="phuong my" data-filter="8S">
+      <div class="card-banner">
+        <span class="banner-tag">🌋 8S</span>
+        <div class="student-name">Phuong My</div>
+      </div>
+      <div class="card-body">
+        <h2 class="card-title">MIT Project</h2>
+        <p class="card-desc">Extreme locations — hosted on CSUK Coder.</p>
+      </div>
+      <div class="card-footer">
+        <a href="https://coder.csuk.io/htmlcoder/16JYj/" target="_blank" class="card-link">Open project ↗</a>
+      </div>
+    </div>
+
+    <!-- 9H section -->
+    <div style="grid-column: 1 / -1;" id="yr9h-divider">
+      <div class="section-heading" style="margin-top: 20px;">
+        <span class="section-icon">🔬</span>
+        <h2>Year 9 &mdash; Weird &amp; Wonderful Materials</h2>
+        <span class="class-badge" style="background:var(--c9h-bg);color:var(--c9h)">9H</span>
+      </div>
+    </div>
+
+    <!-- URL-only cards: name links directly to live project -->
+    <div class="card" data-name="bao nam nguyen" data-filter="9H">
+      <div class="card-banner">
+        <span class="banner-tag">🔬 9H</span>
+        <div class="student-name">Bao Nam Nguyen</div>
+      </div>
+      <div class="card-body">
+        <h2 class="card-title">MIT Project</h2>
+        <p class="card-desc">Weird and wonderful building materials — hosted on CSUK Coder.</p>
+      </div>
+      <div class="card-footer">
+        <a href="https://coder.csuk.io/htmlcoder/79Py8/" target="_blank" class="card-link">Open project ↗</a>
+      </div>
+    </div>
+
+    <div class="card" data-name="danbi kim" data-filter="9H">
+      <div class="card-banner">
+        <span class="banner-tag">🔬 9H</span>
+        <div class="student-name">Danbi Kim</div>
+      </div>
+      <div class="card-body">
+        <h2 class="card-title">MIT Project</h2>
+        <p class="card-desc">Weird and wonderful building materials — hosted on CSUK Coder.</p>
+      </div>
+      <div class="card-footer">
+        <a href="https://coder.csuk.io/htmlcoder/57N0q/" target="_blank" class="card-link">Open project ↗</a>
+      </div>
+    </div>
+
+    <div class="card" data-name="donggeon kim" data-filter="9H">
+      <div class="card-banner">
+        <span class="banner-tag">🔬 9H</span>
+        <div class="student-name">Donggeon Kim</div>
+      </div>
+      <div class="card-body">
+        <h2 class="card-title">MIT Project</h2>
+        <p class="card-desc">Weird and wonderful building materials — hosted on CSUK Coder.</p>
+      </div>
+      <div class="card-footer">
+        <a href="https://coder.csuk.io/htmlcoder/qQzpk/" target="_blank" class="card-link">Open project ↗</a>
+      </div>
+    </div>
+
+    <div class="card" data-name="evanti pilania" data-filter="9H">
+      <div class="card-banner">
+        <span class="banner-tag">🔬 9H</span>
+        <div class="student-name">Evanti Pilania</div>
+      </div>
+      <div class="card-body">
+        <h2 class="card-title">MIT Project</h2>
+        <p class="card-desc">Weird and wonderful building materials — hosted on CSUK Coder.</p>
+      </div>
+      <div class="card-footer">
+        <a href="https://coder.csuk.io/htmlcoder/x6KzE/" target="_blank" class="card-link">Open project ↗</a>
+      </div>
+    </div>
+
+    <div class="card" data-name="ha an vu" data-filter="9H">
+      <div class="card-banner">
+        <span class="banner-tag">🔬 9H</span>
+        <div class="student-name">Ha An Vu</div>
+      </div>
+      <div class="card-body">
+        <h2 class="card-title">MIT Project</h2>
+        <p class="card-desc">Weird and wonderful building materials — hosted on CSUK Coder.</p>
+      </div>
+      <div class="card-footer">
+        <a href="https://coder.csuk.io/htmlcoder/vQ0Jn/" target="_blank" class="card-link">Open project ↗</a>
+      </div>
+    </div>
+
+    <div class="card" data-name="hyeyun kim" data-filter="9H">
+      <div class="card-banner">
+        <span class="banner-tag">🔬 9H</span>
+        <div class="student-name">Hyeyun Kim</div>
+      </div>
+      <div class="card-body">
+        <h2 class="card-title">Unusual Building Materials</h2>
+        <p class="card-desc">A multi-page site covering unusual materials with a quiz and bibliography. Custom CSS styling throughout.</p>
+      </div>
+      <div class="card-footer">
+        <a href="hyeyun/index.html" target="_blank" class="card-link">Open project ↗</a>
+      </div>
+    </div>
+
+    <div class="card" data-name="linh anh hoang" data-filter="9H">
+      <div class="card-banner">
+        <span class="banner-tag">🔬 9H</span>
+        <div class="student-name">Linh Anh Hoang</div>
+      </div>
+      <div class="card-body">
+        <h2 class="card-title">MIT Project</h2>
+        <p class="card-desc">Weird and wonderful building materials — hosted on CSUK Coder.</p>
+      </div>
+      <div class="card-footer">
+        <a href="https://coder.csuk.io/htmlcoder/oZxnA/" target="_blank" class="card-link">Open project ↗</a>
+      </div>
+    </div>
+
+    <div class="card" data-name="phuc quan" data-filter="9H">
+      <div class="card-banner">
+        <span class="banner-tag">🔬 9H</span>
+        <div class="student-name">Phuc Quan</div>
+      </div>
+      <div class="card-body">
+        <h2 class="card-title">Living &amp; Bio-Based Materials</h2>
+        <p class="card-desc">Explores bamboo fibre reinforcement, self-healing bacterial concrete, and plastic waste bricks. Includes interactive material buttons, a quiz, and bibliography.</p>
+      </div>
+      <div class="card-footer">
+        <a href="phuc-quan/index.html" target="_blank" class="card-link">Open project ↗</a>
+      </div>
+    </div>
+
+    <div class="card" data-name="pitt song" data-filter="9H">
+      <div class="card-banner">
+        <span class="banner-tag">🔬 9H</span>
+        <div class="student-name">Pitt Song</div>
+      </div>
+      <div class="card-body">
+        <h2 class="card-title">MIT Project</h2>
+        <p class="card-desc">Weird and wonderful building materials — hosted on CSUK Coder.</p>
+      </div>
+      <div class="card-footer">
+        <a href="https://coder.csuk.io/htmlcoder/mqv0n/" target="_blank" class="card-link">Open project ↗</a>
+      </div>
+    </div>
+
+    <div class="card" data-name="tue minh vu" data-filter="9H">
+      <div class="card-banner">
+        <span class="banner-tag">🔬 9H</span>
+        <div class="student-name">Tue Minh Vu</div>
+      </div>
+      <div class="card-body">
+        <h2 class="card-title">MIT Project</h2>
+        <p class="card-desc">Weird and wonderful building materials — hosted on CSUK Coder.</p>
+      </div>
+      <div class="card-footer">
+        <a href="https://coder.csuk.io/htmlcoder/gpmDZ/" target="_blank" class="card-link">Open project ↗</a>
+      </div>
+    </div>
+
 
   </div>
 
@@ -775,6 +1003,14 @@
     const yr9iDivider = document.getElementById('yr9i-divider');
     if (yr9iDivider) {
       yr9iDivider.style.display = cards.some(c => c.dataset.filter === '9I' && c.style.display !== 'none') ? '' : 'none';
+    }
+    const yr8sDivider = document.getElementById('yr8s-divider');
+    if (yr8sDivider) {
+      yr8sDivider.style.display = cards.some(c => c.dataset.filter === '8S' && c.style.display !== 'none') ? '' : 'none';
+    }
+    const yr9hDivider = document.getElementById('yr9h-divider');
+    if (yr9hDivider) {
+      yr9hDivider.style.display = cards.some(c => c.dataset.filter === '9H' && c.style.display !== 'none') ? '' : 'none';
     }
     const yr8Divider = document.getElementById('yr8-divider');
     if (yr8Divider) {

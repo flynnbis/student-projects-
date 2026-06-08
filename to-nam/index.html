@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Extreme Survival Environments</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            background: linear-gradient(to right, #0f172a, #1e3a8a);
+
+            color: white;
+
+            overflow-x: hidden;
+        }
+
+        nav {
+
+            width: 100%;
+
+            padding: 20px;
+
+            background-color: rgba(0,0,0,0.5);
+
+            backdrop-filter: blur(10px);
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            text-align: center;
+        }
+
+        nav a {
+
+            color: white;
+
+            text-decoration: none;
+
+            margin: 20px;
+
+            font-size: 18px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+
+            color: orange;
+        }
+
+        .hero {
+
+            height: 90vh;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            flex-direction: column;
+
+            text-align: center;
+
+            background:
+            linear-gradient(rgba(0,0,0,0.6),
+            rgba(0,0,0,0.6)),
+
+            url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1600&auto=format&fit=crop");
+
+            background-size: cover;
+
+            background-position: center;
+        }
+
+        .hero h1 {
+
+            font-size: 70px;
+
+            margin-bottom: 20px;
+
+            animation: fadeIn 2s;
+        }
+
+        .hero p {
+
+            font-size: 24px;
+
+            width: 70%;
+
+            line-height: 1.6;
+
+            animation: fadeIn 3s;
+        }
+
+        .hero button {
+
+            margin-top: 30px;
+
+            padding: 15px 35px;
+
+            font-size: 20px;
+
+            border: none;
+
+            border-radius: 15px;
+
+            background-color: orange;
+
+            color: black;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .hero button:hover {
+
+            transform: scale(1.1);
+
+            background-color: white;
+        }
+
+        .title {
+
+            text-align: center;
+
+            padding: 60px 20px 20px 20px;
+        }
+
+        .title h2 {
+
+            font-size: 50px;
+
+            color: #93c5fd;
+        }
+
+        .title p {
+
+            margin-top: 15px;
+
+            font-size: 20px;
+        }
+        .container {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            justify-content: center;
+
+            gap: 40px;
+
+            padding: 50px;
+        }
+
+        .card {
+
+            width: 320px;
+
+            background-color: rgba(255,255,255,0.1);
+
+            border-radius: 25px;
+
+            overflow: hidden;
+
+            backdrop-filter: blur(10px);
+
+            box-shadow: 0px 8px 20px rgba(0,0,0,0.5);
+
+            transition: 0.5s;
+        }
+
+        .card:hover {
+
+            transform: translateY(-15px) scale(1.03);
+        }
+
+        .card img {
+
+            width: 100%;
+
+            height: 220px;
+
+            object-fit: cover;
+        }
+
+        .card-content {
+
+            padding: 25px;
+        }
+
+        .card-content h3 {
+
+            font-size: 32px;
+
+            margin-bottom: 15px;
+
+            color: orange;
+        }
+
+        .card-content p {
+
+            line-height: 1.7;
+
+            font-size: 17px;
+        }
+
+
+
+        .btn {
+
+            display: inline-block;
+
+            margin-top: 20px;
+
+            padding: 12px 24px;
+
+            background-color: orange;
+
+            color: black;
+
+            border-radius: 12px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+
+            background-color: white;
+
+            transform: scale(1.05);
+        }
+
+
+
+        footer {
+
+            text-align: center;
+
+            padding: 30px;
+
+            background-color: rgba(0,0,0,0.5);
+
+            margin-top: 50px;
+        }
+
+        @keyframes fadeIn {
+
+            from {
+
+                opacity: 0;
+
+                transform: translateY(20px);
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform: translateY(0);
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <nav>
+
+        <a href="#">Login</a>
+        <a href="#">Mars</a>
+        <a href="#">Ocean</a>
+        <a href="#">Desert</a>
+        <a href="#">Antarctica</a>
+        <a href="#">Venus</a>
+        <a href="#">Titan</a>
+
+    </nav>
+
+
+    <section class="hero">
+
+        <h1>Extreme Survival Environments</h1>
+
+        <p>
+            Explore the most dangerous places in the universe and discover
+            the adaptive materials needed for human survival.
+        </p>
+
+        <button onclick="startJourney()">
+            Start Exploring
+        </button>
+
+    </section>
+
+
+    <section class="title">
+
+        <h2>Choose an Environment</h2>
+
+        <p>
+            Click on an environment to discover the best survival materials.
+        </p>
+
+    </section>
+
+
+    <div class="container">
+
+
+        <div class="card">
+
+            <img src="https://images-assets.nasa.gov/image/PIA00407/PIA00407~orig.jpg">
+
+            <div class="card-content">
+
+                <h3>Mars</h3>
+
+                <p>
+                    Learn how insulated materials and radiation-resistant
+                    structures help astronauts survive on Mars.
+                </p>
+
+                <a href="#" class="btn">
+                    Explore Mars
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <img src="https://oceanservice.noaa.gov/facts/coralreef.jpg">
+
+            <div class="card-content">
+
+                <h3>Ocean</h3>
+
+                <p>
+                    Discover waterproof and pressure-resistant materials
+                    used for underwater survival.
+                </p>
+
+                <a href="#" class="btn">
+                    Explore Ocean
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?q=80&w=1200&auto=format&fit=crop">
+
+            <div class="card-content">
+
+                <h3>Desert</h3>
+
+                <p>
+                    Explore reflective materials and cooling systems
+                    used in extreme desert heat.
+                </p>
+
+                <a href="#" class="btn">
+                    Explore Desert
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1517783999520-f068d7431a60?q=80&w=1200&auto=format&fit=crop">
+
+            <div class="card-content">
+
+                <h3>Antarctica</h3>
+
+                <p>
+                    Learn how thermal insulation and reinforced buildings
+                    protect humans from freezing conditions.
+                </p>
+
+                <a href="#" class="btn">
+                    Explore Antarctica
+                </a>
+
+            </div>
+
+        </div>
+
+         <div class="card">
+
+            <img src="https://media.wired.com/photos/5e59ad2b79c7100008eb6ae8/master/pass/photo_space_venus_1_S91-50688.jpg">
+
+            <div class="card-content">
+
+                <h3>Venus</h3>
+
+                <p>
+                    Explore heat resistant materials and cooling systems
+                    used in extreme Venus heat.
+                </p>
+
+                <a href="#" class="btn">
+                    Explore Venus
+                </a>
+
+            </div>
+
+        </div>
+
+         <div class="card">
+
+            <img src="https://media.wired.com/photos/5dd85094a0926f0008a865a2/master/w_1600%2Cc_limit/PIA20016_orig.jpg">
+
+            <div class="card-content">
+
+                <h3>Titan</h3>
+
+                <p>
+                    Learn how windproof and reinforced buildings
+                    protect humans from windy and wet conditions.
+                </p>
+
+                <a href="#" class="btn">
+                    Explore Titan
+                </a>
+
+            </div>
+
+        </div>
+        
+        
+    
+
+<section class="title">
+
+    <h2>Survival Challenge Quiz</h2>
+
+    <p>
+        Test your knowledge about extreme survival environments!
+    </p>
+
+</section>
+
+<div class="container">
+
+    <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1517783999520-f068d7431a60?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+
+            <h3>Antarctica</h3>
+
+            <p>
+                Which material helps keep heat inside buildings
+                in freezing Antarctic temperatures?
+            </p>
+
+            <button onclick="checkAnswer(this, true)">
+                Thermal Insulation
+            </button>
+
+            <button onclick="checkAnswer(this, false)">
+                Thin Plastic
+            </button>
+
+            <button onclick="checkAnswer(this, false)">
+                Reflective Metal
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+
+            <h3>Ocean</h3>
+
+            <p>
+                What material protects underwater structures
+                from massive water pressure?
+            </p>
+
+            <button onclick="checkAnswer(this, false)">
+                Paper Walls
+            </button>
+
+            <button onclick="checkAnswer(this, true)">
+                Pressure-Resistant Walls
+            </button>
+
+            <button onclick="checkAnswer(this, false)">
+                Glass Bottles
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+
+            <h3>Desert</h3>
+
+            <p>
+                Why are reflective materials useful
+                in hot deserts?
+            </p>
+
+            <button onclick="checkAnswer(this, true)">
+                They reflect sunlight away
+            </button>
+
+            <button onclick="checkAnswer(this, false)">
+                They create snow
+            </button>
+
+            <button onclick="checkAnswer(this, false)">
+                They absorb more heat
+            </button>
+
+        </div>
+
+    </div>
+        <div class="card">
+
+                <img src="https://media.wired.com/photos/5e59ad2b79c7100008eb6ae8/master/pass/photo_space_venus_1_S91-50688.jpg">
+
+             <div class="card-content">
+
+            <h3>Venus</h3>
+
+            <p>
+                What material protects the building from burning temperatures of Venus?
+            </p>
+
+            <button onclick="checkAnswer(this, false)">
+                Sodium metal and diamonds
+            </button>
+
+            <button onclick="checkAnswer(this, false)">
+                Rubber walls and tempered glass
+            </button>
+
+            <button onclick="checkAnswer(this, true)">
+                
+                Titanium & Molybdenum
+            </button>
+
+        </div>
+
+    </div>
+
+
+<div style="text-align:center; padding-bottom:50px;">
+
+    <h2 id="quiz.result">
+        Score: 0
+    </h2>
+
+</div>
+
+
+<style>
+
+.card button {
+
+    width: 100%;
+
+    margin-top: 12px;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.card button:hover {
+
+    transform: scale(1.03);
+}
+
+.correct {
+
+    background-color: green !important;
+
+    color: white;
+}
+
+.wrong {
+
+    background-color: red !important;
+
+    color: white;
+}
+
+</style>
+
+<script>
+
+let score = 0;
+
+function checkAnswer(button, correct) {
+
+    if(button.disabled) {
+
+        return;
+    }
+
+    if(correct) {
+
+        button.classList.add("correct");
+
+        score++;
+
+        document.getElementById("quiz.result").innerHTML =
+
+        "Score: " + score + " / 4";
+    }
+
+    else {
+
+        button.classList.add("wrong");
+    }
+
+    button.disabled = true;
+}
+
+</script>
+
+    <footer>
+
+        <h2>Created for Survival MIT Project</h2>
+
+    </footer>
+
+
+    <script>
+
+        function startJourney() {
+
+            alert("Welcome to the Extreme Survival Environments Project!");
+
+        }
+
+    </script>
+
+</body>
+
+</html>

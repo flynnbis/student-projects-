@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <title>My website!!!</title>
+ 
+        <style>
+            body{
+                background-color: rgb(121, 155, 210, 0.824);
+                text-align: center;
+                font-family: Georgia;
+                padding: 20px;
+                margin: 0px;
+            }
+            nav {
+                background-color:rgb(29, 107, 186);
+                padding: 12px
+            }
+ 
+            nav a {
+                color: white;
+                margin: 0 15px;
+                font-size: 18px;
+            }
+ 
+            h1 {color :rgb(255, 255, 255)
+            }
+           
+            h2{
+                color: rgb(255, 255, 255);
+                margin-top : 30px;
+            }
+ 
+            p{
+                font-size : 16px;
+                max-width: 500px;
+                margin: 20px auto;
+            }
+             
+            img {
+                width: 420px;
+                height: 300px;
+                border: 3px solid rgb(255, 255, 255);
+                margin: 10px auto;
+                display: block;
+            }
+            .answer {
+                display: none;
+                color:rgb(255, 255, 255);
+                font-weight: bold;
+            }
+        </style>
+        <script>
+            function revealAnswer(id) {
+                 document.getElementById(id).style.display='block';
+            }
+       </script>        
+    </head>
+ 
+    <body>
+       <nav>
+           <a href="index.html">home</a>
+           <a href="quizz.html">quiz</a>
+           <a href="reference.html">reference</a>
+ 
+       </nav>
+       
+       <h1>Quizz question</h1>
+       <p>Some quizz about materials</p>
+ 
+       <p>Click the buttons under each question to reveal the answer</p>
+ 
+       <hr>
+ 
+       <p><b>1.What is a salt block used for in buildings?</b></p>
+       <button onclick="revealAnswer('a1')">Reveal Answer</button>
+       <p id="a1" class="answer">To absorb moisture and prevent dampness</p>
+       <p><b>2.Why do people like salt block rooms?</b></p>
+       <button onclick="revealAnswer('a2')">Reveal Answer</button>
+       <p id="a2" class="answer">They provide a unique aesthetic and can help regulate humidity</p>
+        <p><b>3.What is one advantage of Hempcrete?</b></p>
+       <button onclick="revealAnswer('a3')">Reveal Answer</button>
+       <p id="a3" class="answer">It is a sustainable and eco-friendly building material</p>
+       <p><b>4.What is Hempcrete made from?</b></p>
+       <button onclick="revealAnswer('a4')">Reveal Answer</button>
+       <p id="a4" class="answer">It is made from the fibers of the hemp plant and a lime-based binder</p>
+     
+ 
+    </body>
+</html>
